@@ -246,7 +246,7 @@ MonoBehaviour:
   cameraControllerTransform: {fileID: 1648295386}
   cameraTransform: {fileID: 1687258585}
   rotatingSpeed: 100
-  zoomSpeed: 1
+  zoomSpeed: 25
   currentMovementMode: 1
 --- !u!4 &1648295386
 Transform:
