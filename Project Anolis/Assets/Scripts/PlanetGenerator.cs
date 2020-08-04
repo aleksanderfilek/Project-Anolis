@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public static class PlanetGenerator
 {
@@ -96,7 +97,32 @@ public static class PlanetGenerator
 
     static void SeparateTriangles()
     {
+        // first clone vertices to have unique one for each triangle
+        // each vertex makes 6 triangles
+        int numOfVertices = _verticesList.Count;
+        for (int i = 0; i < 5; i++)
+            for(int j=0; j<numOfVertices; j++)
+                _verticesList.Add(_verticesList[j]);
 
+        // now triangles
+        // to make sure we used unique vertex we need additional array
+        // it keep info about number of usages for each vertex
+        int[] usagesCounter = new int[_verticesList.Count / 6];
+        for(int i=0; i<_trianglesList.Count; i++)
+        {
+            int indexV1 = _trianglesList[i].v1;
+            int indexV2 = _trianglesList[i].v2;
+            int indexV3 = _trianglesList[i].v3;
+
+            usagesCounter[indexV1]++;
+            indexV1 += usagesCounter[indexV1] * usagesCounter.Length;
+            usagesCounter[indexV2]++;
+            indexV2 += usagesCounter[indexV2] * usagesCounter.Length;
+            usagesCounter[indexV3]++;
+            indexV3 += usagesCounter[indexV3] * usagesCounter.Length;
+
+            _trianglesList[i] = new Triangle(indexV1, indexV2, indexV3);
+        }
     }
 
     static void Subdivide()
