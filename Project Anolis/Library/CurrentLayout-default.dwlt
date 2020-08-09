@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 421}
   m_MaxSize: {x: 12003, y: 8042}
   vertical: 0
-  controlID: 33
+  controlID: 59
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 421}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 34
+  controlID: 60
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_MinSize: {x: 302, y: 200}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 105
+  controlID: 61
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -407,9 +407,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2172
+    x: 2103
     y: 601
-    width: 984
+    width: 1053
     height: 372
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -650,9 +650,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.5229013, y: 6.691434, z: 4.1519403}
+    m_Target: {x: -15.927259, y: -3.7483397, z: 28.55611}
     speed: 2
-    m_Value: {x: 3.5229013, y: 6.691434, z: 4.1519403}
+    m_Value: {x: -15.927259, y: -3.7483397, z: 28.55611}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -698,13 +698,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.006095283, y: 0.9857907, z: 0.036678985, w: -0.16384138}
+    m_Target: {x: -0.05831515, y: 0.25236732, z: -0.0152396755, w: -0.9657605}
     speed: 2
-    m_Value: {x: 0.0060952534, y: 0.9857859, z: 0.036678806, w: -0.16384058}
+    m_Value: {x: -0.0583147, y: 0.25236535, z: -0.015239557, w: -0.965753}
   m_Size:
-    m_Target: 7.7121925
+    m_Target: 17.686073
     speed: 2
-    m_Value: 7.7121925
+    m_Value: 17.686073
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -763,18 +763,18 @@ MonoBehaviour:
       m_ExpandedIDs: 6afbffff303b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Main Camera
+        m_OriginalName: Main Camera
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 15158
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 12}
       m_SearchString: 

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class CameraController : MonoBehaviour
 {
@@ -9,111 +11,91 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float rotatingSpeed = 100f;
     [SerializeField] private float zoomSpeed = 25f;
 
-    [SerializeField] private MovementMode currentMovementMode;
+    [SerializeField] private float planetSurfaceHeight = 5f; 
+
+    private float _rotationVertical = 0f;
+    private float _rotationHorizontal = 0f;
+    private float _zoom = 0f;
 
     void Update()
     {
+        _rotationVertical = Input.GetAxis("Vertical");
+        _rotationHorizontal = Input.GetAxis("Horizontal");
+        _zoom = Input.GetAxis("Mouse ScrollWheel");
+
         MakeMovement();
     }
 
     private void MakeMovement()
     {
-        switch (currentMovementMode)
-        {
-            case MovementMode.Free:
-                MakeFreeMovement();
-                break;
+        if (_rotationVertical > 0 && isWithinUpperBound())
+            rotateCamera(CameraRotateDirection.up, amount: Mathf.Abs(_rotationVertical));
 
-            case MovementMode.KeepPoles:
-                MakeKeepPolesMovement();
-                break;
-        }
-    }
+        if (_rotationVertical < 0 && isWithinLowerBound())
+            rotateCamera(CameraRotateDirection.down, amount: Mathf.Abs(_rotationVertical));
 
-    enum MovementMode
-    {
-        Free,
-        KeepPoles
-    }
+        if (_rotationHorizontal < 0)
+            rotateCamera(CameraRotateDirection.left, amount: Mathf.Abs(_rotationHorizontal), relativeTo: Space.World);
 
-    private void MakeFreeMovement()
-    {
-        if (Input.GetKey("w"))
-            rotateCameraInDirection(CameraRotateDirection.up);
+        if (_rotationHorizontal > 0)
+            rotateCamera(CameraRotateDirection.right, amount: Mathf.Abs(_rotationHorizontal), relativeTo: Space.World);
 
-        if (Input.GetKey("s"))
-            rotateCameraInDirection(CameraRotateDirection.down);
-
-        if (Input.GetKey("a"))
-            rotateCameraInDirection(CameraRotateDirection.left);
-
-        if (Input.GetKey("d"))
-            rotateCameraInDirection(CameraRotateDirection.right);
-
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        if (_zoom > 0f)
             ZoomIn();
 
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        if (_zoom < 0f)
             ZoomOut();
     }
 
-    private void MakeKeepPolesMovement()
+    private bool isWithinUpperBound()
     {
-        if (Input.GetKey("w") && isCameraRotationSmallerThanUpperBound())
-            rotateCameraInDirection(CameraRotateDirection.up);
-
-        if (Input.GetKey("s") && isCameraRotationGreaterThanLowerBound())
-            rotateCameraInDirection(CameraRotateDirection.down);
-
-        if (Input.GetKey("a"))
-            rotateCameraInDirection(CameraRotateDirection.left, Space.World);
-
-        if (Input.GetKey("d"))
-            rotateCameraInDirection(CameraRotateDirection.right, Space.World);
-
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
-            ZoomIn();
-
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
-            ZoomOut();
+        //sould be rotationEulerAngles.z == 180f, but comparing floats is not a good idea
+        //rotationEulerAngles.z can have values 180f and 0f, therefore conidtion > 90f was chosen
+        var rotationAngles = cameraControllerTransform.localEulerAngles;
+        return rotationAngles.z > 90f ? rotationAngles.x < 90f : true;
     }
 
-    private void rotateCameraInDirection(Vector3 direction, Space relativeTo = Space.Self)
+    private bool isWithinLowerBound()
     {
-        cameraControllerTransform.Rotate(direction * Time.deltaTime * rotatingSpeed, relativeTo);
+        //sould be rotationEulerAngles.z == 180f, but comparing floats is not a good idea
+        //rotationEulerAngles.z can have values 180f and 0f, therefore conidtion > 90f was chosen
+        var rotationAngles = cameraControllerTransform.localEulerAngles;
+        return rotationAngles.z > 90f ? rotationAngles.x > 270f : true;
+    }
+
+    private void rotateCamera(Vector3 direction, float amount, Space relativeTo = Space.Self)
+    {
+        cameraControllerTransform.Rotate(direction * Time.deltaTime * rotatingSpeed * amount, relativeTo);
     }
 
     static class CameraRotateDirection
     {
-        public static readonly Vector3 up = new Vector3(1, 0, 0);
-        public static readonly Vector3 down = new Vector3(-1, 0, 0);
+        public static readonly Vector3 down = new Vector3(1, 0, 0);
+        public static readonly Vector3 up = new Vector3(-1, 0, 0);
         public static readonly Vector3 right = new Vector3(0, -1, 0);
         public static readonly Vector3 left = new Vector3(0, 1, 0);
     }
 
-    private bool isCameraRotationSmallerThanUpperBound()
-    {
-        //sould be rotationEulerAngles.z == 180f, but comparing floats is not a good idea
-        //rotationEulerAngles.z can have values 180f and 0f, therefore conidtion > 90f was chosen
-        var rotationAngles = cameraControllerTransform.localEulerAngles;
-        return rotationAngles.z > 90f ? rotationAngles.x >= 270f : true;
-    }
-
-    private bool isCameraRotationGreaterThanLowerBound()
-    {
-        //sould be rotationEulerAngles.z == 180f, but comparing floats is not a good idea
-        //rotationEulerAngles.z can have values 180f and 0f, therefore conidtion > 90f was chosen
-        var rotationAngles = cameraControllerTransform.localEulerAngles;
-        return rotationAngles.z > 90f ? rotationAngles.x <= 90f : true;
-    }
     private void ZoomIn()
     {
-        cameraTransform.localPosition += new Vector3(0, 0, 1) * zoomSpeed * Time.deltaTime;
+        Zoom(direction: new Vector3(0, 0, -1));
     }
 
     private void ZoomOut()
     {
-        cameraTransform.localPosition += new Vector3(0, 0, -1) * zoomSpeed * Time.deltaTime;
+        Zoom(direction: new Vector3(0, 0, 1));
     }
 
+    private void Zoom(Vector3 direction)
+    {
+        cameraTransform.localPosition += new Vector3(0, 0, -1) * zoomSpeed * Time.deltaTime * _zoom;
+
+        var cameraPosition = cameraTransform.localPosition;
+        if (cameraPosition.z < planetSurfaceHeight)
+        {
+            cameraPosition.z = planetSurfaceHeight;
+            cameraTransform.localPosition = cameraPosition;
+        }
+            
+    }
 }
