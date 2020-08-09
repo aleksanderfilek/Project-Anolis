@@ -243,11 +243,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45738535e0cf2c5428bc3eaaecc557f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraControllerTransform: {fileID: 1648295386}
-  cameraTransform: {fileID: 1687258585}
-  rotatingSpeed: 100
-  zoomSpeed: 25
-  planetSurfaceHeight: 1
+  _cameraControllerTransform: {fileID: 1648295386}
+  _cameraTransform: {fileID: 1687258585}
+  _rotatingSpeed: 100
+  _zoomSpeed: 25
+  _planetSurfaceHeight: 1
 --- !u!4 &1648295386
 Transform:
   m_ObjectHideFlags: 0

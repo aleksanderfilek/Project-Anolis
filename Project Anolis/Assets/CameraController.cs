@@ -7,17 +7,17 @@ using UnityEngine.SocialPlatforms;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private Transform cameraControllerTransform;
-    [SerializeField] private Transform cameraTransform;
+    [SerializeField] private Transform _cameraControllerTransform;
+    [SerializeField] private Transform _cameraTransform;
 
-    [SerializeField] private float rotatingSpeed = 100f;
-    [SerializeField] private float zoomSpeed = 25f;
+    [SerializeField] private float _rotatingSpeed = 100f;
+    [SerializeField] private float _zoomSpeed = 25f;
 
-    [SerializeField] private float planetSurfaceHeight = 5f; 
+    [SerializeField] private float _planetSurfaceHeight = 1f; 
 
-    private float _rotationVertical = 0f;
-    private float _rotationHorizontal = 0f;
-    private float _zoom = 0f;
+    private float _verticalRotationAmount = 0f;
+    private float _horizontalRotationAmount = 0f;
+    private float _zoomAmount = 0f;
 
     void Update()
     {
@@ -27,61 +27,59 @@ public class CameraController : MonoBehaviour
 
     private void UpdateInput()
     {
-        _rotationVertical = Input.GetAxis("Vertical");
-        _rotationHorizontal = Input.GetAxis("Horizontal");
-        _zoom = Input.GetAxis("Mouse ScrollWheel");
+        _verticalRotationAmount = Input.GetAxis("Vertical");
+        _horizontalRotationAmount = Input.GetAxis("Horizontal");
+        _zoomAmount = Input.GetAxis("Mouse ScrollWheel");
     }
 
     private void MakeMovement()
     {
-        if (_rotationVertical != 0 && IsWithinBounds())
-            rotateCamera(direction: new Vector3(-1, 0, 0), amount: _rotationVertical);
+        if (_verticalRotationAmount != 0 && IsWithinBounds())
+            RotateCamera(direction: new Vector3(-1, 0, 0), amount: _verticalRotationAmount);
 
-        if (_rotationHorizontal != 0)
-            rotateCamera(direction: new Vector3(0, -1, 0), amount: _rotationHorizontal, relativeTo: Space.World);
+        if (_horizontalRotationAmount != 0)
+            RotateCamera(direction: new Vector3(0, -1, 0), amount: _horizontalRotationAmount, relativeTo: Space.World);
 
-        if (_zoom != 0f)
-            Zoom();
+        if (_zoomAmount != 0f)
+            Zoom(direction: new Vector3(0, 0, -1));
     }
 
     private bool IsWithinBounds()
     {
-        var rotationAngles = cameraControllerTransform.localEulerAngles;
-        
-        //sould be rotationEulerAngles.z == 180f, but comparing floats is not a good idea
-        //rotationEulerAngles.z can have values 180f and 0f, therefore conidtion > 90f was chosen
-        if (rotationAngles.z < 90f)
+        //when working with euler angles instead of quaternions we get some nasty conditions
+        //this sould be cameraControllerTransform.localEulerAngles.z == 180f, but comparing floats is not a good idea
+        //rotationEulerAngles.z can have values 180f and 0f, therefore condition > 90f was chosen
+        if (_cameraControllerTransform.localEulerAngles.z < 90f)
             return true;
-
-        return _rotationVertical > 0f ? IsWithinUpperBoundary() : IsWithinLowerBoundary();
+        return _verticalRotationAmount > 0f ? IsWithinUpperBoundary() : IsWithinLowerBoundary();
     }
 
     private bool IsWithinUpperBoundary()
     {
-        return cameraControllerTransform.localEulerAngles.x < 90f;
+        return _cameraControllerTransform.localEulerAngles.x < 90f;
     }
 
     private bool IsWithinLowerBoundary()
     {
-        return cameraControllerTransform.localEulerAngles.x > 270f;
+        return _cameraControllerTransform.localEulerAngles.x > 270f;
     }
 
-    private void rotateCamera(Vector3 direction, float amount, Space relativeTo = Space.Self)
+    private void RotateCamera(Vector3 direction, float amount, Space relativeTo = Space.Self)
     {
-        cameraControllerTransform.Rotate(direction * Time.deltaTime * rotatingSpeed * amount, relativeTo);
+        _cameraControllerTransform.Rotate(direction * Time.deltaTime * _rotatingSpeed * amount, relativeTo);
     }
 
-    private void Zoom()
+    private void Zoom(Vector3 direction)
     {
-        cameraTransform.localPosition += new Vector3(0, 0, -1) * zoomSpeed * Time.deltaTime * _zoom;
-        if (cameraTransform.localPosition.z < planetSurfaceHeight)
+        _cameraTransform.localPosition += direction * _zoomSpeed * Time.deltaTime * _zoomAmount;
+        if (_cameraTransform.localPosition.z < _planetSurfaceHeight)
             FixCameraHeight();
     }
 
     private void FixCameraHeight()
     {
-        var cameraPosition = cameraTransform.localPosition;
-        cameraPosition.z = planetSurfaceHeight;
-        cameraTransform.localPosition = cameraPosition;
+        var cameraPosition = _cameraTransform.localPosition;
+        cameraPosition.z = _planetSurfaceHeight;
+        _cameraTransform.localPosition = cameraPosition;
     }
 }
