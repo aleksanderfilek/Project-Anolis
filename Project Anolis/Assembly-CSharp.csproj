@@ -60,6 +60,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Menu\LoadMenuManager.cs" />
      <Compile Include="Assets\Scripts\Menu\MainMenuManager.cs" />
+     <Compile Include="Assets\Scripts\Menu\PlanetRotator.cs" />
      <Compile Include="Assets\Scripts\Menu\PlayMenuManager.cs" />
      <Compile Include="Assets\Scripts\Menu\SettingsMenuManager.cs" />
  <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">

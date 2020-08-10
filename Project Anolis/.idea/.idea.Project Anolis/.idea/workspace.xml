@@ -9,6 +9,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/LoadMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/PlanetRotator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/PlayMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/SettingsMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -19,8 +20,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/PlayMenu_manager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu_manager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/LoadMenuManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Menu/SettingsMenuManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenuManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menu/PlanetRotator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menu/SettingsMenuManager.cs" />
       </list>
     </option>
   </component>

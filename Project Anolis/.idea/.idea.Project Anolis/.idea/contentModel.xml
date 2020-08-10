@@ -10,6 +10,7 @@
           <e p="Menu" t="Include">
             <e p="LoadMenuManager.cs" t="Include" />
             <e p="MainMenuManager.cs" t="Include" />
+            <e p="PlanetRotator.cs" t="Include" />
             <e p="PlayMenuManager.cs" t="Include" />
             <e p="SettingsMenuManager.cs" t="Include" />
           </e>
