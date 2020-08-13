@@ -8,7 +8,7 @@ public static class PlanetGenerator
     // and randomises heights of vertices seed and with given intensivity
     // skip intensivity if you do not want randomizing
     // skip seed if you want it random
-    public static Mesh Generate(float radius, int iterations = 0, float intensivity = 0f, int seed = -1)
+    public static Mesh Generate(float radius, int iterations, float intensivity, ref int seed)
     {
         List<Vector3> vertexList = new List<Vector3>();
         List<Vector3Int> triangleList = new List<Vector3Int>(); 
@@ -18,10 +18,35 @@ public static class PlanetGenerator
         if(iterations > 0)
             Subdivide(iterations, vertexList, ref triangleList, radius);
         if(intensivity > 0f)
-            Randomize(vertexList, radius, intensivity, seed);
+            Randomize(vertexList, radius, intensivity, ref seed);
         BuildSphere(planetMesh, vertexList, triangleList);
 
         return planetMesh;
+    }
+
+    // returns initiated Tile info array using existing Mesh
+    public static Tile[] GetTiles(Mesh planetMesh)
+    {
+        Vector3[] vertices = planetMesh.vertices;
+        int[] triangles = planetMesh.triangles;
+
+        int triangleCount = triangles.Length / 3;
+
+        Tile[] tiles = new Tile[triangleCount];
+
+        for (int i = 0; i < triangleCount; i++)
+        {
+            tiles[i].objectType = ObjectType.None;
+            tiles[i].terrainType = TerrrainType.Barren;
+
+            Vector3 a = vertices[triangles[3 * i + 0]];
+            Vector3 b = vertices[triangles[3 * i + 1]];
+            Vector3 c = vertices[triangles[3 * i + 2]];
+
+            tiles[i].normal = (a + b + c).normalized;
+        }
+
+        return tiles;
     }
 
     // creates an icosahedron of given radius (distance from (0,0,0) to vertex)
@@ -93,7 +118,7 @@ public static class PlanetGenerator
     }
 
     // applies noise to each vertex distance from the middle of sphere
-    private static void Randomize(List<Vector3> vertexList, float radius, float intensivity, int seed)
+    private static void Randomize(List<Vector3> vertexList, float radius, float intensivity, ref int seed)
     {
         if (seed != -1) Random.InitState(seed);
 
@@ -110,15 +135,15 @@ public static class PlanetGenerator
         List<Vector3> newVertexList = new List<Vector3>();
         int[] indices = new int[triangleList.Count * 3];
 
-        for(int i=0; i<indices.Length; i+=3)
+        for (int i = 0; i < indices.Length; i += 3)
         {
             indices[i + 0] = i + 0;
             indices[i + 1] = i + 1;
             indices[i + 2] = i + 2;
 
-            newVertexList.Add(vertexList[triangleList[i/3].x]);
-            newVertexList.Add(vertexList[triangleList[i/3].y]);
-            newVertexList.Add(vertexList[triangleList[i/3].z]);
+            newVertexList.Add(vertexList[triangleList[i / 3].x]);
+            newVertexList.Add(vertexList[triangleList[i / 3].y]);
+            newVertexList.Add(vertexList[triangleList[i / 3].z]);
         }
 
         targetMesh.Clear();
