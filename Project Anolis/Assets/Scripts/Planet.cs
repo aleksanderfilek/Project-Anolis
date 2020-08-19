@@ -29,21 +29,26 @@ public struct Tile
 }
 
 [RequireComponent(typeof(MeshFilter))]
+[RequireComponent(typeof(MeshRenderer))]
+[RequireComponent(typeof(MeshCollider))]
 public class Planet : MonoBehaviour
 {
-    public float radius = 1f;
-    public int iterations = 1;
-    public float intensivity = 0.1f;
-    public int seed = -1;
+    [SerializeField] private float _radius = 1f;
+    [SerializeField] private int _iterations = 1;
+    [SerializeField] private float _intensivity = 0.1f;
+    [SerializeField] private int _seed = -1;
 
-    private Tile[] tiles;
+    public Tile[] Tiles { get; private set; }
 
     public void Start()
     {
-        MeshFilter meshFilter = GetComponent<MeshFilter>();
-        Mesh planetMesh = PlanetGenerator.Generate(radius, iterations, intensivity, ref seed);
+        var meshFilter = GetComponent<MeshFilter>();
+        var planetMesh = PlanetGenerator.Generate(_radius, _iterations, _intensivity, ref _seed);
         meshFilter.mesh = planetMesh;
 
-        tiles = PlanetGenerator.GetTiles(planetMesh);
+        var meshCollider = GetComponent<MeshCollider>();
+        meshCollider.sharedMesh = planetMesh;
+
+        Tiles = PlanetGenerator.GetTiles(planetMesh);
     }
 }
