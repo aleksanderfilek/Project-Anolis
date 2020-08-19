@@ -2,9 +2,14 @@
 
 public class SelectOnClick : MonoBehaviour
 {
-    [SerializeField] private Planet _planet;
+    private Planet _planet;
+    [SerializeField] private Tile _tile;
 
-    private int _triangleIndex;
+    private void Awake()
+    {
+        _planet = transform.GetComponentInParent<Planet>();
+    }
+
     private void Update()
     {
         if (!Input.GetMouseButtonDown(0))
@@ -12,18 +17,31 @@ public class SelectOnClick : MonoBehaviour
         ShootRay();
     }
 
-    private void PrintTile()
-    {
-        print("Selected tile normal: " + _planet.Tiles[_triangleIndex].normal);
-    }
-
     private void ShootRay()
     {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out var hitData, 1000))
         {
-            _triangleIndex = hitData.triangleIndex;
-            PrintTile();
+            OnPlanetHit(hitData);
         }
+    }
+
+    private void OnPlanetHit(RaycastHit hitData)
+    {
+        if (hitData.transform.tag != "Planet") 
+            return;
+        var triangleIndex = hitData.triangleIndex;
+        ExtractTile(triangleIndex);
+        PrintTile();
+    }
+
+    private void ExtractTile(int triangleIndex)
+    {
+        _tile = _planet.Tiles[triangleIndex];
+    }
+
+    private void PrintTile()
+    {
+        print("Selected tile normal:" + _tile.normal);
     }
 }
