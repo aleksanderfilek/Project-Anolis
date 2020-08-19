@@ -3,12 +3,8 @@
 public class SelectOnClick : MonoBehaviour
 {
     private Planet _planet;
-    [SerializeField] private Tile _tile;
 
-    private void Awake()
-    {
-        _planet = transform.GetComponentInParent<Planet>();
-    }
+    public Tile SelectedTile { get; private set; }
 
     private void Update()
     {
@@ -28,20 +24,20 @@ public class SelectOnClick : MonoBehaviour
 
     private void OnPlanetHit(RaycastHit hitData)
     {
-        if (hitData.transform.tag != "Planet") 
+        if (!hitData.transform.CompareTag("Planet")) 
             return;
-        var triangleIndex = hitData.triangleIndex;
-        ExtractTile(triangleIndex);
+        _planet = hitData.transform.gameObject.GetComponent<Planet>();
+        ExtractTile(hitData.triangleIndex);
         PrintTile();
     }
 
     private void ExtractTile(int triangleIndex)
     {
-        _tile = _planet.Tiles[triangleIndex];
+        SelectedTile = _planet.Tiles[triangleIndex];
     }
 
     private void PrintTile()
     {
-        print("Selected tile normal:" + _tile.normal);
+        print($"Selected tile normal: {SelectedTile.normal} from planet {_planet.gameObject}");
     }
 }
