@@ -1,2 +1,3 @@
 *.meta
-/ProjectAnolis/Library
+ProjectAnolis/Library/*
+ProjectAnolis/Temp/*
