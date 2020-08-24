@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(MeshRenderer))]
 [RequireComponent(typeof(MeshCollider))]
+[RequireComponent(typeof(Builder))]
 public class Planet : MonoBehaviour
 {
     [SerializeField] private int _iterations = 0;
@@ -16,6 +17,8 @@ public class Planet : MonoBehaviour
 
     public Tile[] Tiles { get; private set; }
 
+    private Builder buildingManager;
+
     private void Start()
     {
         var meshFilter = GetComponent<MeshFilter>();
@@ -26,6 +29,8 @@ public class Planet : MonoBehaviour
         meshCollider.sharedMesh = planetMesh;
 
         Tiles = PlanetGenerator.GetTiles(planetMesh);
+
+        buildingManager = GetComponent<Builder>();
     }
 
     private void Update()
@@ -34,53 +39,17 @@ public class Planet : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Build(testID, ObjectType.BuildingA, buildingA);
+            buildingManager.Build(ref Tiles[testID], buildingA, ObjectType.BuildingA);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Build(testID, ObjectType.BuildingB, buildingB);
+            buildingManager.Build(ref Tiles[testID], buildingB, ObjectType.BuildingB);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Destroy(testID);
+            buildingManager.Destroy(ref Tiles[testID]);
         }
-    }
-
-    private void Build(int tileID, ObjectType name, GameObject prefab)
-    {
-        var tile = Tiles[tileID];
-
-        if (tile.objectType != ObjectType.None)
-        {
-            print("You can't build that here!");
-            return;
-        }
-
-        tile.objectPlaced = Instantiate(prefab, this.transform);
-        tile.objectType = name;
-
-        // position
-        tile.objectPlaced.transform.Translate(tile.position, Space.Self);
-
-        // rotation
-        tile.objectPlaced.transform.rotation = Quaternion.LookRotation(tile.normal);
-        tile.objectPlaced.transform.Rotate(new Vector3(90, 0, 0), Space.Self);
-
-        // scale
-        // tile.objectPlaced.transform.localScale = new Vector3(.1f, .1f, .1f);
-
-        Tiles[tileID] = tile;
-    }
-
-    private void Destroy(int tileID)
-    {
-        var tile = Tiles[tileID];
-
-        Destroy(tile.objectPlaced);
-        tile.objectType = ObjectType.None;
-
-        Tiles[tileID] = tile;
     }
 }

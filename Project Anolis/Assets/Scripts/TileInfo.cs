@@ -11,6 +11,9 @@ public enum TerrrainType
     Mountain,
     Forest,
 
+    // this flag separates habitable and inhabitable terrain types
+    HabitableFlag,
+
     // inhabitable
     Water,
     Lava,
@@ -25,6 +28,9 @@ public enum ObjectType
     Tree,
     Rock,
     MaterialDeposit,
+
+    // this flag separates building from other objects
+    BuildableFlag,
 
     // buildings
     BuildingA,
