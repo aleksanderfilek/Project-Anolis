@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(MeshRenderer))]
 [RequireComponent(typeof(MeshCollider))]
+
 [RequireComponent(typeof(Builder))]
 public class Planet : MonoBehaviour
 {
@@ -14,7 +15,6 @@ public class Planet : MonoBehaviour
 
     [SerializeField] GameObject buildingA;
     [SerializeField] GameObject buildingB;
-
     public Tile[] Tiles { get; private set; }
 
     private Builder buildingManager;
@@ -22,7 +22,9 @@ public class Planet : MonoBehaviour
     private void Start()
     {
         var meshFilter = GetComponent<MeshFilter>();
+
         var planetMesh = PlanetGenerator.Generate(_iterations, _intensivity, ref _seed);
+
         meshFilter.mesh = planetMesh;
 
         var meshCollider = GetComponent<MeshCollider>();
