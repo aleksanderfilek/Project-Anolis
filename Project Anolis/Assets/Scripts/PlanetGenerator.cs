@@ -41,6 +41,10 @@ public static class PlanetGenerator
 
         for (int i = 0; i < triangleCount; i++)
         {
+
+            tiles[i].objectType = ObjectType.None;
+            tiles[i].terrainType = TerrainType.Barren;
+
             Vector3 a = vertices[triangles[3 * i + 0]];
             Vector3 b = vertices[triangles[3 * i + 1]];
             Vector3 c = vertices[triangles[3 * i + 2]];
