@@ -26,8 +26,6 @@ public static class PlanetGenerator
             Randomize(vertexList, radius, intensivity, ref seed);
         BuildSphere(planetMesh, vertexList, triangleList);
 
-        
-
         return planetMesh;
     }
 
