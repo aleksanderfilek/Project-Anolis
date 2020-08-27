@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public enum TerrrainType
+public enum TerrainType
 {
     Barren,
     Grass,
@@ -22,7 +22,7 @@ public enum ObjectType
 
 public struct Tile
 {
-    public TerrrainType terrainType;
+    public TerrainType terrainType;
     public ObjectType objectType;
 
     public Vector3 normal;

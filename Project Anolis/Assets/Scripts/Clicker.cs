@@ -1,22 +1,32 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
 public class Clicker : MonoBehaviour
 {
+    private Tile _selectedTile;
+
     private void Update()
     {
         if (!Input.GetMouseButtonDown(0))
             return;
+        SelectTile();
+        ShowRadialMenu();
+    }
+
+    private void SelectTile()
+    {
         try
         {
-            Debug.Log("Selected tile: " + TileSelector.FromMousePosition(Input.mousePosition));
+            _selectedTile = TileSelector.FromMousePosition(Input.mousePosition);
         }
         catch (NoTileSelected)
         {
-            Debug.Log("You miss clicked");
+            //ignored
         }
-        catch (WrongObjectSelected)
-        {
-            Debug.Log("That is not even a planet");
-        }
+    }
+
+    private void ShowRadialMenu()
+    {
+        throw new System.NotImplementedException();
     }
 }

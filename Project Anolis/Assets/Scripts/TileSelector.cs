@@ -16,7 +16,7 @@ public static class TileSelector
         if (!isHit)
             throw new NoTileSelected();
         if (!hitData.transform.CompareTag("Planet"))
-            throw new WrongObjectSelected();
+            throw new WrongObjectClicked();
     }
 
     private static ref Tile ExtractTile(RaycastHit hitData)
@@ -30,6 +30,6 @@ class NoTileSelected : Exception
 {
 }
 
-class WrongObjectSelected : Exception
+class WrongObjectClicked : NoTileSelected
 {
 }
