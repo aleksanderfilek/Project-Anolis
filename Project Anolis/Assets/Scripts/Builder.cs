@@ -1,21 +1,49 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Builder : MonoBehaviour
 {
-    public void Build(ref Tile targetTile, GameObject buildingPrefab, ObjectType buildingID)
-    {
-        var tile = targetTile;
+    private List<TileScriptableObject> buildings;
 
-        if (tile.objectType != ObjectType.None)
+    private void Start()
+    {
+        buildings = LoadBuildings();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Debug.Log("Can't build! The tile is not empty. There is " + tile.objectType + " here.");
-            return;
+            Build("Headquarters");
         }
 
-        tile.objectPlaced = Instantiate(buildingPrefab, this.transform);
-        tile.objectType = buildingID;
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Build("Warehouse");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Destroy();
+        }
+    }
+
+    private List<TileScriptableObject> LoadBuildings()
+    {
+        var objectsArray = Resources.FindObjectsOfTypeAll<TileScriptableObject>();
+        var buildingList = objectsArray.Where(t => t.objectType == ObjectType.Building).ToList();
+        Debug.Log("Found " + buildingList.Count + " buildings.");
+        return buildingList;
+    }
+
+    private void Build(string buildingName)
+    {
+        var tile = TileSelector.FromMousePosition(Input.mousePosition);
+
+        var prefab = FindPrefabByName(buildingName);
+
+        tile.objectPlaced = Instantiate(prefab, this.transform);
 
         // position
         tile.objectPlaced.transform.Translate(tile.position, Space.Self);
@@ -23,23 +51,33 @@ public class Builder : MonoBehaviour
         // rotation
         tile.objectPlaced.transform.rotation = Quaternion.LookRotation(tile.normal);
         tile.objectPlaced.transform.Rotate(new Vector3(90, 0, 0), Space.Self);
-
-        targetTile = tile;
     }
 
-    public void Destroy(ref Tile targetTile)
+    private void Destroy()
     {
-        var tile = targetTile;
+        var tile = TileSelector.FromMousePosition(Input.mousePosition);
+        Destroy(tile.objectPlaced);
+    }
 
-        if(tile.objectType <= ObjectType.BuildableFlag)
+    private GameObject FindPrefabByName(string name)
+    {
+        GameObject prefab = null;
+
+        foreach (var t in buildings)
         {
-            Debug.Log("Can't destroy object on this tile. Object " + tile.objectType + " is not a building.");
-            return;
+            if (t.objectName == name)
+            {
+                prefab = t.prefab;
+                break;
+            }
         }
 
-        Destroy(tile.objectPlaced);
-        tile.objectType = ObjectType.None;
+        if (prefab != null)
+        {
+            return prefab;
+        }
 
-        targetTile = tile;
+        Debug.Log("[Error] Could not find object '" + name + "'. Using default instead.");
+        return buildings[0].prefab;
     }
 }

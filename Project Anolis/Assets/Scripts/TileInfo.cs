@@ -30,11 +30,7 @@ public enum ObjectType
     MaterialDeposit,
 
     // this flag separates building from other objects
-    BuildableFlag,
-
-    // buildings
-    BuildingA,
-    BuildingB,
+    Building,
 }
 
 public struct Tile

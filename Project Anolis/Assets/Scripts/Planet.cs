@@ -5,8 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(MeshRenderer))]
 [RequireComponent(typeof(MeshCollider))]
-
-[RequireComponent(typeof(Builder))]
 public class Planet : MonoBehaviour
 {
     [SerializeField] private int _iterations = 0;
@@ -37,21 +35,6 @@ public class Planet : MonoBehaviour
 
     private void Update()
     {
-        int testID = UnityEngine.Random.Range(0, Tiles.Length);
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            buildingManager.Build(ref Tiles[testID], buildingA, ObjectType.BuildingA);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            buildingManager.Build(ref Tiles[testID], buildingB, ObjectType.BuildingB);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            buildingManager.Destroy(ref Tiles[testID]);
-        }
+        
     }
 }
