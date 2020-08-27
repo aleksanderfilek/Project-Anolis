@@ -4,32 +4,16 @@ using UnityEngine;
 
 public enum TerrrainType
 {
-    // habitable
-    Barren,
-    Grass,
-    Snow,
-    Mountain,
-    Forest,
-
-    // this flag separates habitable and inhabitable terrain types
-    HabitableFlag,
-
-    // inhabitable
-    Water,
-    Lava,
+    Habitable,
+    Inhabitable,
+    Liquid,
 }
-
-
 
 public enum ObjectType
 {
-    // non-buildings
     None,
-    Tree,
-    Rock,
-    MaterialDeposit,
-
-    // this flag separates building from other objects
+    Natural,
+    Ore,
     Building,
 }
 

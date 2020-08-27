@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Builder : MonoBehaviour
 {
-    private List<TileScriptableObject> buildings;
+    [SerializeField] List<TileScriptableObject> buildings;
 
     private void Start()
     {
-        buildings = LoadBuildings();
+        
     }
 
     private void Update()
@@ -29,19 +29,11 @@ public class Builder : MonoBehaviour
         }
     }
 
-    private List<TileScriptableObject> LoadBuildings()
-    {
-        var objectsArray = Resources.FindObjectsOfTypeAll<TileScriptableObject>();
-        var buildingList = objectsArray.Where(t => t.objectType == ObjectType.Building).ToList();
-        Debug.Log("Found " + buildingList.Count + " buildings.");
-        return buildingList;
-    }
-
     private void Build(string buildingName)
     {
         var tile = TileSelector.FromMousePosition(Input.mousePosition);
 
-        var prefab = FindPrefabByName(buildingName);
+        var prefab = buildings.Find(t => t.objectName == buildingName).prefab;
 
         tile.objectPlaced = Instantiate(prefab, this.transform);
 
@@ -57,27 +49,5 @@ public class Builder : MonoBehaviour
     {
         var tile = TileSelector.FromMousePosition(Input.mousePosition);
         Destroy(tile.objectPlaced);
-    }
-
-    private GameObject FindPrefabByName(string name)
-    {
-        GameObject prefab = null;
-
-        foreach (var t in buildings)
-        {
-            if (t.objectName == name)
-            {
-                prefab = t.prefab;
-                break;
-            }
-        }
-
-        if (prefab != null)
-        {
-            return prefab;
-        }
-
-        Debug.Log("[Error] Could not find object '" + name + "'. Using default instead.");
-        return buildings[0].prefab;
     }
 }

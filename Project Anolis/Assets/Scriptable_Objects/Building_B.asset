@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Building_B
   m_EditorClassIdentifier: 
   objectName: Warehouse
-  objectType: 0
+  objectType: 3
   prefab: {fileID: 1447646891835595025, guid: 15574bfd849646a459d5b15c55b548a8, type: 3}
