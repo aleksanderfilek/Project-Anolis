@@ -6,13 +6,18 @@ public static class PlanetGenerator
     // creates a planet of given radius
     // iteratively subdivides a suface desired times
     // and randomises heights of vertices seed and with given intensivity
-    // skip intensivity if you do not want randomizing
-    // skip seed if you want it random
-    public static Mesh Generate(float radius, int iterations, float intensivity, ref int seed)
+    // intensivity = 0 skips randomizing
+    // seed = -1 leaves it random
+    public static Mesh Generate(int iterations, float intensivity, ref int seed)
     {
+        const float tileSize = 2.5f;
+
         List<Vector3> vertexList = new List<Vector3>();
         List<Vector3Int> triangleList = new List<Vector3Int>(); 
         Mesh planetMesh = new Mesh();
+
+        float t = (1f + Mathf.Sqrt(5f)) / 2f;
+        float radius = Mathf.Pow(2, iterations) * tileSize;
 
         Initialize(vertexList, triangleList, radius);
         if(iterations > 0)
@@ -36,14 +41,23 @@ public static class PlanetGenerator
 
         for (int i = 0; i < triangleCount; i++)
         {
-            tiles[i].objectType = ObjectType.None;
-            tiles[i].terrainType = TerrainType.Barren;
-
             Vector3 a = vertices[triangles[3 * i + 0]];
             Vector3 b = vertices[triangles[3 * i + 1]];
             Vector3 c = vertices[triangles[3 * i + 2]];
 
-            tiles[i].normal = (a + b + c).normalized;
+            Vector3 ab = b - a;
+            Vector3 bc = c - b;
+
+            var tile = tiles[i];
+
+            tile.position = (a + b + c) / 3;
+            tile.normal = Vector3.Cross(ab, bc).normalized;
+
+            tile.objectName = "";
+            tile.objectType = ObjectType.None;
+            tile.terrainType = TerrainType.Habitable;
+            
+            tiles[i] = tile;
         }
 
         return tiles;
