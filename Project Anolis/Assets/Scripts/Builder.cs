@@ -1,26 +1,30 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Builder : MonoBehaviour
 {
-    [SerializeField] List<TileScriptableObject> buildings;
+    [SerializeField] private List<TileScriptableObject> buildingList;
 
     private void Start()
     {
-        
+        if (buildingList.Count == 0)
+        {
+            Debug.Log("[Warn] List of buildings is empty.");
+        }
     }
 
     private void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Build("Headquarters");
+            Build(buildingList[0]);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Build("Warehouse");
+            Build(buildingList[1]);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -29,25 +33,41 @@ public class Builder : MonoBehaviour
         }
     }
 
-    private void Build(string buildingName)
+    private void Build(TileScriptableObject building)
     {
-        var tile = TileSelector.FromMousePosition(Input.mousePosition);
+        try
+        {
+            var tile = TileSelector.FromMousePosition(Input.mousePosition);
 
-        var prefab = buildings.Find(t => t.objectName == buildingName).prefab;
+            tile.objectName = building.objectName;
+            tile.objectType = building.objectType;
+            tile.objectPlaced = Instantiate(building.prefab, this.transform);
 
-        tile.objectPlaced = Instantiate(prefab, this.transform);
-
-        // position
-        tile.objectPlaced.transform.Translate(tile.position, Space.Self);
-
-        // rotation
-        tile.objectPlaced.transform.rotation = Quaternion.LookRotation(tile.normal);
-        tile.objectPlaced.transform.Rotate(new Vector3(90, 0, 0), Space.Self);
+            // position
+            tile.objectPlaced.transform.Translate(tile.position, Space.Self);
+            // rotation
+            tile.objectPlaced.transform.rotation = Quaternion.LookRotation(tile.normal);
+            tile.objectPlaced.transform.Rotate(new Vector3(90, 0, 0), Space.Self);
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+        }
     }
 
     private void Destroy()
     {
-        var tile = TileSelector.FromMousePosition(Input.mousePosition);
-        Destroy(tile.objectPlaced);
+        try
+        {
+            var tile = TileSelector.FromMousePosition(Input.mousePosition);
+
+            tile.objectName = "";
+            tile.objectType = ObjectType.None;
+            Destroy(tile.objectPlaced);
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+        }
     }
 }

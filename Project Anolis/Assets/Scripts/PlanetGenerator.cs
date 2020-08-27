@@ -43,19 +43,23 @@ public static class PlanetGenerator
 
         for (int i = 0; i < triangleCount; i++)
         {
-            tiles[i].objectType = ObjectType.None;
-            tiles[i].terrainType = TerrrainType.Habitable;
-
             Vector3 a = vertices[triangles[3 * i + 0]];
             Vector3 b = vertices[triangles[3 * i + 1]];
             Vector3 c = vertices[triangles[3 * i + 2]];
 
-            tiles[i].position = (a + b + c) / 3;
-
             Vector3 ab = b - a;
             Vector3 bc = c - b;
 
-            tiles[i].normal = Vector3.Cross(ab, bc).normalized;
+            var tile = tiles[i];
+
+            tile.position = (a + b + c) / 3;
+            tile.normal = Vector3.Cross(ab, bc).normalized;
+
+            tile.objectName = "";
+            tile.objectType = ObjectType.None;
+            tile.terrainType = TerrainType.Habitable;
+            
+            tiles[i] = tile;
         }
 
         return tiles;

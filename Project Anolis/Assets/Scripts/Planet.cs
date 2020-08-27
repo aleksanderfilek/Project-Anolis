@@ -1,5 +1,3 @@
-using System.Dynamic;
-using UnityEditor;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
@@ -8,20 +6,20 @@ using UnityEngine;
 public class Planet : MonoBehaviour
 {
     [SerializeField] private int _iterations = 0;
-    [SerializeField] private float _intensivity = 0.1f;
+    [SerializeField] private float _intensity = 0.1f;
     [SerializeField] private int _seed = -1;
 
     [SerializeField] GameObject buildingA;
     [SerializeField] GameObject buildingB;
-    public Tile[] Tiles { get; private set; }
 
-    private Builder buildingManager;
+    public Tile[] Tiles { get; private set; }
+    public bool IsSelected { get; set; }
 
     private void Start()
     {
         var meshFilter = GetComponent<MeshFilter>();
 
-        var planetMesh = PlanetGenerator.Generate(_iterations, _intensivity, ref _seed);
+        var planetMesh = PlanetGenerator.Generate(_iterations, _intensity, ref _seed);
 
         meshFilter.mesh = planetMesh;
 
@@ -29,12 +27,5 @@ public class Planet : MonoBehaviour
         meshCollider.sharedMesh = planetMesh;
 
         Tiles = PlanetGenerator.GetTiles(planetMesh);
-
-        buildingManager = GetComponent<Builder>();
-    }
-
-    private void Update()
-    {
-        
     }
 }

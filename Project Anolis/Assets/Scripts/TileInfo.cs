@@ -1,8 +1,6 @@
 using UnityEngine;
 
-// WARNING: put habitable and inhabitable terrain types as well as buildings and non-buildings together
-
-public enum TerrrainType
+public enum TerrainType
 {
     Habitable,
     Inhabitable,
@@ -19,11 +17,12 @@ public enum ObjectType
 
 public struct Tile
 {
-    public TerrrainType terrainType;
+    public TerrainType terrainType;
 
     public Vector3 normal;
     public Vector3 position;
 
+    public string objectName;
     public ObjectType objectType;
     public GameObject objectPlaced;
 }
