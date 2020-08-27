@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Builder : MonoBehaviour
 {
-    [SerializeField] private List<TileScriptableObject> buildingList;
+    [SerializeField] private List<TileScriptableObject> _buildingList;
 
     private void Start()
     {
-        if (buildingList.Count == 0)
+        if (_buildingList.Count == 0)
         {
             Debug.Log("[Warn] List of buildings is empty.");
         }
@@ -19,12 +19,12 @@ public class Builder : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Build(buildingList[0]);
+            Build(_buildingList[0]);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Build(buildingList[1]);
+            Build(_buildingList[1]);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))

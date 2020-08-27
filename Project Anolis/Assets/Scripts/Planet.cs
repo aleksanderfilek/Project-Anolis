@@ -9,9 +9,6 @@ public class Planet : MonoBehaviour
     [SerializeField] private float _intensity = 0.1f;
     [SerializeField] private int _seed = -1;
 
-    [SerializeField] GameObject buildingA;
-    [SerializeField] GameObject buildingB;
-
     public Tile[] Tiles { get; private set; }
     public bool IsSelected { get; set; }
 
