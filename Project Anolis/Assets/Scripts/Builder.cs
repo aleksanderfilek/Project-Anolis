@@ -37,7 +37,7 @@ public class Builder : MonoBehaviour
     {
         try
         {
-            var tile = TileSelector.FromMousePosition(Input.mousePosition);
+            ref var tile = ref TileSelector.FromMousePosition(Input.mousePosition);
 
             tile.objectName = building.objectName;
             tile.objectType = building.objectType;
@@ -67,7 +67,7 @@ public class Builder : MonoBehaviour
         }
         catch (Exception e)
         {
-            Debug.Log(e);
+            Debug.Log("Please select a Tile");
         }
     }
 }

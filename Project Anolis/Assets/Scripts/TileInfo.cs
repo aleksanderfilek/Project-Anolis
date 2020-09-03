@@ -25,4 +25,8 @@ public struct Tile
     public string objectName;
     public ObjectType objectType;
     public GameObject objectPlaced;
+
+    public int neighbor1;
+    public int neighbor2;
+    public int neighbor3;
 }

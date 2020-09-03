@@ -32,36 +32,32 @@ public static class PlanetGenerator
     // returns initiated Tile info array using existing Mesh
     public static Tile[] GetTiles(Mesh planetMesh)
     {
-        Vector3[] vertices = planetMesh.vertices;
-        int[] triangles = planetMesh.triangles;
+        var vertices = planetMesh.vertices;
+        int tileCount = vertices.Length / 3;
+        var tiles = new Tile[tileCount];
 
-        int triangleCount = triangles.Length / 3;
-
-        Tile[] tiles = new Tile[triangleCount];
-
-        for (int i = 0; i < triangleCount; i++)
+        for (int i = 0; i < tileCount; i++)
         {
-
-            tiles[i].objectType = ObjectType.None;
-            tiles[i].terrainType = TerrainType.Barren;
-
-            Vector3 a = vertices[triangles[3 * i + 0]];
-            Vector3 b = vertices[triangles[3 * i + 1]];
-            Vector3 c = vertices[triangles[3 * i + 2]];
+            Vector3 a = vertices[3 * i + 0];
+            Vector3 b = vertices[3 * i + 1];
+            Vector3 c = vertices[3 * i + 2];
 
             Vector3 ab = b - a;
             Vector3 bc = c - b;
 
-            var tile = tiles[i];
+            var neighbors = GetNeighbors(i, vertices);
 
-            tile.position = (a + b + c) / 3;
-            tile.normal = Vector3.Cross(ab, bc).normalized;
-
-            tile.objectName = "";
-            tile.objectType = ObjectType.None;
-            tile.terrainType = TerrainType.Habitable;
-            
-            tiles[i] = tile;
+            tiles[i] = new Tile
+            {
+                position = (a + b + c) / 3,
+                normal = Vector3.Cross(ab, bc).normalized,
+                objectName = "",
+                objectType = ObjectType.None,
+                terrainType = TerrainType.Habitable,
+                neighbor1 = neighbors[0],
+                neighbor2 = neighbors[1],
+                neighbor3 = neighbors[2]
+            };
         }
 
         return tiles;
@@ -122,9 +118,9 @@ public static class PlanetGenerator
             var newTriangleList = new List<Vector3Int>();
             foreach(var triangle in triangleList)
             {
-                int a = getMidPoint(triangle.x, triangle.y, ref vertexList, ref cache, radius);
-                int b = getMidPoint(triangle.y, triangle.z, ref vertexList, ref cache, radius);
-                int c = getMidPoint(triangle.z, triangle.x, ref vertexList, ref cache, radius);
+                int a = GetMidPoint(triangle.x, triangle.y, ref vertexList, ref cache, radius);
+                int b = GetMidPoint(triangle.y, triangle.z, ref vertexList, ref cache, radius);
+                int c = GetMidPoint(triangle.z, triangle.x, ref vertexList, ref cache, radius);
 
                 newTriangleList.Add(new Vector3Int(triangle.x, a, c));
                 newTriangleList.Add(new Vector3Int(triangle.y, b, a));
@@ -171,7 +167,7 @@ public static class PlanetGenerator
         targetMesh.Optimize();
     }
 
-    private static int getMidPoint(int p1, int p2, ref List<Vector3> vertexList, ref Dictionary<long, int> cache, float radius)
+    private static int GetMidPoint(int p1, int p2, ref List<Vector3> vertexList, ref Dictionary<long, int> cache, float radius)
     {
         bool isFirstSmaller = p1 < p2;
         long smallerIndex = isFirstSmaller ? p1 : p2;
@@ -193,5 +189,80 @@ public static class PlanetGenerator
         cache.Add(key, i);
 
         return i;
+    }
+
+    private static int[] GetNeighbors(int thisTriangleID, Vector3[] vertices)
+    {
+        // I just want it working
+        
+        var neighborIDs = new int[3];
+        int numOfNeighborsFound = 0;
+        
+        var thisVertices = new Vector3[3];
+        thisVertices[0] = vertices[3 * thisTriangleID + 0];
+        thisVertices[1] = vertices[3 * thisTriangleID + 1];
+        thisVertices[2] = vertices[3 * thisTriangleID + 2];
+
+        for (int i = 0; i < vertices.Length/3; i++)
+        {
+            if (i == thisTriangleID) continue;
+
+            var anotherVertices = new Vector3[3];
+            anotherVertices[0] = vertices[3 * i + 0];
+            anotherVertices[1] = vertices[3 * i + 1];
+            anotherVertices[2] = vertices[3 * i + 2];
+            
+            if (IsNeighbor(thisVertices, anotherVertices))
+            {
+                neighborIDs[numOfNeighborsFound] = i;
+                numOfNeighborsFound ++;
+            }
+        }
+
+        return neighborIDs;
+    }
+
+    private static bool IsNeighbor(Vector3[] triangle1, Vector3[] triangle2)
+    {
+
+        var a1 = triangle1[0];
+        var a2 = triangle1[1];
+        var a3 = triangle1[2];
+        
+        var b1 = triangle2[0];
+        var b2 = triangle2[1];
+        var b3 = triangle2[2];
+
+        if (a1 == b1 || a1 == b2 || a1 == b3) // is a1 in arr b?
+        {
+            if (a2 == b1 || a2 == b2 || a2 == b3) // is a2 in arr b?
+            {
+                if (a3 == b1 || a3 == b2 || a3 == b3) // is a3 in arr b?
+                {
+                    return false;
+                }
+
+                return true;
+            }
+
+            if (a3 == b1 || a3 == b2 || a3 == b3) // is a3 in arr b?
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        if (a2 == b1 || a2 == b2 || a2 == b3) // is a2 in arr b?
+        {
+            if (a3 == b1 || a3 == b2 || a3 == b3) // is a3 in arr b?
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        return false;
     }
 }
