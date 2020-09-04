@@ -1,19 +1,21 @@
-﻿using UnityEditor;
-using UnityEngine;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
+﻿using UnityEngine;
 
 namespace Logistics
 {
     public class Clicker : MonoBehaviour
     {
-        private Menu _menu;
+        public Menu Menu;
 
         private void Update()
         {
             if (!Input.GetMouseButtonDown(0))
                 return;
-            _menu.ManageClick();
+            Menu.ManageClick();
+            Debug.Log("Menu List length: " + MenuList.Menus.Count);
+            foreach (var menu in MenuList.Menus)
+            {
+                Debug.Log(menu);
+            }
         }
 
     }

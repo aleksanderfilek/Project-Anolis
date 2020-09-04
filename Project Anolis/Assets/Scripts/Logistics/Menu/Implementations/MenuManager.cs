@@ -1,18 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuManager : MonoBehaviour
+namespace Logistics
 {
-    // Start is called before the first frame update
-    void Start()
+    public class MenuManager : Menu
     {
-        
-    }
+        private Clicker _clicker;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Awake()
+        {
+            _clicker = GetComponentInParent<Clicker>();
+            SetMenu(this);
+        }
+
+
+        public override void Show()
+        {
+            Debug.Log("Showing Menu Manager");
+        }
+
+        public override void ManageClick()
+        {
+            Debug.Log("Managing Click in Menu Manager, so changing to Building Menu");
+            SetMenu(MenuList.Menus[0]);
+        }
+
+        private void SetMenu(Menu menu)
+        {
+            _clicker.Menu = menu;
+        }
     }
 }

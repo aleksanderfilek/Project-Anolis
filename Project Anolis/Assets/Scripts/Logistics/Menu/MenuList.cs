@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace Logistics
 {
-    public abstract class RadialMenu : Menu
+    public struct MenuList
     {
+        public static List<Menu> Menus = new List<Menu>();
     }
 }
