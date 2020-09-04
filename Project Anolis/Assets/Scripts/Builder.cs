@@ -1,47 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Builder : MonoBehaviour
 {
-    [SerializeField] private List<TileScriptableObject> _buildingList;
 
-    private void Start()
-    {
-        if (_buildingList.Count == 0)
-        {
-            Debug.Log("[Warn] List of buildings is empty.");
-        }
-    }
-
-    private void Update()
-    {
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            Build(_buildingList[0]);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            Build(_buildingList[1]);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            Destroy();
-        }
-    }
-
-    private void Build(TileScriptableObject building)
+    private void Build(TileContent building, ref Tile tile, Transform planetTransform)
     {
         try
         {
-            var tile = TileSelector.FromMousePosition(Input.mousePosition);
-
             tile.objectName = building.objectName;
             tile.objectType = building.objectType;
-            tile.objectPlaced = Instantiate(building.prefab, this.transform);
+            tile.objectPlaced = Instantiate(building.prefab, planetTransform);
 
             // position
             tile.objectPlaced.transform.Translate(tile.position, Space.Self);
@@ -55,12 +25,10 @@ public class Builder : MonoBehaviour
         }
     }
 
-    private void Destroy()
+    private void Destroy(ref Tile tile)
     {
         try
         {
-            var tile = TileSelector.FromMousePosition(Input.mousePosition);
-
             tile.objectName = "";
             tile.objectType = ObjectType.None;
             Destroy(tile.objectPlaced);
