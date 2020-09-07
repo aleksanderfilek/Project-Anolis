@@ -15,7 +15,12 @@ namespace Logistics
 
         public override void ManageClick()
         {
-            Debug.Log("Managing Click in Build Menu");
+            Debug.Log("Building Menu: Building chosen, going back to manager");
+        }
+
+        public override bool CheckIfValidForSelection()
+        {
+            return true;
         }
     }
 }

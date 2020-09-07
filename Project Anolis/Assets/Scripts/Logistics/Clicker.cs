@@ -11,13 +11,7 @@ namespace Logistics
             if (!Input.GetMouseButtonDown(0))
                 return;
             Menu.ManageClick();
-            Debug.Log("Menu List length: " + MenuList.Menus.Count);
-            foreach (var menu in MenuList.Menus)
-            {
-                Debug.Log(menu);
-            }
         }
-
     }
 }
 
