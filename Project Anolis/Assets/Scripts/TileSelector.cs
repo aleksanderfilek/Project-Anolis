@@ -22,6 +22,7 @@ public static class TileSelector
     private static ref Tile ExtractTile(RaycastHit hitData)
     {
         var planet = hitData.transform.gameObject.GetComponent<Planet>();
+        // Debug.Log("This Tile has index: " + hitData.triangleIndex);
         return ref planet.Tiles[hitData.triangleIndex];
     }
 }

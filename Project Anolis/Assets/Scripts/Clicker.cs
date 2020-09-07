@@ -9,6 +9,8 @@ public class Clicker : MonoBehaviour
         try
         {
             Debug.Log("Selected tile: " + TileSelector.FromMousePosition(Input.mousePosition));
+            // var tile = TileSelector.FromMousePosition(Input.mousePosition);
+            // print("Neighbors IDs are: " + tile.neighbor1 + ", " + tile.neighbor2 + ", " + tile.neighbor3 + ".");
         }
         catch (NoTileSelected)
         {
