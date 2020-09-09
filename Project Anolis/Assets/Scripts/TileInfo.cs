@@ -25,4 +25,9 @@ public struct Tile
     public string objectName;
     public ObjectType objectType;
     public GameObject objectPlaced;
+
+    public bool IsEmpty()
+    {
+        return true;
+    }
 }

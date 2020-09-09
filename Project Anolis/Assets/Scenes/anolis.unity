@@ -467,6 +467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204826358}
   - component: {fileID: 1204826357}
+  - component: {fileID: 1204826359}
   m_Layer: 0
   m_Name: Logistics
   m_TagString: Untagged
@@ -486,7 +487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b2d21168f2a8b040b8fab6daf234eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Menu: {fileID: 0}
 --- !u!4 &1204826358
 Transform:
   m_ObjectHideFlags: 0
@@ -502,6 +502,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1204826359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204826356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a391f50fb7b574382f260ae5f5e9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentMenu: {fileID: 0}
+  Menus: []
 --- !u!1 &1493357537
 GameObject:
   m_ObjectHideFlags: 0

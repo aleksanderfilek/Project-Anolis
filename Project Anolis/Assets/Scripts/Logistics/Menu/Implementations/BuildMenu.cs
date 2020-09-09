@@ -6,8 +6,6 @@ namespace Logistics
 {
     public class BuildMenu : RadialMenu
     {
-
-
         public override void Show()
         {
             Debug.Log("Showing Build Menu");
@@ -15,12 +13,13 @@ namespace Logistics
 
         public override void ManageClick()
         {
-            Debug.Log("Building Menu: Building chosen, going back to manager");
+            Hide();
         }
 
         public override bool CheckIfValidForSelection()
         {
-            return true;
+            var tile = TileSelector.SelectFromRaycast(Raycast.HitData);
+            return tile.IsEmpty();
         }
     }
 }

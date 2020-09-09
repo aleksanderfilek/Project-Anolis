@@ -5,35 +5,27 @@ namespace Logistics
 {
     public class TileSelector
     {
-        public static ref Tile FromMousePosition(Vector3 mousePosition)
+        public static ref Tile SelectFromRaycast(RaycastHit hitData)
         {
-            var ray = Camera.main.ScreenPointToRay(mousePosition);
-            var isHit = Physics.Raycast(ray, out var hitData, 1000);
-            CheckShotResult(isHit, hitData);
-            return ref ExtractTile(hitData);
+            if (hitData.transform.CompareTag("Planet"))
+                return ref ExtractTileFromPlanet(hitData);
+            if (hitData.transform.CompareTag("TileContent"))
+                return ref ExtractTileFromTileContent(hitData);
+            throw new NoTileSelected();
         }
 
-        private static void CheckShotResult(bool isHit, RaycastHit hitData)
-        {
-            if (!isHit)
-                throw new NoTileSelected();
-            if (!hitData.transform.CompareTag("Planet"))
-                throw new WrongObjectClicked();
-        }
-
-        private static ref Tile ExtractTile(RaycastHit hitData)
+        private static ref Tile ExtractTileFromPlanet(RaycastHit hitData)
         {
             var planet = hitData.transform.gameObject.GetComponent<Planet>();
             return ref planet.Tiles[hitData.triangleIndex];
         }
+
+        private static ref Tile ExtractTileFromTileContent(RaycastHit hitData)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     class NoTileSelected : Exception
-    {
-    }
-
-    class WrongObjectClicked : NoTileSelected
-    {
-    }
-    
+    { }
 }

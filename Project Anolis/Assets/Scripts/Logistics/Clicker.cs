@@ -4,13 +4,21 @@ namespace Logistics
 {
     public class Clicker : MonoBehaviour
     {
-        public Menu Menu;
+        private MenuManager _menuManager;
+        private Raycast _raycast;
+
+        private void Awake()
+        {
+            _menuManager = GetComponent<MenuManager>();
+            _raycast = GetComponent<Raycast>();
+        }
 
         private void Update()
         {
             if (!Input.GetMouseButtonDown(0))
                 return;
-            Menu.ManageClick();
+            _raycast.Shoot();
+            _menuManager.CurrentMenu.ManageClick();
         }
     }
 }

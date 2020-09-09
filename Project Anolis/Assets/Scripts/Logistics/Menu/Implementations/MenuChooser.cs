@@ -3,22 +3,23 @@ using UnityEngine;
 
 namespace Logistics
 {
-    public class MenuManager : Menu
+    public class MenuChooser : Menu
     {
-        private Clicker _clicker;
         public override void Show()
         {
-            Debug.Log("Showing Menu Manager");
+            Debug.Log("Showing Menu Chooser");  //temporary, for testing
         }
 
         public override void ManageClick()
         {
-            Debug.Log("Managing Click in Menu Manager, so changing to Building Menu");
-            foreach (var menu in MenuList.Menus)
+            if (!Raycast.IsSomethingHit)
+                return;
+            foreach (var menu in MenuManager.Menus)
             {
                 if(menu.CheckIfValidForSelection())
                 {
-                    SetMenu(menu);
+                    MenuManager.CurrentMenu = menu;
+                    MenuManager.CurrentMenu.Show();
                     return;
                 }
             }
@@ -31,13 +32,9 @@ namespace Logistics
 
         private void Awake()
         {
-            _clicker = GetComponentInParent<Clicker>();
-            SetMenu(this);
-        }
-
-        private void SetMenu(Menu menu)
-        {
-            _clicker.Menu = menu;
+            MenuManager = GetComponentInParent<MenuManager>();
+            MenuManager.CurrentMenu = this;
+            Raycast = GetComponentInParent<Raycast>();
         }
     }
 }
