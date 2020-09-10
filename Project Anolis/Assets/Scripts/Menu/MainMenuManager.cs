@@ -35,6 +35,7 @@ namespace Menu
 
         public void Quit_Click()
         {
+            Debug.Log("Quit");
             Application.Quit();
         }
     }    
