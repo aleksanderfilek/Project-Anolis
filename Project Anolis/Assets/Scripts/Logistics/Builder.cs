@@ -27,7 +27,7 @@ namespace Logistics
             }
         }
 
-        private void Destroy(ref Tile tile)
+        public void Destroy(ref Tile tile)
         {
             try
             {

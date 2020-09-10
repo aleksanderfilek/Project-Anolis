@@ -4,14 +4,13 @@ using UnityEngine;
 
 namespace Logistics
 {
-    public class BuildMenu : RadialMenu
+    public class UpgradeBuildingMenu : Menu
     {
         private Builder _builder;
-        [SerializeField] private List<TileContent> _buildingList;
 
         public override void Show()
         {
-            Debug.Log("Showing Build Menu");
+            Debug.Log("Showing Upgrade Menu");
         }
 
         protected override void Awake()
@@ -22,14 +21,14 @@ namespace Logistics
 
         public override void ManageClick()
         {
-            _builder.Build(_buildingList[0], ref UnoptimalTileSelector.ExtractTileFromPlanet(Raycast.HitData), UnoptimalTileSelector.ExtractTransformFromPlanet(Raycast.HitData));
+            _builder.Destroy(ref UnoptimalTileSelector.ExtractTileFromPlanet(Raycast.HitData));
             Hide();
         }
 
         public override bool CheckIfValidForSelection()
         {
             var tile = UnoptimalTileSelector.ExtractTileFromPlanet(Raycast.HitData);
-            return tile.IsEmpty();
+            return !tile.IsEmpty();
         }
     }
 }
