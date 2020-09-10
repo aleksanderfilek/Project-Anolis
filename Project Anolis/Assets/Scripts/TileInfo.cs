@@ -28,6 +28,6 @@ public struct Tile
 
     public bool IsEmpty()
     {
-        return true;
+        return objectPlaced == null;
     }
 }

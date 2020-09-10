@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 746254086}
   - component: {fileID: 746254085}
   - component: {fileID: 746254087}
+  - component: {fileID: 746254088}
   m_Layer: 0
   m_Name: Menus
   m_TagString: Untagged
@@ -345,6 +346,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2cdf965c94bbf747af2ecb734b0fa74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &746254088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746254084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf8a110c243cd545920aa7edc978a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1013336707
@@ -468,6 +481,7 @@ GameObject:
   - component: {fileID: 1204826358}
   - component: {fileID: 1204826357}
   - component: {fileID: 1204826359}
+  - component: {fileID: 1204826360}
   m_Layer: 0
   m_Name: Logistics
   m_TagString: Untagged
@@ -514,8 +528,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a391f50fb7b574382f260ae5f5e9dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentMenu: {fileID: 0}
-  Menus: []
+--- !u!114 &1204826360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204826356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f4940e302471ef4db41ec463007b180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSomethingHit: 0
 --- !u!1 &1493357537
 GameObject:
   m_ObjectHideFlags: 0

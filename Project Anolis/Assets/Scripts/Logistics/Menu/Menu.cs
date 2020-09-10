@@ -12,7 +12,7 @@ namespace Logistics
 
         public abstract bool CheckIfValidForSelection();
 
-        private void Awake()
+        protected virtual void Awake()
         {
             MenuManager = GetComponentInParent<MenuManager>();
             MenuManager.Menus.Add(this);

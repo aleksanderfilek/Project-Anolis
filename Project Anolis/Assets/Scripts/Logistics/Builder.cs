@@ -7,7 +7,7 @@ namespace Logistics
     public class Builder : MonoBehaviour
     {
 
-        private void Build(TileContent building, ref Tile tile, Transform planetTransform)
+        public void Build(TileContent building, ref Tile tile, Transform planetTransform)
         {
             try
             {

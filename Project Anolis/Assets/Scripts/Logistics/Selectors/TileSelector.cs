@@ -3,29 +3,30 @@ using UnityEngine;
 
 namespace Logistics
 {
-    public class TileSelector
+    public class TileSelector : MonoBehaviour
     {
-        public static ref Tile SelectFromRaycast(RaycastHit hitData)
+        public Tile SelectedTile { get; private set; }
+        public Transform SelectedPlanetTransform { get; private set; }
+
+        public void SelectFromRaycast(RaycastHit hitData)
         {
             if (hitData.transform.CompareTag("Planet"))
-                return ref ExtractTileFromPlanet(hitData);
-            if (hitData.transform.CompareTag("TileContent"))
-                return ref ExtractTileFromTileContent(hitData);
-            throw new NoTileSelected();
+                ExtractTileFromPlanet(hitData);
+            //if (hitData.transform.CompareTag("TileContent"))
+                //ExtractTileFromTileContent(hitData);
+            else throw new NoTileSelected();
         }
 
-        private static ref Tile ExtractTileFromPlanet(RaycastHit hitData)
+        private void ExtractTileFromPlanet(RaycastHit hitData)
         {
+            SelectedPlanetTransform = hitData.transform;
             var planet = hitData.transform.gameObject.GetComponent<Planet>();
-            return ref planet.Tiles[hitData.triangleIndex];
+            SelectedTile = planet.Tiles[hitData.triangleIndex];
         }
 
-        private static ref Tile ExtractTileFromTileContent(RaycastHit hitData)
+        private void ExtractTileFromTileContent(RaycastHit hitData)
         {
             throw new NotImplementedException();
         }
     }
-
-    class NoTileSelected : Exception
-    { }
 }
