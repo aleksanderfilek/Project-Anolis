@@ -5,24 +5,53 @@ using UnityEngine;
 [RequireComponent(typeof(MeshCollider))]
 public class Planet : MonoBehaviour
 {
-    [SerializeField] private int _iterations = 0;
-    [SerializeField] private float _intensity = 0.1f;
-    [SerializeField] private int _seed = -1;
+    [SerializeField] [Range(1,10)] private int resolution = 1;
 
     public Tile[] Tiles { get; private set; }
-    public bool IsSelected { get; set; }
+    public float Radius { private get; set; }
+
+    private MeshFilter _meshFilter;
+    private MeshCollider _meshCollider;
+
+    private int _previousFrameResolution; // used for real-time generation
 
     private void Start()
     {
-        var meshFilter = GetComponent<MeshFilter>();
+        _meshFilter = GetComponent<MeshFilter>();
+        _meshCollider = GetComponent<MeshCollider>();
+        Initialize();
+        _previousFrameResolution = resolution;
+    }
 
-        var planetMesh = PlanetGenerator.Generate(_iterations, _intensity, ref _seed);
+    private void Update()
+    {
+        if (resolution != _previousFrameResolution)
+        {
+            Initialize();
+        }
+        _previousFrameResolution = resolution;
+    }
 
-        meshFilter.mesh = planetMesh;
-
-        var meshCollider = GetComponent<MeshCollider>();
-        meshCollider.sharedMesh = planetMesh;
-
-        Tiles = PlanetGenerator.GetTiles(planetMesh);
+    private void Initialize()
+    {
+        var planetMesh = PlanetGenerator.Generate(resolution);
+        
+        _meshFilter.mesh.Clear();
+        _meshFilter.mesh = planetMesh;
+        
+        _meshCollider.sharedMesh = planetMesh;
+        
+        Tiles = PlanetGenerator.GetTiles(_meshFilter.sharedMesh);
+        Radius = (_meshFilter.sharedMesh.vertices[0] - transform.position).magnitude;
+    }
+    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        if (_meshFilter == null) return;
+        foreach (var vertex in _meshFilter.sharedMesh.vertices)
+        {
+            Gizmos.DrawSphere(vertex, 0.2f);
+        }
     }
 }

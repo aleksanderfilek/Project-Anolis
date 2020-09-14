@@ -21,14 +21,14 @@ namespace Logistics
 
         public override void ManageClick()
         {
-            _builder.Destroy(ref UnoptimalTileSelector.ExtractTileFromPlanet(Raycast.HitData));
+            _builder.Destroy(UnoptimalTileSelector.ExtractTileFromPlanet(Raycast.HitData));
             Hide();
         }
 
         public override bool CheckIfValidForSelection()
         {
             var tile = UnoptimalTileSelector.ExtractTileFromPlanet(Raycast.HitData);
-            return !tile.IsEmpty();
+            return tile.TileContent != null;
         }
     }
 }

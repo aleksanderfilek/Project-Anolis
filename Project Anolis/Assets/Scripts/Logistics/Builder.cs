@@ -7,19 +7,17 @@ namespace Logistics
     public class Builder : MonoBehaviour
     {
 
-        public void Build(TileContent building, ref Tile tile, Transform planetTransform)
+        public void Build(Placeable building, Tile tile, Transform planetTransform)
         {
             try
             {
-                tile.objectName = building.objectName;
-                tile.objectType = building.objectType;
-                tile.objectPlaced = Instantiate(building.prefab, planetTransform);
+                tile.TileContent = Instantiate(building.prefab, planetTransform);
 
                 // position
-                tile.objectPlaced.transform.Translate(tile.position, Space.Self);
+                tile.TileContent.transform.Translate(tile.Position, Space.Self);
                 // rotation
-                tile.objectPlaced.transform.rotation = Quaternion.LookRotation(tile.normal);
-                tile.objectPlaced.transform.Rotate(new Vector3(90, 0, 0), Space.Self);
+                tile.TileContent.transform.rotation = Quaternion.LookRotation(tile.Position);
+                tile.TileContent.transform.Rotate(new Vector3(90, 0, 0), Space.Self);
             }
             catch (Exception e)
             {
@@ -27,13 +25,11 @@ namespace Logistics
             }
         }
 
-        public void Destroy(ref Tile tile)
+        public void Destroy(Tile tile)
         {
             try
             {
-                tile.objectName = "";
-                tile.objectType = ObjectType.None;
-                Destroy(tile.objectPlaced);
+                Destroy(tile.TileContent);
             }
             catch (Exception e)
             {

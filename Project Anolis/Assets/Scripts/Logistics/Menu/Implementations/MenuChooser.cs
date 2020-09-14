@@ -12,6 +12,7 @@ namespace Logistics
 
         public override void ManageClick()
         {
+            Debug.Log("is hit: " + Raycast.IsSomethingHit);
             if (!Raycast.IsSomethingHit)
                 return;
             foreach (var menu in MenuManager.Menus)
@@ -30,7 +31,7 @@ namespace Logistics
             return false;
         }
 
-        private void Awake()
+        protected override void Awake()
         {
             MenuManager = GetComponentInParent<MenuManager>();
             MenuManager.CurrentMenu = this;

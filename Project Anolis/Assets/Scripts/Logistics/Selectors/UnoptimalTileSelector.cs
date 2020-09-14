@@ -8,12 +8,12 @@ namespace Logistics
 {
     public class UnoptimalTileSelector
     {
-        public static ref Tile ExtractTileFromPlanet(RaycastHit hitData)
+        public static Tile ExtractTileFromPlanet(RaycastHit hitData)
         {
             if (!hitData.transform.CompareTag("Planet"))
                 throw new NoTileSelected();
             var planet = hitData.transform.gameObject.GetComponent<Planet>();
-            return ref planet.Tiles[hitData.triangleIndex];
+            return planet.Tiles[hitData.triangleIndex];
         }
 
         public static Transform ExtractTransformFromPlanet(RaycastHit hitData)
