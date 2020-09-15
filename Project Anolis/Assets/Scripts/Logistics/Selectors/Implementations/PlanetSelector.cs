@@ -7,18 +7,16 @@ namespace Logistics
 {
     public class PlanetSelector : Selector
     {
-        public GameObject SelectedPlanet;
+        public GameObject SelectedPlanet { get; private set; }
 
-        public override void UpdateSelector()
-        {
-            if (!isValidForSelection())
-                return;
-            SelectedPlanet = Raycast.HitData.transform.gameObject;
-        }
-
-        private bool isValidForSelection()
+        protected override bool IsValidForSelection()
         {
             return Raycast.IsSomethingHit && Raycast.HitData.transform.CompareTag("Planet");
+        }
+
+        protected override void Select()
+        {
+            SelectedPlanet = Raycast.HitData.transform.gameObject;
         }
     }
 }

@@ -7,20 +7,18 @@ namespace Logistics
 {
     public class TileSelector : Selector
     {
-        public Tile SelectedTile { get; set; }
+        public Tile SelectedTile { get; private set; }
 
-        public override void UpdateSelector()
+        protected override bool IsValidForSelection()
         {
-            if (!isValidForSelection())
-                return;
+            return Raycast.IsSomethingHit && Raycast.HitData.transform.CompareTag("Planet");
+        }
+
+        protected override void Select()
+        {
             var hitData = Raycast.HitData;
             var planet = hitData.transform.gameObject.GetComponent<Planet>();
             SelectedTile = planet.Tiles[hitData.triangleIndex];
-        }
-
-        private bool isValidForSelection()
-        {
-            return Raycast.IsSomethingHit && Raycast.HitData.transform.CompareTag("Planet");
         }
     }
 

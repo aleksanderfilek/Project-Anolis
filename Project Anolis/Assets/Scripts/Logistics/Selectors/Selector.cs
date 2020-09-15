@@ -9,7 +9,16 @@ namespace Logistics
     {
         private SelectorManager _selectorManager;
         protected Raycast Raycast;
-        public abstract void UpdateSelector();
+
+        public void UpdateSelector()
+        {
+            if (!IsValidForSelection())
+                return;
+            Select();
+        }
+
+        protected abstract bool IsValidForSelection();
+        protected abstract void Select();
 
         protected virtual void Awake()
         {
