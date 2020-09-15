@@ -15,7 +15,7 @@ namespace Logistics
 
         protected override void Awake()
         {
-            _builder = GetComponent<Builder>();
+            _builder = GetComponentInChildren<Builder>();
             base.Awake();
         }
 
