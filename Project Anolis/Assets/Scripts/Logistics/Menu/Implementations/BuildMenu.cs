@@ -8,22 +8,25 @@ namespace Logistics
     public class BuildMenu : RadialMenu
     {
         private Builder _builder;
+        private TileSelector _tileSelector;
+        private PlanetSelector _planetSelector;
         [SerializeField] private List<Placeable> _buildingList;
         private Tile _selectedTile;
         private Transform _selectedPlanetTransform;
 
-        public override void Show()
-        {
-            Debug.Log("Showing Build Menu");
-            _selectedTile = UnoptimalTileSelector.ExtractTileFromPlanet(Raycast.HitData);
-            _selectedPlanetTransform = UnoptimalTileSelector.ExtractTransformFromPlanet(Raycast.HitData);
-;
-        }
-
         protected override void Awake()
         {
             _builder = GetComponentInChildren<Builder>();
+            _tileSelector = GetComponentInChildren<TileSelector>();
+            _planetSelector = GetComponentInChildren<PlanetSelector>();
             base.Awake();
+        }
+
+        public override void Show()
+        {
+            Debug.Log("Showing Build Menu");
+            _selectedTile = _tileSelector.SelectedTile;
+            _selectedPlanetTransform = _planetSelector.SelectedPlanet.transform;
         }
 
         public override void ManageClick()
@@ -34,8 +37,9 @@ namespace Logistics
 
         public override bool CheckIfValidForSelection()
         {
-            var tile = UnoptimalTileSelector.ExtractTileFromPlanet(Raycast.HitData);
-            return tile.TileContent == null;
+            if (_tileSelector.SelectedTile == null)
+                return false;
+            return _tileSelector.SelectedTile.TileContent == null;
         }
     }
 }

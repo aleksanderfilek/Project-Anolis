@@ -6,7 +6,7 @@ namespace Logistics
 {
     public class Raycast : MonoBehaviour
     {
-        public bool IsSomethingHit;
+        [HideInInspector] public bool IsSomethingHit;
         public RaycastHit HitData;
 
         public void Shoot()

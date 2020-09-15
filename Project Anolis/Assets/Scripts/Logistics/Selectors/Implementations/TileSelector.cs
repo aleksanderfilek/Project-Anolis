@@ -11,16 +11,16 @@ namespace Logistics
 
         public override void UpdateSelector()
         {
-            ValidateSelection();
+            if (!isValidForSelection())
+                return;
             var hitData = Raycast.HitData;
             var planet = hitData.transform.gameObject.GetComponent<Planet>();
             SelectedTile = planet.Tiles[hitData.triangleIndex];
         }
 
-        private void ValidateSelection()
+        private bool isValidForSelection()
         {
-            if (!Raycast.HitData.transform.CompareTag("Planet"))
-                throw new NoTileSelected();
+            return Raycast.IsSomethingHit && Raycast.HitData.transform.CompareTag("Planet");
         }
     }
 

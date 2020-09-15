@@ -12,7 +12,6 @@ namespace Logistics
 
         public override void ManageClick()
         {
-            Debug.Log("is hit: " + Raycast.IsSomethingHit);
             if (!Raycast.IsSomethingHit)
                 return;
             foreach (var menu in MenuManager.Menus)
