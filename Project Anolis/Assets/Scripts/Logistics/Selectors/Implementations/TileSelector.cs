@@ -21,7 +21,4 @@ namespace Logistics
             SelectedTile = planet.Tiles[hitData.triangleIndex];
         }
     }
-
-    class NoTileSelected : Exception
-    { }
 }
