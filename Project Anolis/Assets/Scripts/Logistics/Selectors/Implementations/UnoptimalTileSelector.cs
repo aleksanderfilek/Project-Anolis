@@ -24,7 +24,4 @@ namespace Logistics
         }
 
     }
-
-    class NoTileSelected : Exception
-    { }
 }
