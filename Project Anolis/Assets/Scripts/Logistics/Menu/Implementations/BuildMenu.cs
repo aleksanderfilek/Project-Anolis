@@ -11,8 +11,6 @@ namespace Logistics
         private TileSelector _tileSelector;
         private PlanetSelector _planetSelector;
         [SerializeField] private List<Placeable> _buildingList;
-        private Tile _selectedTile;
-        private Transform _selectedPlanetTransform;
 
         protected override void Awake()
         {
@@ -25,13 +23,11 @@ namespace Logistics
         public override void Show()
         {
             Debug.Log("Showing Build Menu");
-            _selectedTile = _tileSelector.SelectedTile;
-            _selectedPlanetTransform = _planetSelector.SelectedPlanet.transform;
         }
 
         public override void ManageClick()
         {
-            _builder.Build(_buildingList[0], _selectedTile, _selectedPlanetTransform);
+            _builder.Build(_buildingList[0], _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
             Hide();
         }
 

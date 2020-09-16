@@ -12,13 +12,15 @@ namespace Logistics
 
         public void UpdateSelector()
         {
-            if (!IsValidForSelection())
-                return;
-            Select();
+            if (IsValidForSelection())
+                Select();
+            else
+                ClearSelection();
         }
 
         protected abstract bool IsValidForSelection();
         protected abstract void Select();
+        protected abstract void ClearSelection();
 
         protected virtual void Awake()
         {

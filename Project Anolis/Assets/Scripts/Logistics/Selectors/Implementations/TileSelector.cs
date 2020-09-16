@@ -20,5 +20,10 @@ namespace Logistics
             var planet = hitData.transform.gameObject.GetComponent<Planet>();
             SelectedTile = planet.Tiles[hitData.triangleIndex];
         }
+
+        protected override void ClearSelection()
+        {
+            SelectedTile = null;
+        }
     }
 }

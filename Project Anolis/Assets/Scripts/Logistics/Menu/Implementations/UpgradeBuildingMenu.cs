@@ -8,12 +8,10 @@ namespace Logistics
     {
         private Builder _builder;
         private TileSelector _tileSelector;
-        private Tile _selectedTile;
 
         public override void Show()
         {
             Debug.Log("Showing Upgrade Menu");
-            _selectedTile = _tileSelector.SelectedTile;
         }
 
         protected override void Awake()
@@ -25,7 +23,7 @@ namespace Logistics
 
         public override void ManageClick()
         {
-            _builder.Destroy(_selectedTile);
+            _builder.Destroy(_tileSelector.SelectedTile);
             Hide();
         }
 

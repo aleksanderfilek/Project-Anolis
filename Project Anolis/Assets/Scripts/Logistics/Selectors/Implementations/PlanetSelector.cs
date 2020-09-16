@@ -18,5 +18,10 @@ namespace Logistics
         {
             SelectedPlanet = Raycast.HitData.transform.gameObject;
         }
+
+        protected override void ClearSelection()
+        {
+            SelectedPlanet = null;
+        }
     }
 }

@@ -1,10 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Logistics
 {
     public class MenuChooser : Menu
     {
+        private Raycast _raycast;
+        private SelectorManager _selectorManager;
+
         public override void Show()
         {
             Debug.Log("Showing Menu Chooser");  //temporary, for testing
@@ -12,16 +16,14 @@ namespace Logistics
 
         public override void ManageClick()
         {
-            if (!Raycast.IsSomethingHit)
+            if (!_raycast.IsSomethingHit)
                 return;
-            foreach (var menu in MenuManager.Menus)
+            _selectorManager.UpdateSelectors();
+            foreach (var menu in MenuManager.Menus.Where(menu => menu.CheckIfValidForSelection()))
             {
-                if(menu.CheckIfValidForSelection())
-                {
-                    MenuManager.CurrentMenu = menu;
-                    MenuManager.CurrentMenu.Show();
-                    return;
-                }
+                MenuManager.CurrentMenu = menu;
+                MenuManager.CurrentMenu.Show();
+                return;
             }
         }
 
@@ -34,7 +36,8 @@ namespace Logistics
         {
             MenuManager = GetComponentInParent<MenuManager>();
             MenuManager.CurrentMenu = this;
-            Raycast = GetComponentInParent<Raycast>();
+            _raycast = GetComponentInParent<Raycast>();
+            _selectorManager = GetComponentInParent<SelectorManager>();
         }
     }
 }

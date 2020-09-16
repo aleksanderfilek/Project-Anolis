@@ -20,7 +20,6 @@ namespace Logistics
             if (!Input.GetMouseButtonDown(0))
                 return;
             _raycast.Shoot();
-            _selectorManager.UpdateSelectors();
             _menuManager.CurrentMenu.ManageClick();
         }
     }
