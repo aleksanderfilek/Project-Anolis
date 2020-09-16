@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Logistics
 {
-    public class UpgradeBuildingMenu : Menu
+    public class UpgradeBuildingMenu : RadialMenu
     {
         private Builder _builder;
         private TileSelector _tileSelector;
@@ -27,12 +25,11 @@ namespace Logistics
             Hide();
         }
 
-        public override bool CheckIfValidForSelection()
+        public override bool IsValidForSelection()
         {
             if (_tileSelector.SelectedTile == null)
                 return false;
-            var tile = _tileSelector.SelectedTile;
-            return tile.TileContent != null;
+            return _tileSelector.SelectedTile.TileContent != null;
         }
     }
 }

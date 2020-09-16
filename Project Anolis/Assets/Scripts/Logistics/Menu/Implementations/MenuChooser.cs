@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 
 namespace Logistics
@@ -8,6 +7,15 @@ namespace Logistics
     {
         private Raycast _raycast;
         private SelectorManager _selectorManager;
+        private MenuManager _menuManager;
+
+        protected override void Awake()
+        {
+            _selectorManager = GetComponentInParent<SelectorManager>();
+            _raycast = GetComponentInParent<Raycast>();
+            _menuManager = GetComponentInParent<MenuManager>();
+            _menuManager.CurrentMenu = this;
+        }
 
         public override void Show()
         {
@@ -19,25 +27,17 @@ namespace Logistics
             if (!_raycast.IsSomethingHit)
                 return;
             _selectorManager.UpdateSelectors();
-            foreach (var menu in MenuManager.Menus.Where(menu => menu.CheckIfValidForSelection()))
+            foreach (var menu in _menuManager.Menus.Where(menu => menu.IsValidForSelection()))
             {
-                MenuManager.CurrentMenu = menu;
-                MenuManager.CurrentMenu.Show();
+                _menuManager.CurrentMenu = menu;
+                _menuManager.CurrentMenu.Show();
                 return;
             }
         }
 
-        public override bool CheckIfValidForSelection()
+        public override bool IsValidForSelection()
         {
             return false;
-        }
-
-        protected override void Awake()
-        {
-            MenuManager = GetComponentInParent<MenuManager>();
-            MenuManager.CurrentMenu = this;
-            _raycast = GetComponentInParent<Raycast>();
-            _selectorManager = GetComponentInParent<SelectorManager>();
         }
     }
 }

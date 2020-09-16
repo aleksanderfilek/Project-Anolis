@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Logistics
+﻿namespace Logistics
 {
     public abstract class RadialMenu : Menu
     {

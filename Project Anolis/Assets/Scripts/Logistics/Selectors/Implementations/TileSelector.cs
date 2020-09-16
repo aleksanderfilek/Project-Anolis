@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
-
-namespace Logistics
+﻿namespace Logistics
 {
     public class TileSelector : Selector
     {

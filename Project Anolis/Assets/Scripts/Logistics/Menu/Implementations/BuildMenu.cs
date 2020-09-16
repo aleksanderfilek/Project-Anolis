@@ -1,16 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering;
 
 namespace Logistics
 {
     public class BuildMenu : RadialMenu
     {
+        [SerializeField] private List<Placeable> _buildingList;
+
         private Builder _builder;
         private TileSelector _tileSelector;
         private PlanetSelector _planetSelector;
-        [SerializeField] private List<Placeable> _buildingList;
 
         protected override void Awake()
         {
@@ -31,7 +30,7 @@ namespace Logistics
             Hide();
         }
 
-        public override bool CheckIfValidForSelection()
+        public override bool IsValidForSelection()
         {
             if (_tileSelector.SelectedTile == null)
                 return false;

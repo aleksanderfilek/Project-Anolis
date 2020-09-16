@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Logistics
@@ -9,7 +8,7 @@ namespace Logistics
         public Menu CurrentMenu { get; set; }
         public List<Menu> Menus { get; set; } = new List<Menu>();
 
-        public void SetMenuChooser()
+        public void ClearMenu()
         {
             CurrentMenu = GetComponentInChildren<MenuChooser>();
         }

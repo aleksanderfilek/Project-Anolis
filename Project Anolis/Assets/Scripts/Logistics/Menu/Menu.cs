@@ -4,23 +4,22 @@ namespace Logistics
 {
     public abstract class Menu : MonoBehaviour
     {
-        protected MenuManager MenuManager;
-
-        public abstract void Show();
-        public abstract void ManageClick();
-
-        public abstract bool CheckIfValidForSelection();
+        private MenuManager _menuManager;
 
         protected virtual void Awake()
         {
-            MenuManager = GetComponentInParent<MenuManager>();
-            MenuManager.Menus.Add(this);
+            _menuManager = GetComponentInParent<MenuManager>();
+            _menuManager.Menus.Add(this);
         }
+
+        public abstract void Show();
+        public abstract void ManageClick();
+        public abstract bool IsValidForSelection();
 
         public virtual void Hide()
         {
-            MenuManager.SetMenuChooser();
-            MenuManager.CurrentMenu.Show(); //temporary, for testing
+            _menuManager.ClearMenu();
+            _menuManager.CurrentMenu.Show(); //temporary, for testing
         }
     }
 }
