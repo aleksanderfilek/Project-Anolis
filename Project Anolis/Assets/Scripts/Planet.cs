@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshCollider))]
 public class Planet : MonoBehaviour
 {
-    [SerializeField] [Range(1,10)] private int resolution = 1;
+    [SerializeField] [Range(1,100)] private int resolution = 1;
 
     public Tile[] Tiles { get; private set; }
     public float Radius { private get; set; }
@@ -51,7 +51,7 @@ public class Planet : MonoBehaviour
         if (_meshFilter == null) return;
         foreach (var vertex in _meshFilter.sharedMesh.vertices)
         {
-            Gizmos.DrawSphere(vertex, 0.2f);
+            Gizmos.DrawSphere(vertex + transform.position, 0.2f);
         }
     }
 }

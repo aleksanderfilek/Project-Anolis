@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f7fa24678540e47bf60340dd2fc446, type: 3}
   m_Name: Building_A
   m_EditorClassIdentifier: 
-  objectName: Budynek
+  objectName: Kuznia
   objectType: 3
   prefab: {fileID: 3062741268767224653, guid: 057104767b5684a4aba0225b37920a4d, type: 3}

@@ -7,14 +7,13 @@ namespace Logistics
     {
         private Raycast _raycast;
         private SelectorManager _selectorManager;
-        private MenuManager _menuManager;
 
         protected override void Awake()
         {
             _selectorManager = GetComponentInParent<SelectorManager>();
             _raycast = GetComponentInParent<Raycast>();
-            _menuManager = GetComponentInParent<MenuManager>();
-            _menuManager.CurrentMenu = this;
+            MenuManager = GetComponentInParent<MenuManager>();
+            MenuManager.CurrentMenu = this;
         }
 
         public override void Show()
@@ -27,10 +26,10 @@ namespace Logistics
             if (!_raycast.IsSomethingHit)
                 return;
             _selectorManager.UpdateSelectors();
-            foreach (var menu in _menuManager.Menus.Where(menu => menu.IsValidForSelection()))
+            foreach (var menu in MenuManager.Menus.Where(menu => menu.IsValidForSelection()))
             {
-                _menuManager.CurrentMenu = menu;
-                _menuManager.CurrentMenu.Show();
+                MenuManager.CurrentMenu = menu;
+                MenuManager.CurrentMenu.Show();
                 return;
             }
         }

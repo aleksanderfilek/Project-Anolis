@@ -2317,11 +2317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c2d8fda48e9c47daff0765d7b7e8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasElements:
-  - {fileID: 858326615}
-  - {fileID: 1021740630}
-  - {fileID: 1327264478}
-  - {fileID: 1378431818}
 --- !u!1 &713316921
 GameObject:
   m_ObjectHideFlags: 0
@@ -4083,11 +4078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52070d0b666560353846c53c2c88647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groups:
-  - {fileID: 477773501}
-  - {fileID: 2098895325}
-  - {fileID: 721588706}
-  resolutionDropdown: {fileID: 1354118194}
 --- !u!1 &1456191780
 GameObject:
   m_ObjectHideFlags: 0
@@ -4932,7 +4922,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6e9ed2b5854b771a3a71e75d4a4303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vector: {x: 0.05, y: 0.1, z: 0}
 --- !u!1 &1919602668
 GameObject:
   m_ObjectHideFlags: 0
@@ -5477,10 +5466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e0d3e051f509b438fa4881fd4d4f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
-  iterations: 3
-  intensivity: 0.02
-  seed: -1
 --- !u!23 &1711813855930119527
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -4,12 +4,12 @@ namespace Logistics
 {
     public abstract class Menu : MonoBehaviour
     {
-        private MenuManager _menuManager;
+        protected MenuManager MenuManager;
 
         protected virtual void Awake()
         {
-            _menuManager = GetComponentInParent<MenuManager>();
-            _menuManager.Menus.Add(this);
+            MenuManager = GetComponentInParent<MenuManager>();
+            MenuManager.Menus.Add(this);
         }
 
         public abstract void Show();
@@ -18,8 +18,8 @@ namespace Logistics
 
         public virtual void Hide()
         {
-            _menuManager.ClearMenu();
-            _menuManager.CurrentMenu.Show(); //temporary, for testing
+            MenuManager.ClearMenu();
+            MenuManager.CurrentMenu.Show(); //temporary, for testing
         }
     }
 }
