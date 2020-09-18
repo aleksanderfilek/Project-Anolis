@@ -186,7 +186,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53147534}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -212,8 +212,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 999048435}
-  m_Father: {fileID: 746254086}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -302,8 +302,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 746254087}
-        m_MethodName: Build2
+      - m_Target: {fileID: 746254088}
+        m_MethodName: BuildTratak
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -458,7 +458,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 746254086}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &429628939
 MonoBehaviour:
@@ -663,6 +663,7 @@ GameObject:
   - component: {fileID: 746254086}
   - component: {fileID: 746254085}
   - component: {fileID: 746254087}
+  - component: {fileID: 746254088}
   - component: {fileID: 746254089}
   m_Layer: 0
   m_Name: Menus
@@ -694,9 +695,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 429628938}
   - {fileID: 1055662572}
-  - {fileID: 53147538}
+  - {fileID: 429628938}
   m_Father: {fileID: 1204826358}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -712,9 +712,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2cdf965c94bbf747af2ecb734b0fa74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ui: {fileID: 999048434}
+--- !u!114 &746254088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746254084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 578420a8cd32ad24594ca7e744178875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _buildingList:
   - {fileID: 11400000, guid: 96fd126a986eb834d82439601b1abf6e, type: 2}
   - {fileID: 11400000, guid: defadd075bbf25e42b989b02a1a4ca28, type: 2}
+  _ui: {fileID: 999048434}
 --- !u!114 &746254089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -945,12 +959,12 @@ GameObject:
   m_Component:
   - component: {fileID: 999048435}
   m_Layer: 0
-  m_Name: Radial
+  m_Name: BuildUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &999048435
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1111,7 +1125,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 746254086}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1055662573
 MonoBehaviour:
@@ -1466,7 +1480,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1597414852
 GameObject:
@@ -1550,8 +1564,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 746254087}
-        m_MethodName: Build1
+      - m_Target: {fileID: 746254088}
+        m_MethodName: BuildKuznia
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1580,8 +1594,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

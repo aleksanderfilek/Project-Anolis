@@ -5,44 +5,24 @@ namespace Logistics
 {
     public class BuildMenu : Menu
     {
-        [SerializeField] private List<Placeable> _buildingList;
+        [SerializeField] private GameObject _ui;
 
-        private Builder _builder;
         private TileSelector _tileSelector;
-        private PlanetSelector _planetSelector;
-        private Canvas _uiCanvas;
-        private RectTransform _uiRadial;
 
         protected override void Awake()
         {
-            _builder = GetComponentInChildren<Builder>();
             _tileSelector = GetComponentInChildren<TileSelector>();
-            _planetSelector = GetComponentInChildren<PlanetSelector>();
-            _uiCanvas = GetComponentInChildren<Canvas>();
             base.Awake();
         }
 
         public override void Show()
         {
-            _uiCanvas.enabled = true;
-            _uiRadial.anchoredPosition = new Vector2(-20, -20);
+            _ui.SetActive(true);
         }
 
         public override void ManageClick()
         {
             Hide();
-        }
-
-        public void Build1()
-        {
-            _builder.Build(_buildingList[0], _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
-            _uiCanvas.enabled = false;
-        }
-
-        public void Build2()
-        {
-            _builder.Build(_buildingList[1], _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
-            _uiCanvas.enabled = false;
         }
 
         public override bool IsValidForSelection()
