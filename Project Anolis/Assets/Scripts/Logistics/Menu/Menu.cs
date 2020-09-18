@@ -4,6 +4,8 @@ namespace Logistics
 {
     public abstract class Menu : MonoBehaviour
     {
+        [SerializeField] protected GameObject Ui;
+
         protected MenuManager MenuManager;
 
         protected virtual void Awake()
