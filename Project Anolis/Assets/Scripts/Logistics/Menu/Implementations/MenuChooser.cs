@@ -14,6 +14,7 @@ namespace Logistics
             _raycast = GetComponentInParent<Raycast>();
             MenuManager = GetComponentInParent<MenuManager>();
             MenuManager.CurrentMenu = this;
+            MenuManager.CurrentMenu.Show();
         }
 
         public override void Show()
@@ -22,7 +23,7 @@ namespace Logistics
             base.Show();
         }
 
-        public override void OnClickOutsideMenu()
+        public void Choose()
         {
             if (!_raycast.IsSomethingHit)
                 return;
@@ -31,9 +32,10 @@ namespace Logistics
             {
                 MenuManager.CurrentMenu = menu;
                 MenuManager.CurrentMenu.Show();
+                Ui.SetActive(false);
                 return;
             }
-            Ui.SetActive(false);
+
         }
 
         public override bool IsValidForSelection()

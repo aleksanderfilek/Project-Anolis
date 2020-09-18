@@ -14,17 +14,17 @@ namespace Logistics
             MenuManager.Menus.Add(this);
         }
 
+        public abstract bool IsValidForSelection();
+
         public virtual void Show()
         {
             Ui.SetActive(true);
         }
-        public abstract void OnClickOutsideMenu();
-        public abstract bool IsValidForSelection();
 
         public virtual void Hide()
         {
+            Ui.SetActive(false);
             MenuManager.ClearMenu();
-            MenuManager.CurrentMenu.Show(); //temporary, for testing
         }
     }
 }

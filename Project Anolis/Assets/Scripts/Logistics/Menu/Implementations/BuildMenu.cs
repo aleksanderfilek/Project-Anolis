@@ -19,17 +19,6 @@ namespace Logistics
             base.Awake();
         }
 
-        public override void Show()
-        {
-            Debug.Log("Showing Build Menu");  //temporary, for testing
-            base.Show();
-        }
-
-        public override void OnClickOutsideMenu()
-        {
-            Hide();
-        }
-
         public override bool IsValidForSelection()
         {
             if (_tileSelector.SelectedTile == null)
@@ -40,13 +29,13 @@ namespace Logistics
         public void BuildKuznia()
         {
             _builder.Build(_buildingList[0], _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
-            Ui.SetActive(false);
+            Hide();
         }
 
         public void BuildTratak()
         {
             _builder.Build(_buildingList[1], _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
-            Ui.SetActive(false);
+            Hide();
         }
     }
 }

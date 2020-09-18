@@ -8,9 +8,17 @@ namespace Logistics
         public Menu CurrentMenu { get; set; }
         public List<Menu> Menus { get; set; } = new List<Menu>();
 
+        private MenuChooser _menuChooser;
+
+        private void Awake()
+        {
+            _menuChooser = GetComponentInChildren<MenuChooser>();
+        }
+
         public void ClearMenu()
         {
-            CurrentMenu = GetComponentInChildren<MenuChooser>();
+            CurrentMenu = _menuChooser;
+            CurrentMenu.Show();
         }
     }
 }

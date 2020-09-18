@@ -7,12 +7,6 @@ namespace Logistics
         private Builder _builder;
         private TileSelector _tileSelector;
 
-        public override void Show()
-        {
-            Debug.Log("Showing Upgrade Menu");
-            base.Show();
-        }
-
         protected override void Awake()
         {
             _builder = GetComponentInChildren<Builder>();
@@ -20,7 +14,7 @@ namespace Logistics
             base.Awake();
         }
 
-        public override void OnClickOutsideMenu()
+        public void RemoveBuilding()
         {
             _builder.Destroy(_tileSelector.SelectedTile);
             Hide();
