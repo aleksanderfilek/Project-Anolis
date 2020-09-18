@@ -15,10 +15,15 @@ namespace Logistics
             _menuChooser = GetComponentInChildren<MenuChooser>();
         }
 
+        public void ActivateMenu(Menu menu)
+        {
+            CurrentMenu = menu;
+            CurrentMenu.Show();
+        }
+
         public void ClearMenu()
         {
-            CurrentMenu = _menuChooser;
-            CurrentMenu.Show();
+            ActivateMenu(_menuChooser);
         }
     }
 }

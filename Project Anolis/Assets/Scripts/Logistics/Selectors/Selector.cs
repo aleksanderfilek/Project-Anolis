@@ -7,6 +7,13 @@ namespace Logistics
         private SelectorManager _selectorManager;
         protected Raycast Raycast;
 
+        protected virtual void Awake()
+        {
+            _selectorManager = GetComponentInParent<SelectorManager>();
+            _selectorManager.Selectors.Add(this);
+            Raycast = GetComponentInParent<Raycast>();
+        }
+
         public void UpdateSelector()
         {
             if (IsValidForSelection())
@@ -18,12 +25,5 @@ namespace Logistics
         protected abstract bool IsValidForSelection();
         protected abstract void Select();
         protected abstract void ClearSelection();
-
-        protected virtual void Awake()
-        {
-            _selectorManager = GetComponentInParent<SelectorManager>();
-            _selectorManager.Selectors.Add(this);
-            Raycast = GetComponentInParent<Raycast>();
-        }
     }
 }

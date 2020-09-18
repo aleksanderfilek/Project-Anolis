@@ -14,17 +14,17 @@ namespace Logistics
             base.Awake();
         }
 
-        public void RemoveBuilding()
-        {
-            _builder.Destroy(_tileSelector.SelectedTile);
-            Hide();
-        }
-
-        public override bool IsValidForSelection()
+        public override bool CanHandleSelection()
         {
             if (_tileSelector.SelectedTile == null)
                 return false;
             return _tileSelector.SelectedTile.TileContent != null;
+        }
+
+        public void RemoveBuilding()
+        {
+            _builder.Destroy(_tileSelector.SelectedTile);
+            Hide();
         }
     }
 }

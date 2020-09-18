@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 291884343}
   - component: {fileID: 291884342}
   m_Layer: 5
-  m_Name: Button2
+  m_Name: BuildSawmillButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -548,7 +548,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 746254087}
-        m_MethodName: BuildTratak
+        m_MethodName: BuildSawmill
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2010,7 +2010,7 @@ GameObject:
   - component: {fileID: 1554723131}
   - component: {fileID: 1554723130}
   m_Layer: 5
-  m_Name: Button1
+  m_Name: RemoveBuildingButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2140,7 +2140,7 @@ GameObject:
   - component: {fileID: 1597414855}
   - component: {fileID: 1597414854}
   m_Layer: 5
-  m_Name: Button1
+  m_Name: BuildForgeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2210,7 +2210,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 746254087}
-        m_MethodName: BuildKuznia
+        m_MethodName: BuildForge
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -8,8 +8,6 @@ namespace Logistics
 
         public void Build(Placeable building, Tile tile, Transform planetTransform)
         {
-            try
-            {
                 tile.TileContent = Instantiate(building.prefab, planetTransform);
 
                 // position
@@ -17,23 +15,11 @@ namespace Logistics
                 // rotation
                 tile.TileContent.transform.rotation = Quaternion.LookRotation(tile.Position);
                 tile.TileContent.transform.Rotate(new Vector3(90, 0, 0), Space.Self);
-            }
-            catch (Exception e)
-            {
-                Debug.Log(e);
-            }
         }
 
         public void Destroy(Tile tile)
         {
-            try
-            {
                 Destroy(tile.TileContent);
-            }
-            catch (Exception e)
-            {
-                Debug.Log(e);
-            }
         }
     }
 }

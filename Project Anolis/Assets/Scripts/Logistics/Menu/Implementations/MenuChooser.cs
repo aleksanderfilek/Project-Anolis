@@ -10,11 +10,15 @@ namespace Logistics
 
         protected override void Awake()
         {
-            _selectorManager = GetComponentInParent<SelectorManager>();
             _raycast = GetComponentInParent<Raycast>();
+            _selectorManager = GetComponentInParent<SelectorManager>();
             MenuManager = GetComponentInParent<MenuManager>();
-            MenuManager.CurrentMenu = this;
-            MenuManager.CurrentMenu.Show();
+            MenuManager.ActivateMenu(this);
+        }
+
+        public override bool CanHandleSelection()
+        {
+            return false;
         }
 
         public override void Show()
@@ -28,19 +32,12 @@ namespace Logistics
             if (!_raycast.IsSomethingHit)
                 return;
             _selectorManager.UpdateSelectors();
-            foreach (var menu in MenuManager.Menus.Where(menu => menu.IsValidForSelection()))
+            foreach (var menu in MenuManager.Menus.Where(menu => menu.CanHandleSelection()))
             {
-                MenuManager.CurrentMenu = menu;
-                MenuManager.CurrentMenu.Show();
+                MenuManager.ActivateMenu(menu);
                 Ui.SetActive(false);
                 return;
             }
-
-        }
-
-        public override bool IsValidForSelection()
-        {
-            return false;
         }
     }
 }

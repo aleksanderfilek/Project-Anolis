@@ -14,27 +14,31 @@ namespace Logistics
         protected override void Awake()
         {
             _tileSelector = GetComponentInChildren<TileSelector>();
-            _builder = GetComponentInChildren<Builder>();
             _planetSelector = GetComponentInChildren<PlanetSelector>();
+            _builder = GetComponentInChildren<Builder>();
             base.Awake();
         }
 
-        public override bool IsValidForSelection()
+        public override bool CanHandleSelection()
         {
             if (_tileSelector.SelectedTile == null)
                 return false;
             return _tileSelector.SelectedTile.TileContent == null;
         }
 
-        public void BuildKuznia()
+        public void BuildForge()
         {
-            _builder.Build(_buildingList[0], _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
-            Hide();
+            Build(0);
         }
 
-        public void BuildTratak()
+        public void BuildSawmill()
         {
-            _builder.Build(_buildingList[1], _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
+            Build(1);
+        }
+
+        private void Build(int index)
+        {
+            _builder.Build(_buildingList[index], _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
             Hide();
         }
     }

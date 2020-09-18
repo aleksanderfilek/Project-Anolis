@@ -14,7 +14,7 @@ namespace Logistics
             MenuManager.Menus.Add(this);
         }
 
-        public abstract bool IsValidForSelection();
+        public abstract bool CanHandleSelection();
 
         public virtual void Show()
         {
