@@ -19,9 +19,10 @@ namespace Logistics
         public override void Show()
         {
             Debug.Log("Showing Menu Chooser");  //temporary, for testing
+            base.Show();
         }
 
-        public override void ManageClick()
+        public override void OnClickOutsideMenu()
         {
             if (!_raycast.IsSomethingHit)
                 return;
@@ -32,6 +33,7 @@ namespace Logistics
                 MenuManager.CurrentMenu.Show();
                 return;
             }
+            Ui.SetActive(false);
         }
 
         public override bool IsValidForSelection()

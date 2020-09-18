@@ -21,10 +21,11 @@ namespace Logistics
 
         public override void Show()
         {
-            Ui.SetActive(true);
+            Debug.Log("Showing Build Menu");  //temporary, for testing
+            base.Show();
         }
 
-        public override void ManageClick()
+        public override void OnClickOutsideMenu()
         {
             Hide();
         }

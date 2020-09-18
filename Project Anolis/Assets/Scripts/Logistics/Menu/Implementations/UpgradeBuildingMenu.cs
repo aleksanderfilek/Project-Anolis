@@ -10,6 +10,7 @@ namespace Logistics
         public override void Show()
         {
             Debug.Log("Showing Upgrade Menu");
+            base.Show();
         }
 
         protected override void Awake()
@@ -19,7 +20,7 @@ namespace Logistics
             base.Awake();
         }
 
-        public override void ManageClick()
+        public override void OnClickOutsideMenu()
         {
             _builder.Destroy(_tileSelector.SelectedTile);
             Hide();
