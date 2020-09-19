@@ -7,12 +7,14 @@ namespace Logistics
     {
         [SerializeField] private List<Placeable> _buildingList;
 
+        private RectTransform _uiRectTransform;
         private TileSelector _tileSelector;
         private PlanetSelector _planetSelector;
         private Builder _builder;
 
         protected override void Awake()
         {
+            _uiRectTransform = Ui.GetComponent<RectTransform>();
             _tileSelector = GetComponentInChildren<TileSelector>();
             _planetSelector = GetComponentInChildren<PlanetSelector>();
             _builder = GetComponentInChildren<Builder>();
@@ -28,30 +30,31 @@ namespace Logistics
         
         public override void Show()
         {
-            _uiCanvas.enabled = true;
-
-            var halfMenuSize = _uiRadial.rect.size / 2;
-            var screenSize = _uiCanvas.pixelRect.size;
+            var halfMenuSize = _uiRectTransform.rect.size / 2;
+            var screenWidth = Screen.width;
+            var screenHeight = Screen.height;
             
             var newPosition = Input.mousePosition;
 
-            newPosition.x = newPosition.x <= screenSize.x - halfMenuSize.x
+            newPosition.x = newPosition.x <= screenWidth - halfMenuSize.x
                 ? newPosition.x
-                : screenSize.x - halfMenuSize.x;
+                : screenWidth - halfMenuSize.x;
 
             newPosition.x = newPosition.x >= halfMenuSize.x
                 ? newPosition.x
                 : halfMenuSize.x;
             
-            newPosition.y = newPosition.y <= screenSize.y - halfMenuSize.y
+            newPosition.y = newPosition.y <= screenHeight - halfMenuSize.y
                 ? newPosition.y
-                : screenSize.y - halfMenuSize.y;
+                : screenHeight - halfMenuSize.y;
 
             newPosition.y = newPosition.y >= halfMenuSize.y
                 ? newPosition.y
                 : halfMenuSize.y;
 
-            _uiRadial.position = newPosition;
+            _uiRectTransform.position = newPosition;
+
+            base.Show();
         }
 
         public void BuildForge()
