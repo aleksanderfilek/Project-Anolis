@@ -2,7 +2,7 @@
 
 namespace Logistics
 {
-    public class UpgradeBuildingMenu : Menu
+    public class UpgradeBuildingMenu : UnderMouseMenu
     {
         private Builder _builder;
         private TileSelector _tileSelector;
