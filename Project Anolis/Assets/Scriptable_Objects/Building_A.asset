@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aae47f6609d5564a8e72182267f1b8a, type: 3}
+  m_Script: {fileID: 11500000, guid: d9f7fa24678540e47bf60340dd2fc446, type: 3}
   m_Name: Building_A
   m_EditorClassIdentifier: 
-  objectName: Headquarters
+  objectName: Kuznia
   objectType: 3
-  prefab: {fileID: 3062741268767224653, guid: 25541c9f9b77237489e1c5dbea13e9fa, type: 3}
+  prefab: {fileID: 3062741268767224653, guid: 057104767b5684a4aba0225b37920a4d, type: 3}

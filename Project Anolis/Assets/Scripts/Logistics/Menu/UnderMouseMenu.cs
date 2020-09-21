@@ -1,0 +1,46 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Logistics
+{
+    public abstract class UnderMouseMenu : Menu
+    {
+        private RectTransform _uiRectTransform;
+
+        protected override void Awake()
+        {
+            _uiRectTransform = Ui.GetComponent<RectTransform>();
+            base.Awake();
+        }
+
+        public override void Show()
+        {
+            var halfMenuSize = _uiRectTransform.rect.size / 2;
+            var screenWidth = Screen.width;
+            var screenHeight = Screen.height;
+            
+            var newPosition = Input.mousePosition;
+
+            newPosition.x = newPosition.x <= screenWidth - halfMenuSize.x
+                ? newPosition.x
+                : screenWidth - halfMenuSize.x;
+
+            newPosition.x = newPosition.x >= halfMenuSize.x
+                ? newPosition.x
+                : halfMenuSize.x;
+            
+            newPosition.y = newPosition.y <= screenHeight - halfMenuSize.y
+                ? newPosition.y
+                : screenHeight - halfMenuSize.y;
+
+            newPosition.y = newPosition.y >= halfMenuSize.y
+                ? newPosition.y
+                : halfMenuSize.y;
+
+            _uiRectTransform.position = newPosition;
+
+            base.Show();
+        }
+    }
+}
