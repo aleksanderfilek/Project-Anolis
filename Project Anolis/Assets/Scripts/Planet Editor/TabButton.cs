@@ -19,7 +19,6 @@ public class TabButton :
     public void OnPointerEnter(PointerEventData eventData)
     {
         tabGroup.OnTabEnter(this);
-        
     }
     
     public void OnPointerClick(PointerEventData eventData)
