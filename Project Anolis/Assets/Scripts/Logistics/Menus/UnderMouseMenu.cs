@@ -8,10 +8,9 @@ namespace Logistics
     {
         private RectTransform _uiRectTransform;
 
-        protected override void Awake()
+        private void Awake()
         {
             _uiRectTransform = Ui.GetComponent<RectTransform>();
-            base.Awake();
         }
 
         public override void Show()

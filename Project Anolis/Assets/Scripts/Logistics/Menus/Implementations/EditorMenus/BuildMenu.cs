@@ -6,5 +6,9 @@ namespace Logistics.Editor
 {
     public class BuildMenu : Menu
     {
+        public override bool CanHandleSelection()
+        {
+            return false;
+        }
     }
 }

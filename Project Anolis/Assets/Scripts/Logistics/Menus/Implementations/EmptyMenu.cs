@@ -6,9 +6,14 @@ namespace Logistics
 {
     public class EmptyMenu : Menu
     {
-        protected override void Awake()
+        private void Awake()
         {
             Ui = new GameObject();
+        }
+
+        public override bool CanHandleSelection()
+        {
+            return false;
         }
     }
 }

@@ -4,15 +4,8 @@ namespace Logistics
 {
     public class UpgradeBuildingMenu : UnderMouseMenu
     {
-        private Builder _builder;
-        private TileSelector _tileSelector;
-
-        protected override void Awake()
-        {
-            _builder = GetComponentInChildren<Builder>();
-            _tileSelector = GetComponentInChildren<TileSelector>();
-            base.Awake();
-        }
+        [SerializeField] private Builder _builder;
+        [SerializeField] private TileSelector _tileSelector;
 
         public override bool CanHandleSelection()
         {
@@ -24,7 +17,6 @@ namespace Logistics
         public void RemoveBuilding()
         {
             _builder.Destroy(_tileSelector.SelectedTile);
-            Deactivate();
         }
     }
 }

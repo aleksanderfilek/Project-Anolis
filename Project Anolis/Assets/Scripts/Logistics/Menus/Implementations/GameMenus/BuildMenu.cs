@@ -7,17 +7,9 @@ namespace Logistics
     {
         [SerializeField] private List<Placeable> _buildingList;
 
-        private TileSelector _tileSelector;
-        private PlanetSelector _planetSelector;
-        private Builder _builder;
-
-        protected override void Awake()
-        {
-            _tileSelector = GetComponentInChildren<TileSelector>();
-            _planetSelector = GetComponentInChildren<PlanetSelector>();
-            _builder = GetComponentInChildren<Builder>();
-            base.Awake();
-        }
+        [SerializeField] private TileSelector _tileSelector;
+        [SerializeField] private PlanetSelector _planetSelector;
+        [SerializeField] private Builder _builder;
 
         public override bool CanHandleSelection()
         {
@@ -39,7 +31,6 @@ namespace Logistics
         private void Build(int index)
         {
             _builder.Build(_buildingList[index], _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
-            Deactivate();
         }
     }
 }
