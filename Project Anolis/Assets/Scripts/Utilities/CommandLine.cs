@@ -15,9 +15,8 @@ namespace Utilities
             private GameObject _commandLine;
             private InputField _commandField;
             
-            private Dictionary<string, Action> _commands;
+            private readonly Dictionary<string, Func<string[], bool>> _commands = new Dictionary<string, Func<string[], bool>>();
 
-            private string[] _cmd;
             private void Start()
             {
                 _commandLine = transform.GetChild(0).gameObject;
@@ -25,9 +24,9 @@ namespace Utilities
 
                 _commandField = _commandLine.GetComponent<InputField>();
                 
-                _commandField.onEndEdit.AddListener(delegate { ProcessCommand();  });
-
-                _commands["slomo"] = new Action(Slomo);
+                _commands.Add("slomo", Slomo);
+                
+                
             }
 
             private void Update()
@@ -42,22 +41,41 @@ namespace Utilities
                     if(_visible == true) _commandField.ActivateInputField();
                     else _commandField.DeactivateInputField();
                 }
+
+                if (_visible == true)
+                {
+                    if (Input.GetKeyDown(KeyCode.Return))
+                    {
+                        ProcessCommand();
+                    }
+                }
             }
 
             private void ProcessCommand()
             {
-                _cmd = _commandField.text.ToLower().Split(',').Select(str => str.Trim()).ToArray();
+                var text = _commandField.text.ToLower();
+                var args = text.Split(' ').Select(str => str.Trim()).ToArray();
 
-                var cmd = _cmd[0];
-                _commands[cmd]();
-                
+                if (_commands.ContainsKey(args[0]))
+                {
+                    var result = _commands[args[0]].Invoke(args);
+                    if (result == false)
+                        Debug.Log("Debugger error: " + text);
+                }
+
                 _commandField.text = "";
                 _commandField.ActivateInputField();
             }
 
-            private static void Slomo()
+            private bool Slomo(string[] args)
             {
-                //tutaj zwalniamy czas
+                if (args.Length < 2)
+                    return false;
+
+                var scale = float.Parse(args[1], System.Globalization.CultureInfo.InvariantCulture);
+                Time.timeScale = scale;
+                
+                return true;
             }
         }
         #endif
