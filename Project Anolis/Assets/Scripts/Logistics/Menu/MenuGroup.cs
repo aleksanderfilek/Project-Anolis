@@ -10,14 +10,19 @@ namespace Logistics
 
         public void Awake()
         {
-            CurrentMenu = _defaultMenu;
+            ActivateMenu(_defaultMenu);
+        }
+
+        public void ActivateMenu(Menu menu)
+        {
+            CurrentMenu = menu;
             CurrentMenu.Show();
         }
 
         public void DeactivateCurrentMenu()
         {
             CurrentMenu.Hide();
-            CurrentMenu = _defaultMenu;
+            ActivateMenu(_defaultMenu);
         }
     }
 }
