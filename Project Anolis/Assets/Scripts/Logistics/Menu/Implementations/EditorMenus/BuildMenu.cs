@@ -9,7 +9,6 @@ namespace Logistics.Editor
         public void OnHide()
         {
             Ui.SetActive(false);
-            MenuManager.CurrentMenu = null;
         }
 
         public override bool CanHandleSelection()

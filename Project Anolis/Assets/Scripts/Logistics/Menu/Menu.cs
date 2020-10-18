@@ -24,7 +24,7 @@ namespace Logistics
         public virtual void Hide()
         {
             Ui.SetActive(false);
-            MenuManager.ClearMenu();
+            MenuManager.ActivateDefault();
         }
     }
 }

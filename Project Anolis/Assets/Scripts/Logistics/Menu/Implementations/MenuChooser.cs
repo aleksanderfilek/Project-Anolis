@@ -13,7 +13,8 @@ namespace Logistics
             _raycast = GetComponentInParent<Raycast>();
             _selectorManager = GetComponentInParent<SelectorManager>();
             MenuManager = GetComponentInParent<MenuManager>();
-            MenuManager.ActivateMenu(this);
+            MenuManager.DefaultMenu = this;
+            MenuManager.ActivateDefault();
         }
 
         public override bool CanHandleSelection()
@@ -34,7 +35,7 @@ namespace Logistics
             _selectorManager.UpdateSelectors();
             foreach (var menu in MenuManager.Menus.Where(menu => menu.CanHandleSelection()))
             {
-                MenuManager.ActivateMenu(menu);
+                menu.Show();
                 Ui.SetActive(false);
                 return;
             }
