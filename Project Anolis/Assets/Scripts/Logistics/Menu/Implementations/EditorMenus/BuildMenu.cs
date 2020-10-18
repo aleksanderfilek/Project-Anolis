@@ -6,14 +6,12 @@ namespace Logistics.Editor
 {
     public class BuildMenu : Menu
     {
-        public void OnHide()
-        {
-            Ui.SetActive(false);
-        }
+        [SerializeField] private MenuGroup _menuGroup;
 
-        public override bool CanHandleSelection()
+        public override void Show()
         {
-            return true;
+            _menuGroup.CurrentMenu = this;
+            base.Show();
         }
     }
 }

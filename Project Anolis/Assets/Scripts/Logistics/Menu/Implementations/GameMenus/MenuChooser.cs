@@ -17,11 +17,6 @@ namespace Logistics
             MenuManager.ActivateDefault();
         }
 
-        public override bool CanHandleSelection()
-        {
-            return false;
-        }
-
         public override void Show()
         {
             Debug.Log("Showing Menu Chooser");  //temporary, for testing

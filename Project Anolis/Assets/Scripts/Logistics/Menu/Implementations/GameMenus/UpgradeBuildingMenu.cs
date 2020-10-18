@@ -24,7 +24,7 @@ namespace Logistics
         public void RemoveBuilding()
         {
             _builder.Destroy(_tileSelector.SelectedTile);
-            Hide();
+            Deactivate();
         }
     }
 }

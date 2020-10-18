@@ -39,7 +39,7 @@ namespace Logistics
         private void Build(int index)
         {
             _builder.Build(_buildingList[index], _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
-            Hide();
+            Deactivate();
         }
     }
 }

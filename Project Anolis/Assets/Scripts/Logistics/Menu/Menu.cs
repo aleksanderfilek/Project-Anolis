@@ -14,7 +14,10 @@ namespace Logistics
             MenuManager.Menus.Add(this);
         }
 
-        public abstract bool CanHandleSelection();
+        public virtual bool CanHandleSelection()
+        {
+            return false;
+        }
 
         public virtual void Show()
         {
@@ -24,6 +27,11 @@ namespace Logistics
         public virtual void Hide()
         {
             Ui.SetActive(false);
+        }
+
+        public virtual void Deactivate()
+        {
+            Hide();
             MenuManager.ActivateDefault();
         }
     }
