@@ -4,9 +4,8 @@ namespace Logistics
 {
     public class Raycast : MonoBehaviour
     {
-        [HideInInspector] public bool IsSomethingHit;
+        public bool IsSomethingHit { get; private set; }
         public RaycastHit HitData;
-
         public void Shoot()
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);

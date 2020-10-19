@@ -6,16 +6,13 @@ namespace Logistics
 {
     public class MenuChooser : Chooser
     {
-        private Raycast _raycast;
-        private SelectorManager _selectorManager;
+        [SerializeField] private Raycast _raycast;
+        [SerializeField] private SelectorManager _selectorManager;
         [SerializeField] private List<Menu> _menus;
-        [SerializeField] private MenuGroup _menuGroup;
 
-        protected void Awake()
-        {
-            _raycast = GetComponentInParent<Raycast>();
-            _selectorManager = GetComponentInParent<SelectorManager>();
-        }
+        //TODO think about if one menu chooser could manage multiple menu groups, if not, it would be better to
+        //acquire this reference in Awake from parent (which will always be menu group in this case)
+        [SerializeField] private ShowableGroup _menuGroup;   
 
         public void Choose()
         {

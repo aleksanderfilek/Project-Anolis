@@ -2,23 +2,23 @@
 
 namespace Logistics
 {
-    public class MenuGroupWithDefault : MonoBehaviour
+    public class MenuGroupWithDefault : ShowableGroup
     {
         [SerializeField] private Showable _defaultMenu;
         private Showable _currentMenu;
 
-        public void Awake()
+        private void Awake()
         {
             ActivateMenu(_defaultMenu);
         }
 
-        public void ActivateMenu(Showable menu)
+        public override void ActivateMenu(Showable menu)
         {
             _currentMenu = menu;
             _currentMenu.Show();
         }
 
-        public void ChangeCurrentToDefault()
+        public override void DeactivateCurrent()
         {
             _currentMenu.Hide();
             ActivateMenu(_defaultMenu);

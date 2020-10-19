@@ -2,7 +2,7 @@
 
 namespace Logistics
 {
-    public class MenuGroup : MonoBehaviour
+    public class MenuGroup : ShowableGroup
     {
         [SerializeField] private Showable _openOnAwakeMenu;
         private Showable _currentMenu;
@@ -12,13 +12,13 @@ namespace Logistics
             ActivateMenu(_openOnAwakeMenu);
         }
 
-        public void ActivateMenu(Showable menu)
+        public override void ActivateMenu(Showable menu)
         {
             _currentMenu = menu;
             _currentMenu.Show();
         }
 
-        public void DeactivateCurrent()
+        public override void DeactivateCurrent()
         {
             _currentMenu.Hide();
         }

@@ -2,14 +2,9 @@
 
 namespace Logistics
 {
-    public class Clicker : MonoBehaviour
+    public class RaycastManager : MonoBehaviour
     {
-        private Raycast _raycast;
-
-        private void Awake()
-        {
-            _raycast = GetComponent<Raycast>();
-        }
+        [SerializeField] private Raycast _raycast;
 
         private void Update()
         {
