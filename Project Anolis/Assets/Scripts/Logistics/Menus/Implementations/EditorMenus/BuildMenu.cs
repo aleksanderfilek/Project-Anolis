@@ -11,6 +11,8 @@ namespace Logistics.Editor
         [SerializeField] private List<Placeable> _placeables;
         [SerializeField] private GameObject _buttonPrefab;
 
+        public Placeable CurrentSelection { get; set; }
+
         public override bool CanHandleSelection()
         {
             return false;
@@ -28,6 +30,10 @@ namespace Logistics.Editor
             {
                 var newButton = Instantiate(_buttonPrefab, Ui.transform);
                 newButton.GetComponentInChildren<Text>().text = placeable.objectName;
+                newButton.AddComponent<OptionContainer>().option = placeable;
+                newButton.GetComponentInChildren<Button>().onClick.AddListener(
+                    newButton.GetComponentInChildren<OptionContainer>().OnSelection);
+                newButton.GetComponentInChildren<OptionContainer>().AssignManager(this);
             }
         }
     }

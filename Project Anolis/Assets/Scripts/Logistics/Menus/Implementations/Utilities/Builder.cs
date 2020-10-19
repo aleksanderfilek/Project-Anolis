@@ -20,6 +20,7 @@ namespace Logistics
         public void Destroy(Tile tile)
         {
                 Destroy(tile.TileContent);
+                tile.TileContent = null;
         }
     }
 }
