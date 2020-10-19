@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9f7fa24678540e47bf60340dd2fc446, type: 3}
-  m_Name: Building_A
+  m_Name: Sphere
   m_EditorClassIdentifier: 
-  objectName: Kuznia
-  objectType: 0
-  prefab: {fileID: 3062741268767224653, guid: 057104767b5684a4aba0225b37920a4d, type: 3}
-  description: In Kuznia we kuj.
+  objectName: Sphere
+  objectType: 3
+  prefab: {fileID: 3791987028931154349, guid: b981f2e3440b61860ab2703e04171fb3, type: 3}
+  description: The roundest building you've ever seen!

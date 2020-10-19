@@ -15,3 +15,5 @@ MonoBehaviour:
   objectName: Tartak
   objectType: 3
   prefab: {fileID: 1447646891835595025, guid: 2469af0b12568594d9e264129869fe83, type: 3}
+  description: This is a tartak - freely transalted as "taryes", that means "yes
+    for .tar archives".
