@@ -10,7 +10,11 @@ namespace Logistics.Editor
     {
         [SerializeField] private List<Placeable> _placeables;
         [SerializeField] private GameObject _buttonPrefab;
-
+        [SerializeField] private TileSelector _tileSelector;
+        [SerializeField] private PlanetSelector _planetSelector;
+        [SerializeField] private Builder _builder;
+        [SerializeField] private Raycast _raycaster;
+        
         public Placeable CurrentSelection { get; set; }
 
         public override bool CanHandleSelection()
@@ -28,13 +32,23 @@ namespace Logistics.Editor
 
             foreach (var placeable in _placeables)
             {
-                var newButton = Instantiate(_buttonPrefab, Ui.transform);
+                var newButton = Instantiate(_buttonPrefab, ui[0].transform);
                 newButton.GetComponentInChildren<Text>().text = placeable.objectName;
                 newButton.AddComponent<OptionContainer>().option = placeable;
-                newButton.GetComponentInChildren<Button>().onClick.AddListener(
-                    newButton.GetComponentInChildren<OptionContainer>().OnSelection);
-                newButton.GetComponentInChildren<OptionContainer>().AssignManager(this);
+                var containerModule = newButton.GetComponentInChildren<OptionContainer>();
+                containerModule.AssignManager(this);
+                newButton.GetComponentInChildren<Button>().onClick.AddListener(containerModule.OnSelection);
             }
+        }
+
+        public void BulidSelected()
+        {
+            if (CurrentSelection == null) return;
+            _raycaster.Shoot();
+            _tileSelector.UpdateSelector();
+            _planetSelector.UpdateSelector();
+            Debug.Log(_tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
+            _builder.Build(CurrentSelection, _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
         }
     }
 }

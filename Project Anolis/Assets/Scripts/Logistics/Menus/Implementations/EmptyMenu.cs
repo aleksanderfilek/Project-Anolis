@@ -8,7 +8,7 @@ namespace Logistics
     {
         private void Awake()
         {
-            Ui = new GameObject();
+            ui = new List<GameObject>();
         }
 
         public override bool CanHandleSelection()

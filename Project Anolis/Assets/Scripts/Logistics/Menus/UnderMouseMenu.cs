@@ -10,7 +10,7 @@ namespace Logistics
 
         private void Awake()
         {
-            _uiRectTransform = Ui.GetComponent<RectTransform>();
+            _uiRectTransform = ui[0].GetComponent<RectTransform>();
         }
 
         public override void Show()

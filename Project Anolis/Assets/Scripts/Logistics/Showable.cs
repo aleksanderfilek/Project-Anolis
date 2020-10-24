@@ -1,19 +1,26 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 namespace Logistics
 {
     public abstract class Showable : MonoBehaviour
     {
-        [SerializeField] protected GameObject Ui;
+        [SerializeField] protected List<GameObject> ui;
 
         public virtual void Show()
         {
-            Ui.SetActive(true);
+            foreach (var uiElem in ui)
+            {
+                uiElem.SetActive(true);
+            }
         }
 
         public virtual void Hide()
         {
-            Ui.SetActive(false);
+            foreach (var uiElem in ui)
+            {
+                uiElem.SetActive(false);
+            };
         }
     }
 }

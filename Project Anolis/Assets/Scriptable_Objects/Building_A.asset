@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Building_A
   m_EditorClassIdentifier: 
   objectName: Kuznia
-  objectType: 0
+  objectType: 3
   prefab: {fileID: 3062741268767224653, guid: 057104767b5684a4aba0225b37920a4d, type: 3}
   description: In Kuznia we kuj.

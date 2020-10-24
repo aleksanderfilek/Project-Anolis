@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9f7fa24678540e47bf60340dd2fc446, type: 3}
-  m_Name: Cylinder
+  m_Name: Capsule
   m_EditorClassIdentifier: 
-  objectName: 
-  objectType: 0
-  prefab: {fileID: 0}
-  description: 
+  objectName: Capsule
+  objectType: 1
+  prefab: {fileID: 287678770271331127, guid: ee064e68c2c5848718bee9e956c9dbc4, type: 3}
+  description: There's a suprise toy inside for sure.
