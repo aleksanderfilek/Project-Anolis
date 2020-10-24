@@ -5,7 +5,7 @@ namespace Logistics
 {
     public class SelectorManager : MonoBehaviour
     {
-        public List<Selector> Selectors { get; set; } = new List<Selector>();
+        public List<Selector> Selectors = new List<Selector>();
 
         public void UpdateSelectors()
         {

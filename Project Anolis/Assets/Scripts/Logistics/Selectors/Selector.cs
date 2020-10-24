@@ -4,15 +4,7 @@ namespace Logistics
 {
     public abstract class Selector : MonoBehaviour
     {
-        private SelectorManager _selectorManager;
-        protected Raycast Raycast;
-
-        protected virtual void Awake()
-        {
-            _selectorManager = GetComponentInParent<SelectorManager>();
-            _selectorManager.Selectors.Add(this);
-            Raycast = GetComponentInParent<Raycast>();
-        }
+        [SerializeField] protected Raycast Raycast;
 
         public void UpdateSelector()
         {
