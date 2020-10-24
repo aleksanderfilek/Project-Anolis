@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class CameraController : MonoBehaviour
     
     
     private Transform _cameraTransform;
+    private Keyboard _keyboard;
+    private Mouse _mouse;
     
     private float _verticalRotationAmount;
     private float _horizontalRotationAmount;
@@ -20,6 +23,8 @@ public class CameraController : MonoBehaviour
     private void Awake()
     {
         _cameraTransform = transform.GetChild(0);
+        _keyboard = Keyboard.current;
+        _mouse = Mouse.current;
     }
 
     private void Update()
@@ -28,11 +33,24 @@ public class CameraController : MonoBehaviour
         MakeMovement();
     }
 
+    public void TestButton()
+    {
+        Debug.Log("Przycisk został naciśnięty?");
+    }
+    
     private void UpdateInput()
     {
-        _verticalRotationAmount = Input.GetAxis("Vertical");
-        _horizontalRotationAmount = Input.GetAxis("Horizontal");
-        _zoomAmount = Input.GetAxis("Mouse ScrollWheel");
+        if(_keyboard.wKey.isPressed)
+            _verticalRotationAmount = 1.0f;
+        
+        if(_keyboard.sKey.isPressed)
+            _verticalRotationAmount = -1.0f;
+        
+        if(_keyboard.dKey.isPressed)
+            _horizontalRotationAmount = 1.0f;
+        
+        if(_keyboard.aKey.isPressed)
+            _horizontalRotationAmount = -1.0f;
     }
 
     private void MakeMovement()
@@ -45,6 +63,9 @@ public class CameraController : MonoBehaviour
 
         if (_zoomAmount != 0f)
             Zoom(direction: new Vector3(0, 0, -1));
+
+        _horizontalRotationAmount = 0f;
+        _verticalRotationAmount = 0f;
     }
 
     private bool IsWithinBounds()

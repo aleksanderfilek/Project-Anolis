@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Logistics
 {
@@ -19,7 +20,7 @@ namespace Logistics
             var screenWidth = Screen.width;
             var screenHeight = Screen.height;
             
-            var newPosition = Input.mousePosition;
+            var newPosition = Mouse.current.position.ReadValue();
 
             newPosition.x = newPosition.x <= screenWidth - halfMenuSize.x
                 ? newPosition.x

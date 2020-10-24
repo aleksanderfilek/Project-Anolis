@@ -1,16 +1,25 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Logistics
 {
     public class RaycastManager : MonoBehaviour
     {
-        [SerializeField] private Raycast _raycast;
+        [SerializeField] private Raycast raycast;
 
+        private Mouse _mouse;
+        
+        private void Start()
+        {
+            _mouse = Mouse.current;
+        }
+        
         private void Update()
         {
-            if (!Input.GetMouseButtonDown(0))
+            if (!_mouse.leftButton.wasPressedThisFrame)
                 return;
-            _raycast.Shoot();
+            raycast.Shoot();
         }
     }
 }
