@@ -71,6 +71,87 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "InterplanetaryMode",
+            "id": "40213b6b-8349-40d9-8f5c-6e88e1340d97",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "af1fe188-4007-4a2f-b2f4-b31bdbb27dd1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ecfbe21c-adee-45cf-9a4f-493bafed028c",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Controller",
+            "id": "da86cb11-3ccc-475f-9876-c680ba0a40a9",
+            "actions": [
+                {
+                    "name": "Zoom",
+                    "type": "Value",
+                    "id": "1c9953bb-c5da-46bb-86fd-1e345946b2aa",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "713ae9d0-bdda-43d7-8ac0-2b6043d89076",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Zoom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Game",
+            "id": "39b072f5-4e42-4c60-934d-b7f38d01a9a8",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Value",
+                    "id": "ec3ec968-0559-4686-919b-b2012e0c9482",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "943b4955-fd81-4cc9-b258-822aab22560b",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

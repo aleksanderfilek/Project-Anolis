@@ -9,6 +9,10 @@
         <e p="Samples" t="Include">
           <e p="Input System" t="Include">
             <e p="1.0.0" t="Include">
+              <e p="Gamepad Mouse Cursor" t="Include">
+                <e p="Unity.InputSystem.VirtualMouseInput.asmdef" t="Include" />
+                <e p="VirtualMouseInput.cs" t="Include" />
+              </e>
               <e p="Simple Demo" t="Include">
                 <e p="SimpleController_UsingActionAsset.cs" t="Include" />
                 <e p="SimpleController_UsingActions.cs" t="Include" />
@@ -25,11 +29,13 @@
         <e p="Scripts" t="Include">
           <e p="Camera" t="Include">
             <e p="CameraController.cs" t="Include" />
+            <e p="InterplanetaryCameraController.cs" t="Include" />
+            <e p="PlanetaryCameraController.cs" t="Include" />
           </e>
           <e p="GameState.cs" t="Include" />
+          <e p="InputActionMapManager.cs" t="Include" />
           <e p="Logistics" t="Include">
             <e p="Managers" t="Include">
-              <e p="RaycastManager.cs" t="Include" />
               <e p="SelectorManager.cs" t="Include" />
             </e>
             <e p="MenuGroups" t="Include">
@@ -98,6 +104,7 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Project Anolis.sln" t="IncludeFlat" />
       <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Unity.InputSystem.VirtualMouseInput.csproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>

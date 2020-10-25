@@ -1221,6 +1221,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 631273900}
+  - component: {fileID: 631273902}
+  - component: {fileID: 631273901}
   - component: {fileID: 631273899}
   m_Layer: 0
   m_Name: Camera Controller
@@ -1241,9 +1243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1f1d37e6101d041965033996629954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotatingSpeed: 100
   zoomSpeed: 25
-  planetSurfaceHeight: 1
+  minCameraHeight: 10
   state: {fileID: 1100528767}
 --- !u!4 &631273900
 Transform:
@@ -1260,6 +1261,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &631273901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631273898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cadc18cf8a1cc5d4dae504ee92e7f100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &631273902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631273898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3114e51824c14f048671b06a512e50db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotatingSpeed: 100
 --- !u!1 &675619507
 GameObject:
   m_ObjectHideFlags: 0
@@ -3755,8 +3781,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 631273899}
-        m_MethodName: Rotate
+      - m_Target: {fileID: 631273902}
+        m_MethodName: OnRotate
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3769,13 +3795,39 @@ MonoBehaviour:
     m_ActionId: ab77acef-0e06-4ac9-8a44-6cbc56483d0e
     m_ActionName: PlanetaryMode/Rotate[/Keyboard/s,/Keyboard/w]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: dcc2f5e7-b980-4b2f-8d9f-ba65191e6781
-    m_ActionName: PlanetaryMode1/RotateHorizontaly[/Keyboard/a,/Keyboard/d]
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: OnZoom
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 10cbf920-b1a5-45f6-8bba-61d3ab3335f8
+    m_ActionName: Controller/Zoom[/Mouse/delta/x,/Mouse/delta/x]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 4b5c3ba5-d283-4bd1-a38d-d28dc1e2d843
-    m_ActionName: PlanetaryMode1/RotateVerticaly[/Keyboard/s,/Keyboard/w]
+    m_ActionId: af1fe188-4007-4a2f-b2f4-b31bdbb27dd1
+    m_ActionName: InterplanetaryMode/New action
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 631273899}
+        m_MethodName: OnZoom
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 62043b47-df0d-4886-af9b-b5bf9e7687fb
+    m_ActionName: PlanetaryMode/Zoom[/Mouse/leftButton,/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: PlanetaryMode

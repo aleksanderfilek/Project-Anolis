@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Logistics
 {
     public class SelectorManager : MonoBehaviour
     {
-        public List<Selector> Selectors = new List<Selector>();
+         public List<Selector> selectors;
 
         public void UpdateSelectors()
         {
-            foreach (var selector in Selectors)
+            foreach (var selector in selectors)
             {
                 selector.UpdateSelector();
             }
