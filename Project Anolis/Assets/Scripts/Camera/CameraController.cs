@@ -13,59 +13,39 @@ public class CameraController : MonoBehaviour
     
     
     private Transform _cameraTransform;
-    private Keyboard _keyboard;
-    private Mouse _mouse;
-    
+
     private float _verticalRotationAmount;
     private float _horizontalRotationAmount;
     private float _zoomAmount;
-
+    
+    public void Rotate(InputAction.CallbackContext context)
+    {
+        var amount = context.ReadValue<Vector2>();
+        _verticalRotationAmount = amount.y;
+        _horizontalRotationAmount = amount.x;
+    }
+    
     private void Awake()
     {
         _cameraTransform = transform.GetChild(0);
-        _keyboard = Keyboard.current;
-        _mouse = Mouse.current;
     }
 
     private void Update()
     {
-        UpdateInput();
+       // UpdateInput();
         MakeMovement();
     }
-
-    public void TestButton()
-    {
-        Debug.Log("Przycisk został naciśnięty?");
-    }
     
-    private void UpdateInput()
-    {
-        if(_keyboard.wKey.isPressed)
-            _verticalRotationAmount = 1.0f;
-        
-        if(_keyboard.sKey.isPressed)
-            _verticalRotationAmount = -1.0f;
-        
-        if(_keyboard.dKey.isPressed)
-            _horizontalRotationAmount = 1.0f;
-        
-        if(_keyboard.aKey.isPressed)
-            _horizontalRotationAmount = -1.0f;
-    }
-
     private void MakeMovement()
     {
         if (_verticalRotationAmount != 0 && IsWithinBounds())
             RotateCamera(direction: new Vector3(-1, 0, 0), amount: _verticalRotationAmount);
-
+        
         if (_horizontalRotationAmount != 0)
             RotateCamera(direction: new Vector3(0, -1, 0), amount: _horizontalRotationAmount, relativeTo: Space.World);
-
+        
         if (_zoomAmount != 0f)
             Zoom(direction: new Vector3(0, 0, -1));
-
-        _horizontalRotationAmount = 0f;
-        _verticalRotationAmount = 0f;
     }
 
     private bool IsWithinBounds()
