@@ -8,12 +8,12 @@ namespace Interaction
 
         protected override bool IsValidForSelection()
         {
-            return Raycast.IsSomethingHit && Raycast.HitData.transform.CompareTag("Planet");
+            return raycast.IsSomethingHit && raycast.HitData.transform.CompareTag("Planet");
         }
 
         protected override void Select()
         {
-            SelectedPlanet = Raycast.HitData.transform.gameObject;
+            SelectedPlanet = raycast.HitData.transform.gameObject;
         }
 
         protected override void ClearSelection()

@@ -4,7 +4,7 @@ namespace Interaction
 {
     public abstract class Selector : MonoBehaviour
     {
-        [SerializeField] protected Raycast Raycast;
+        [SerializeField] protected Raycast raycast;
 
         public void UpdateSelector()
         {

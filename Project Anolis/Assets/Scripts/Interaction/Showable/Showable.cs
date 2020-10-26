@@ -4,16 +4,16 @@ namespace Interaction
 {
     public abstract class Showable : MonoBehaviour
     {
-        [SerializeField] protected GameObject Ui;
+        [SerializeField] protected GameObject ui;
 
         public virtual void Show()
         {
-            Ui.SetActive(true);
+            ui.SetActive(true);
         }
 
         public virtual void Hide()
         {
-            Ui.SetActive(false);
+            ui.SetActive(false);
         }
     }
 }

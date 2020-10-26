@@ -11,7 +11,7 @@ namespace Interaction
 
         private void Awake()
         {
-            _uiRectTransform = Ui.GetComponent<RectTransform>();
+            _uiRectTransform = ui.GetComponent<RectTransform>();
         }
 
         public override void Show()

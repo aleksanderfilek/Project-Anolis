@@ -1,27 +1,35 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using UnityEngine;
 using System.Collections.Generic;
 
 namespace Interaction
 {
+    [RequireComponent(typeof(SelectorCollection))]
     public class MenuChooser : Chooser
     {
-        [SerializeField] private Raycast _raycast;
-        [SerializeField] private SelectorCollection selectorCollection;
-        [SerializeField] private List<Menu> _menus;
+        [SerializeField] private Raycast raycast;
+        [SerializeField] private List<Menu> menus;
 
-        //TODO think about if one menu chooser could manage multiple menu groups, if not, it would be better to
-        //acquire this reference in Awake from parent (which will always be menu group in this case)
-        [SerializeField] private ShowableGroup _menuGroup;   
+        private SelectorCollection _selectorCollection;
+        private ShowableGroup _showableGroup;
+        
+        private void Awake()
+        {
+            _selectorCollection = GetComponent<SelectorCollection>();
+            _showableGroup = GetComponentInParent<ShowableGroup>();
+            if (_showableGroup == null)    // TODO remove when building
+                Debug.LogError("Wrong structure. Chooser should be child of ShowableGroup that it manages.");
+        }
 
         public void Choose()
         {
-            if (!_raycast.IsSomethingHit)
+            if (!raycast.IsSomethingHit)
                 return;
-            selectorCollection.UpdateSelectors();
-            foreach (var menu in _menus.Where(menu => menu.CanHandleSelection()))
+            _selectorCollection.UpdateSelectors();
+            foreach (var menu in menus.Where(menu => menu.CanHandleSelection()))
             {
-                _menuGroup.ActivateMenu(menu);
+                _showableGroup.ActivateMenu(menu);
                 Hide();
                 return;
             }

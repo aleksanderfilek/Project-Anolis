@@ -5,17 +5,17 @@ namespace Interaction
 {
     public class BuildMenu : UnderMouseMenu
     {
-        [SerializeField] private List<Placeable> _buildingList;
+        [SerializeField] private List<Placeable> buildingList;
 
-        [SerializeField] private TileSelector _tileSelector;
-        [SerializeField] private PlanetSelector _planetSelector;
-        [SerializeField] private Builder _builder;
+        [SerializeField] private TileSelector tileSelector;
+        [SerializeField] private PlanetSelector planetSelector;
+        [SerializeField] private Builder builder;
 
         public override bool CanHandleSelection()
         {
-            if (_tileSelector.SelectedTile == null)
+            if (tileSelector.SelectedTile == null)
                 return false;
-            return _tileSelector.SelectedTile.TileContent == null;
+            return tileSelector.SelectedTile.TileContent == null;
         }
 
         public void BuildForge()
@@ -30,7 +30,7 @@ namespace Interaction
 
         private void Build(int index)
         {
-            _builder.Build(_buildingList[index], _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
+            builder.Build(buildingList[index], tileSelector.SelectedTile, planetSelector.SelectedPlanet.transform);
         }
     }
 }

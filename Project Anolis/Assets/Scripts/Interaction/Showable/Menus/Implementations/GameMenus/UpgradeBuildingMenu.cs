@@ -4,19 +4,19 @@ namespace Interaction
 {
     public class UpgradeBuildingMenu : UnderMouseMenu
     {
-        [SerializeField] private Builder _builder;
-        [SerializeField] private TileSelector _tileSelector;
+        [SerializeField] private Builder builder;
+        [SerializeField] private TileSelector tileSelector;
 
         public override bool CanHandleSelection()
         {
-            if (_tileSelector.SelectedTile == null)
+            if (tileSelector.SelectedTile == null)
                 return false;
-            return _tileSelector.SelectedTile.TileContent != null;
+            return tileSelector.SelectedTile.TileContent != null;
         }
 
         public void RemoveBuilding()
         {
-            _builder.Destroy(_tileSelector.SelectedTile);
+            builder.Destroy(tileSelector.SelectedTile);
         }
     }
 }

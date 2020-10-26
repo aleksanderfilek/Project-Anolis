@@ -6,12 +6,12 @@
 
         protected override bool IsValidForSelection()
         {
-            return Raycast.IsSomethingHit && Raycast.HitData.transform.CompareTag("Planet");
+            return raycast.IsSomethingHit && raycast.HitData.transform.CompareTag("Planet");
         }
 
         protected override void Select()
         {
-            var hitData = Raycast.HitData;
+            var hitData = raycast.HitData;
             var planet = hitData.transform.gameObject.GetComponent<Planet>();
             SelectedTile = planet.Tiles[hitData.triangleIndex];
         }
