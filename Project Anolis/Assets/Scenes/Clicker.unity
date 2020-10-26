@@ -248,7 +248,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 84385945}
-  - {fileID: 395787763}
   m_Father: {fileID: 1204826358}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -411,9 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8bdc5fadb2351c4eba8e1f5d775012c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Selectors:
-  - {fileID: 225091708}
-  - {fileID: 568787242}
+  selectors: []
 --- !u!4 &84385945
 Transform:
   m_ObjectHideFlags: 0
@@ -858,50 +855,6 @@ RectTransform:
   m_AnchoredPosition: {x: -18, y: -5.4}
   m_SizeDelta: {x: 291.64038, y: 163.80284}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &395787762
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 395787763}
-  - component: {fileID: 395787764}
-  m_Layer: 0
-  m_Name: RaycastManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &395787763
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395787762}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 66694410}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &395787764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395787762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b2d21168f2a8b040b8fab6daf234eb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  raycast: {fileID: 174268904}
 --- !u!1 &419503251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3746,8 +3699,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1762456355}
   - component: {fileID: 1762456354}
+  - component: {fileID: 1762456356}
   m_Layer: 0
-  m_Name: PlayerInput
+  m_Name: Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3795,21 +3749,6 @@ MonoBehaviour:
     m_ActionId: ab77acef-0e06-4ac9-8a44-6cbc56483d0e
     m_ActionName: PlanetaryMode/Rotate[/Keyboard/s,/Keyboard/w]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: OnZoom
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 10cbf920-b1a5-45f6-8bba-61d3ab3335f8
-    m_ActionName: Controller/Zoom[/Mouse/delta/x,/Mouse/delta/x]
-  - m_PersistentCalls:
       m_Calls: []
     m_ActionId: af1fe188-4007-4a2f-b2f4-b31bdbb27dd1
     m_ActionName: InterplanetaryMode/New action
@@ -3826,8 +3765,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 62043b47-df0d-4886-af9b-b5bf9e7687fb
-    m_ActionName: PlanetaryMode/Zoom[/Mouse/leftButton,/Mouse/rightButton]
+    m_ActionId: 1c9953bb-c5da-46bb-86fd-1e345946b2aa
+    m_ActionName: Controller/Zoom[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 174268904}
+        m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ec3ec968-0559-4686-919b-b2012e0c9482
+    m_ActionName: Game/Click[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: PlanetaryMode
@@ -3847,6 +3801,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1762456356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762456353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc125dbac3b29364ba6a4946019bb6a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alwaysActivatedActions:
+  - Zoom
+  - Click
 --- !u!1 &1827450297
 GameObject:
   m_ObjectHideFlags: 0
