@@ -19,58 +19,41 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Move rest of planetary camera to new input system">
+    <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Change names">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/.sample.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/.sample.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/Environment.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/Environment.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleController_UsingActionAsset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleController_UsingActionAsset.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleController_UsingActions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleController_UsingActions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleController_UsingPlayerInput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleController_UsingPlayerInput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleController_UsingState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleController_UsingState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleControls.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleControls.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleControls.inputactions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleControls.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleDemo_UsingActionAsset.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleDemo_UsingActionAsset.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleDemo_UsingActions.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleDemo_UsingActions.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleDemo_UsingPlayerInput.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleDemo_UsingPlayerInput.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleDemo_UsingState.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleDemo_UsingState.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleProjectile.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleProjectile.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Clicker.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Clicker.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Managers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Managers/SelectorManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Managers/SelectorManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/MenuGroups.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/MenuGroups/Implementations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/MenuGroups/Implementations/MenuGroup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/MenuGroups/Implementations/MenuGroup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/MenuGroups/Implementations/MenuGroupWithDefault.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/MenuGroups/Implementations/MenuGroupWithDefault.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/MenuGroups/ShowableGroup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/MenuGroups/ShowableGroup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Raycast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Raycast.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Selectors.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Selectors/Implementations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Selectors/Implementations/PlanetSelector.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Selectors/Implementations/PlanetSelector.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Selectors/Implementations/TileSelector.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Selectors/Implementations/TileSelector.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Selectors/Selector.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Selectors/Selector.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Choosers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Choosers/Chooser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Choosers/Chooser.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Choosers/Implementations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Choosers/Implementations/MenuChooser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Choosers/Implementations/MenuChooser.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/Implementations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/Implementations/EditorMenus.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/Implementations/EditorMenus/BuildMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/Implementations/EditorMenus/BuildMenu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/Implementations/GameMenus.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/Implementations/GameMenus/BuildMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/Implementations/GameMenus/BuildMenu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/Menu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/Menu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/UnderMouseMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/UnderMouseMenu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Showable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Showable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Utilities.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Utilities/Builder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logistics/Utilities/Builder.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,9 +67,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/AlphaButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Simple Demo/SimpleController_UsingPlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/EditorMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Samples/Input System/1.0.0/Gamepad Mouse Cursor/VirtualMouseInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/InputManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -179,7 +160,7 @@
       <workItem from="1602953679790" duration="2965000" />
       <workItem from="1603620393726" duration="11622000" />
       <workItem from="1603658152492" duration="6756000" />
-      <workItem from="1603701607336" duration="4898000" />
+      <workItem from="1603701607336" duration="5216000" />
     </task>
     <task id="LOCAL-00001" summary="Change rotating planets to new input">
       <created>1603627329359</created>
@@ -195,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603666885731</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Change names">
+      <created>1603706979058</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603706979059</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +207,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Change rotating planets to new input" />
     <MESSAGE value="Move rest of planetary camera to new input system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move rest of planetary camera to new input system" />
+    <MESSAGE value="Change names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change names" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="345" key="#Notifications" timestamp="1603533591308">

@@ -6,23 +6,6 @@
     <e p="D:\projekty_unity\projekty\Project-Anolis\Project Anolis" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Samples" t="Include">
-          <e p="Input System" t="Include">
-            <e p="1.0.0" t="Include">
-              <e p="Gamepad Mouse Cursor" t="Include">
-                <e p="Unity.InputSystem.VirtualMouseInput.asmdef" t="Include" />
-                <e p="VirtualMouseInput.cs" t="Include" />
-              </e>
-              <e p="Simple Demo" t="Include">
-                <e p="SimpleController_UsingActionAsset.cs" t="Include" />
-                <e p="SimpleController_UsingActions.cs" t="Include" />
-                <e p="SimpleController_UsingPlayerInput.cs" t="Include" />
-                <e p="SimpleController_UsingState.cs" t="Include" />
-                <e p="SimpleControls.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-        </e>
         <e p="Scriptable_Objects" t="Include">
           <e p="Placeable.cs" t="Include" />
         </e>
@@ -106,7 +89,6 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Project Anolis.sln" t="IncludeFlat" />
       <e p="Temp\bin" t="ExcludeRecursive" />
-      <e p="Unity.InputSystem.VirtualMouseInput.csproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>

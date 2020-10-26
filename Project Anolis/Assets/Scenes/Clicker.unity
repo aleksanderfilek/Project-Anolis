@@ -220,37 +220,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &66694409
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 66694410}
-  m_Layer: 0
-  m_Name: Managers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &66694410
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 66694409}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 84385945}
-  m_Father: {fileID: 1204826358}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &73416314
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +361,7 @@ GameObject:
   - component: {fileID: 84385945}
   - component: {fileID: 84385944}
   m_Layer: 0
-  m_Name: SelectorManager
+  m_Name: SelectorCollection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -410,7 +379,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8bdc5fadb2351c4eba8e1f5d775012c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectors: []
+  selectors:
+  - {fileID: 225091708}
+  - {fileID: 568787242}
 --- !u!4 &84385945
 Transform:
   m_ObjectHideFlags: 0
@@ -418,11 +389,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84385943}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 66694410}
+  m_Father: {fileID: 1204826358}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &115155387
@@ -2062,7 +2033,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1055662572}
   m_Layer: 0
-  m_Name: Utilities
+  m_Name: Executives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2441,7 +2412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204826358}
   m_Layer: 0
-  m_Name: Logistics
+  m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2458,7 +2429,7 @@ Transform:
   m_LocalPosition: {x: -5.77268, y: -3.004829, z: -5.801783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 66694410}
+  - {fileID: 84385945}
   - {fileID: 429628938}
   - {fileID: 174268903}
   - {fileID: 1913385596}
@@ -3905,7 +3876,7 @@ GameObject:
   - component: {fileID: 1913385596}
   - component: {fileID: 1913385597}
   m_Layer: 0
-  m_Name: MenuGroup
+  m_Name: GameShowableGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3940,7 +3911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cefbd03ab93ca4b9d317d2ad948756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultMenu: {fileID: 1942606175}
+  defaultShowable: {fileID: 1942606175}
 --- !u!1 &1942606173
 GameObject:
   m_ObjectHideFlags: 0
@@ -3986,7 +3957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ui: {fileID: 347566790}
   _raycast: {fileID: 174268904}
-  _selectorManager: {fileID: 84385944}
+  selectorCollection: {fileID: 84385944}
   _menus:
   - {fileID: 746254087}
   - {fileID: 115155388}
