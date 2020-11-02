@@ -11,7 +11,7 @@ namespace Menu
 
         private void Update()
         {
-            transform.Rotate(vector);
+            transform.Rotate(vector*Time.deltaTime);
         }
     }
 }
