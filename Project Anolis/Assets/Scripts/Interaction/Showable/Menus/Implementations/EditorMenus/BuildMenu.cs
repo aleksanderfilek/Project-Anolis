@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 namespace Interaction.Editor
@@ -32,7 +33,9 @@ namespace Interaction.Editor
 
             foreach (var placeable in _placeables)
             {
-                var newButton = Instantiate(_buttonPrefab, ui[0].transform);
+                var panelToAttach = ui.GetComponentInChildren<GridLayoutGroup>().transform;
+                var newButton = Instantiate(_buttonPrefab, panelToAttach);
+                newButton.name = "Button - " + placeable.name;
                 newButton.GetComponentInChildren<Text>().text = placeable.objectName;
                 newButton.AddComponent<OptionContainer>().option = placeable;
                 var containerModule = newButton.GetComponentInChildren<OptionContainer>();

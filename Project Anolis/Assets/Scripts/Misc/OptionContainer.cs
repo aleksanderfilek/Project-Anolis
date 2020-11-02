@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Logistics.Editor;
+using Interaction.Editor;
 using UnityEngine;
 
 public class OptionContainer : MonoBehaviour
