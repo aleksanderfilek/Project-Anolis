@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: Cube
   objectType: 1
-  prefab: {fileID: 3004739611665126215, guid: 7f4933315266148cd9b4dea5736d1a41, type: 3}
+  prefab: {fileID: 3004739611665126215, guid: a9327cc956103fe40ab900e477a69d87, type: 3}
   description: An ordinary cube.

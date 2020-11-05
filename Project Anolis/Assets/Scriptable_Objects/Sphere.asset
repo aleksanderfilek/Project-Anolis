@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: Sphere
   objectType: 3
-  prefab: {fileID: 3791987028931154349, guid: b981f2e3440b61860ab2703e04171fb3, type: 3}
+  prefab: {fileID: 3791987028931154349, guid: b8e461b5a8b32c042aebefb7ae077af0, type: 3}
   description: The roundest building you've ever seen!

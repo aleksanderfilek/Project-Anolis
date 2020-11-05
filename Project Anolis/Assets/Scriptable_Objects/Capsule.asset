@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: Capsule
   objectType: 1
-  prefab: {fileID: 287678770271331127, guid: ee064e68c2c5848718bee9e956c9dbc4, type: 3}
+  prefab: {fileID: 287678770271331127, guid: c7b3bf4a7575e2d4182a7f26e1ae63ea, type: 3}
   description: There's a suprise toy inside for sure.

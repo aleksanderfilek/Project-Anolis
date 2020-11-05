@@ -27,7 +27,7 @@ namespace Interaction.Editor
         {
             if (_placeables.Count == 0)
             {
-                Debug.Log(this + ": List of placeables is empty");
+                Debug.LogWarning(this + ": List of Placeables is empty");
                 return;
             }
 
@@ -50,7 +50,6 @@ namespace Interaction.Editor
             _raycaster.Shoot();
             _tileSelector.UpdateSelector();
             _planetSelector.UpdateSelector();
-            Debug.Log(_tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
             _builder.Build(CurrentSelection, _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
         }
     }
