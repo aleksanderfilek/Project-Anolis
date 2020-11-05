@@ -24,7 +24,7 @@ namespace Interaction
             }
             if (hitData.transform.CompareTag("Placeable"))
             {
-                var placeable = hitData.transform.gameObject.GetComponent<PlaceableInstance>();
+                var placeable = hitData.collider.gameObject.GetComponent<PlaceableInstance>();
                 SelectedTile = placeable.Tile;
                 return;
             }

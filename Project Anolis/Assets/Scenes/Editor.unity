@@ -3294,6 +3294,8 @@ MonoBehaviour:
   ui: {fileID: 856794513}
   _placeables:
   - {fileID: 11400000, guid: 490547b1fb6eee8449cd376554c2be29, type: 2}
+  - {fileID: 11400000, guid: 8db4f75552b93ad4a825c23500e25861, type: 2}
+  - {fileID: 11400000, guid: 80736920f2282094eb7d916d234c995f, type: 2}
   _buttonPrefab: {fileID: 5229485784711942867, guid: c7eb202acd8a38d4895570a82c8c1c38,
     type: 3}
   _tileSelector: {fileID: 530461730}

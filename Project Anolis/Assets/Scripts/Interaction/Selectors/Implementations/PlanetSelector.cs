@@ -23,7 +23,7 @@ namespace Interaction
             }
             if (hitData.transform.CompareTag("Placeable"))
             {
-                SelectedPlanet = hitData.transform.gameObject.GetComponentInParent<Planet>().gameObject;
+                SelectedPlanet = hitData.collider.gameObject.GetComponentInParent<Planet>().gameObject;
                 return;
             }
             Debug.LogError("Planet selection failed");
