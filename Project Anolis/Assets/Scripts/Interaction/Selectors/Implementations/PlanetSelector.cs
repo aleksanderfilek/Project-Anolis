@@ -8,12 +8,25 @@ namespace Interaction
 
         protected override bool IsValidForSelection()
         {
-            return raycast.IsSomethingHit && raycast.HitData.transform.CompareTag("Planet");
+            return raycast.IsSomethingHit 
+                   && (raycast.HitData.transform.CompareTag("Planet") 
+                       || raycast.HitData.transform.CompareTag("Placeable"));
         }
 
         protected override void Select()
         {
-            SelectedPlanet = raycast.HitData.transform.gameObject;
+            var hitData = raycast.HitData;
+            if (hitData.transform.CompareTag("Planet"))
+            {
+                SelectedPlanet = hitData.transform.gameObject;
+                return;
+            }
+            if (hitData.transform.CompareTag("Placeable"))
+            {
+                SelectedPlanet = hitData.transform.gameObject.GetComponentInParent<Planet>().gameObject;
+                return;
+            }
+            Debug.LogError("Planet selection failed");
         }
 
         protected override void ClearSelection()

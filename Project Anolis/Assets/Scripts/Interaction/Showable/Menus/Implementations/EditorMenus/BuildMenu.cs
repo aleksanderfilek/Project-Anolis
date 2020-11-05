@@ -50,7 +50,15 @@ namespace Interaction.Editor
             _raycaster.Shoot();
             _tileSelector.UpdateSelector();
             _planetSelector.UpdateSelector();
-            _builder.Build(CurrentSelection, _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
+            if (_tileSelector.SelectedTile == null)
+            {
+                Debug.LogError("Tile is not selected");
+                if (_planetSelector.SelectedPlanet == null)
+                {
+                    Debug.LogError("Planet is not selected");
+                }
+            }
+            else _builder.Build(CurrentSelection, _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
         }
     }
 }

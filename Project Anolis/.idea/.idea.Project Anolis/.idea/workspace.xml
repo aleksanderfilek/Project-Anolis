@@ -16,21 +16,32 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Remove samples">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Clicker.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Clicker.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Executives/Builder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Executives/Builder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Implementations/PlanetSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Implementations/PlanetSelector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Implementations/TileSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Implementations/TileSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Selector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Selector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Choosers/Implementations/MenuChooser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Choosers/Implementations/MenuChooser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/BuildMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/BuildMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/UnderMouseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/UnderMouseMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Showable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Showable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/EditorMenus/BuildMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/EditorMenus/BuildMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/OptionContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/OptionContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +52,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/InputManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/21/40296c6f/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/AlphaButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Scriptable_Objects/Placeable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Scripts/Interaction/Executives/Builder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Scenes/Editor.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/UnderMouseMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Scriptable_Objects/Cube.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Scriptable_Objects/Capsule.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/EditorMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/InputManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Scriptable_Objects/Sphere.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/19/a81ead35/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Scripts/Interaction/Showable/Menus/Implementations/EditorMenus/BuildMenu.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -75,7 +96,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Collections/ShowableGroups/Implementations/ShowableGroupWithDefault.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputActionMapManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Raycast.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Choosers/Implementations/MenuChooser.cs" />
@@ -83,6 +103,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/BuildMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Selector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NewBehaviourScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scriptable_Objects/Placeable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlaceableInstance.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Misc/OptionContainer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/EditorMenus/BuildMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Implementations/TileSelector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Implementations/PlanetSelector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Executives/Builder.cs" />
       </list>
     </option>
   </component>
@@ -95,6 +125,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -106,7 +138,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -119,10 +151,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22888">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="22888" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -143,6 +175,8 @@
       <workItem from="1603620393726" duration="11622000" />
       <workItem from="1603658152492" duration="6756000" />
       <workItem from="1603701607336" duration="11392000" />
+      <workItem from="1604569008499" duration="1338000" />
+      <workItem from="1604570669138" duration="5310000" />
     </task>
     <task id="LOCAL-00001" summary="Change rotating planets to new input">
       <created>1603627329359</created>
@@ -172,7 +206,28 @@
       <option name="project" value="LOCAL" />
       <updated>1603707236516</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Import latest master, changed names">
+      <created>1604337966180</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604337966180</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Removed some shame">
+      <created>1604338073939</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1604338073939</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Built Placeable can be changed to another">
+      <created>1604572713548</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604572713548</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +240,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -198,25 +265,98 @@
     <MESSAGE value="Move rest of planetary camera to new input system" />
     <MESSAGE value="Change names" />
     <MESSAGE value="Remove samples" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove samples" />
+    <MESSAGE value="Import latest master, changed names" />
+    <MESSAGE value="Removed some shame" />
+    <MESSAGE value="Built Placeable can be changed to another" />
+    <option name="LAST_COMMIT_MESSAGE" value="Built Placeable can be changed to another" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="345" key="#Notifications" timestamp="1603533591308">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="708" y="345" key="#Notifications/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603533591308" />
-    <state x="415" y="0" width="1142" height="851" key="SettingsEditor" timestamp="1603541639611">
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1604574946050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
+    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1604574946049">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946049" />
+    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1604574946049">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946049" />
+    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1604574946050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1604574946050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
+    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1604574946050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
+    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1604574946050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
+    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1604574946050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1604574946050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
+    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1604574946050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
+    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1604574946050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
+    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1604574946050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1604574946051">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946051" />
+    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1604574946051">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946051" />
+    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1604574946051">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946051" />
+    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1604574946051">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946051" />
+    <state x="766" y="230" key="RollbackChangesDialog" timestamp="1604337980619">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="766" y="230" key="RollbackChangesDialog/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604337980619" />
+    <state x="744" y="183" width="1142" height="851" key="SettingsEditor" timestamp="1604569505186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="472" y="232" key="SettingsEditor/0.0.1920.1037/1920.0.1280.1024@0.0.1920.1037" timestamp="1602954206546" />
+    <state x="744" y="183" key="SettingsEditor/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604569505186" />
     <state x="415" y="0" width="1142" height="851" key="SettingsEditor/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603541639611" />
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1603658622327">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603658622327" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603707241038">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604338388670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604338388670" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603707241038" />
     <state x="624" y="237" key="run.anything.popup" timestamp="1602954072896">
       <screen x="0" y="0" width="1920" height="1037" />
