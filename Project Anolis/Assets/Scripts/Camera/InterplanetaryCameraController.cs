@@ -10,19 +10,21 @@ public class InterplanetaryCameraController : MonoBehaviour
     private float _verticalMoveAmount;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float maxCameraHeight;
+    [SerializeField] private Vector3 rotation;
     
     private Transform _cameraTransform;
     private CameraManipulator _cameraManipulator;
     
     private void Awake()
     {
-        _cameraManipulator = GetComponent<CameraManipulator>(); 
+        _cameraManipulator = GetComponent<CameraManipulator>();
         _cameraTransform = GetComponentInChildren<Camera>().transform;
     }
 
     private void Update()
     {
         MakeMovement();
+        transform.rotation = Quaternion.Euler(rotation);
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -53,10 +55,10 @@ public class InterplanetaryCameraController : MonoBehaviour
     private void MakeMovement()
     {
         if (_horizontalMoveAmount != 0 && IsWithinBounds())
-            transform.Translate(_horizontalMoveAmount * moveSpeed, 0.0f, 0.0f);
+            transform.Translate(-_horizontalMoveAmount * moveSpeed, 0.0f, 0.0f);
 
         if (_verticalMoveAmount != 0 && IsWithinBounds())
-            transform.Translate(0.0f, 0.0f, _verticalMoveAmount * moveSpeed, Space.World);
+            transform.Translate(0.0f, 0.0f, -_verticalMoveAmount * moveSpeed, Space.World);
     }
 
     private bool IsWithinBounds()

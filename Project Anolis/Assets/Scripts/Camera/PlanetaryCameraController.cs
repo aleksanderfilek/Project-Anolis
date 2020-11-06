@@ -22,7 +22,7 @@ public class PlanetaryCameraController : MonoBehaviour
 
     private void Update()
     {
-        MakeMovement();
+        MakeRotation();
     }
 
     public void OnRotate(InputAction.CallbackContext context)
@@ -50,7 +50,7 @@ public class PlanetaryCameraController : MonoBehaviour
         }
     }
 
-    private void MakeMovement()
+    private void MakeRotation()
     {
         if (_verticalRotationAmount != 0 && IsWithinBounds())
             _cameraManipulator.Rotate(new Vector3(-1, 0, 0), _verticalRotationAmount * rotatingSpeed);

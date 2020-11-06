@@ -18,13 +18,13 @@ public class ActionActivator : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (GameState.Get.CurrentMode == GameState.Mode.Interplanetary)    //todo change!!!
-           _playerInput.SwitchCurrentActionMap("InterplanetaryMode");
-        else
-        {
-            // _playerInput.SwitchCurrentActionMap("PlanetaryMode");
-        }
-    }
+    // private void Update()
+    // {
+    //     if (GameState.Get.CurrentMode == GameState.Mode.Interplanetary)    //todo change!!!
+    //        _playerInput.SwitchCurrentActionMap("InterplanetaryMode");
+    //     else
+    //     {
+    //         // _playerInput.SwitchCurrentActionMap("PlanetaryMode");
+    //     }
+    // }
 }
