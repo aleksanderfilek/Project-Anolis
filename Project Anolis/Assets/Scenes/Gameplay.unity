@@ -1099,9 +1099,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 631273900}
+  - component: {fileID: 631273899}
+  - component: {fileID: 631273903}
   - component: {fileID: 631273902}
   - component: {fileID: 631273901}
-  - component: {fileID: 631273899}
   m_Layer: 0
   m_Name: Camera Controller
   m_TagString: Untagged
@@ -1121,9 +1122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1f1d37e6101d041965033996629954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomSpeed: 25
-  minCameraHeight: 10
-  state: {fileID: 1100528767}
 --- !u!4 &631273900
 Transform:
   m_ObjectHideFlags: 0
@@ -1151,6 +1149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cadc18cf8a1cc5d4dae504ee92e7f100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 2
+  maxCameraHeight: 200
 --- !u!114 &631273902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1164,6 +1164,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotatingSpeed: 100
+  minCameraHeight: 21.55
+--- !u!114 &631273903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631273898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f3f369128c418c9a2901806938aee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomSpeed: 25
+  modeTransitionHeight: 42.76
 --- !u!1 &675619507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,8 +2096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72086c40c68084458a29955a238ab49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentFocus: {fileID: 0}
-  currentMode: 0
 --- !u!4 &1100528768
 Transform:
   m_ObjectHideFlags: 0
@@ -3674,12 +3687,23 @@ MonoBehaviour:
     m_ActionId: ab77acef-0e06-4ac9-8a44-6cbc56483d0e
     m_ActionName: PlanetaryMode/Rotate[/Keyboard/s,/Keyboard/w]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 631273901}
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: af1fe188-4007-4a2f-b2f4-b31bdbb27dd1
     m_ActionName: InterplanetaryMode/New action
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 631273899}
+      - m_Target: {fileID: 0}
         m_MethodName: OnZoom
         m_Mode: 0
         m_Arguments:
@@ -3707,6 +3731,36 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ec3ec968-0559-4686-919b-b2012e0c9482
     m_ActionName: Game/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 631273902}
+        m_MethodName: OnZoom
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 20fadbc5-f268-434a-94f9-5006fcc2e195
+    m_ActionName: PlanetaryMode/Zoom[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 631273901}
+        m_MethodName: OnZoom
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 04fc4c6a-4d9f-4223-8162-7a41cf80b977
+    m_ActionName: InterplanetaryMode/Zoom[/Mouse/scroll]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: PlanetaryMode
@@ -3739,7 +3793,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alwaysActivatedActions:
-  - Zoom
   - Click
 --- !u!1 &1827450297
 GameObject:

@@ -19,18 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Remove samples">
+    <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Change file structure and names">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManipulator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManipulator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Clicker.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Clicker.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Implementations/PlanetSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Implementations/PlanetSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Implementations/TileSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Implementations/TileSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Selector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Selector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Choosers/Implementations/MenuChooser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Choosers/Implementations/MenuChooser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/BuildMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/BuildMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/UnderMouseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/UnderMouseMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Showable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Showable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Actions/AnolisActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Actions/AnolisActions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputActionMapManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActionActivator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputActionMapManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActionActivator.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,14 +75,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Collections/ShowableGroups/Implementations/ShowableGroupWithDefault.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputActionMapManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Raycast.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Choosers/Implementations/MenuChooser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Showable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/BuildMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Selector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManipulator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ActionActivator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" />
       </list>
     </option>
   </component>
@@ -142,7 +145,9 @@
       <workItem from="1602953679790" duration="2965000" />
       <workItem from="1603620393726" duration="11622000" />
       <workItem from="1603658152492" duration="6756000" />
-      <workItem from="1603701607336" duration="11392000" />
+      <workItem from="1603701607336" duration="12124000" />
+      <workItem from="1604349168672" duration="4010000" />
+      <workItem from="1604593415680" duration="8874000" />
     </task>
     <task id="LOCAL-00001" summary="Change rotating planets to new input">
       <created>1603627329359</created>
@@ -172,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603707236516</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Change file structure and names">
+      <created>1603714343809</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603714343809</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +210,8 @@
     <MESSAGE value="Move rest of planetary camera to new input system" />
     <MESSAGE value="Change names" />
     <MESSAGE value="Remove samples" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove samples" />
+    <MESSAGE value="Change file structure and names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change file structure and names" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="345" key="#Notifications" timestamp="1603533591308">
@@ -214,17 +227,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603658622327" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603707241038">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603714349814">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603707241038" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603714349814" />
     <state x="624" y="237" key="run.anything.popup" timestamp="1602954072896">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="624" y="237" key="run.anything.popup/0.0.1920.1037/1920.0.1280.1024@0.0.1920.1037" timestamp="1602954072896" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603534020836">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604599668298">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603534020836" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1604599668298" />
   </component>
 </project>
