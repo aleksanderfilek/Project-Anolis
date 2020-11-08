@@ -16,5 +16,6 @@ public class OptionContainer : MonoBehaviour
     public void OnSelection()
     {
         _managerMenu.CurrentSelection = option;
+        _managerMenu.Displayer.SetSelectionTo(option);
     }
 }

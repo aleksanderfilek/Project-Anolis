@@ -15,7 +15,9 @@ namespace Interaction.Editor
         [SerializeField] private PlanetSelector _planetSelector;
         [SerializeField] private Builder _builder;
         [SerializeField] private Raycast _raycaster;
+        [SerializeField] private PropertiesDisplayer _displayer;
         
+        public PropertiesDisplayer Displayer { get; private set; }
         public Placeable CurrentSelection { get; set; }
 
         public override bool CanHandleSelection()
@@ -25,6 +27,8 @@ namespace Interaction.Editor
 
         public void Start()
         {
+            Displayer = _displayer;
+            
             if (_placeables.Count == 0)
             {
                 Debug.LogWarning(this + ": List of Placeables is empty");
