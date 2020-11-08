@@ -20,6 +20,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ChooseMenu",
+                    "type": "Button",
+                    "id": "d52f9fda-3abd-444d-b0e3-6e3acf207825",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -88,6 +96,17 @@
                     "action": "Zoom",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2426d9b8-2fc2-4fd2-ba47-fadf845bed9b",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChooseMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -108,6 +127,14 @@
                     "type": "Value",
                     "id": "04fc4c6a-4d9f-4223-8162-7a41cf80b977",
                     "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ChoosePlanet",
+                    "type": "Button",
+                    "id": "ebd25abd-667f-49e8-ac57-e7e0a907d853",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -178,31 +205,15 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
-                }
-            ]
-        },
-        {
-            "name": "Controller",
-            "id": "da86cb11-3ccc-475f-9876-c680ba0a40a9",
-            "actions": [
-                {
-                    "name": "Zoom",
-                    "type": "Value",
-                    "id": "1c9953bb-c5da-46bb-86fd-1e345946b2aa",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "713ae9d0-bdda-43d7-8ac0-2b6043d89076",
-                    "path": "<Mouse>/scroll",
-                    "interactions": "",
+                    "id": "87666a1e-937e-4c82-add0-7bee210fff6d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "MultiTap",
                     "processors": "",
                     "groups": "",
-                    "action": "Zoom",
+                    "action": "ChoosePlanet",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -213,7 +224,7 @@
             "id": "39b072f5-4e42-4c60-934d-b7f38d01a9a8",
             "actions": [
                 {
-                    "name": "Click",
+                    "name": "CastRay",
                     "type": "Value",
                     "id": "ec3ec968-0559-4686-919b-b2012e0c9482",
                     "expectedControlType": "Button",
@@ -229,7 +240,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Click",
+                    "action": "CastRay",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

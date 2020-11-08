@@ -8,6 +8,8 @@ namespace Interaction
     [RequireComponent(typeof(SelectorCollection))]
     public class MenuChooser : Chooser
     {
+        //todo remove invisible button and change clicking to action in input system
+        
         [SerializeField] private Raycast raycast;
         [SerializeField] private List<Menu> menus;
 
