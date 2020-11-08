@@ -11,6 +11,7 @@ public class InterplanetaryCameraController : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float maxCameraHeight;
     [SerializeField] private Vector3 rotation;
+    [SerializeField] private Vector2 boundaries;
     
     private Transform _cameraTransform;
     private CameraManipulator _cameraManipulator;
@@ -19,12 +20,12 @@ public class InterplanetaryCameraController : MonoBehaviour
     {
         _cameraManipulator = GetComponent<CameraManipulator>();
         _cameraTransform = GetComponentInChildren<Camera>().transform;
+        transform.rotation = Quaternion.Euler(rotation);
     }
 
     private void Update()
     {
         MakeMovement();
-        transform.rotation = Quaternion.Euler(rotation);
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -54,15 +55,22 @@ public class InterplanetaryCameraController : MonoBehaviour
     
     private void MakeMovement()
     {
-        if (_horizontalMoveAmount != 0 && IsWithinBounds())
-            transform.Translate(-_horizontalMoveAmount * moveSpeed, 0.0f, 0.0f);
+        if (_horizontalMoveAmount != 0 && IsWithinHorizontalBoundary())
+            transform.Translate(-_horizontalMoveAmount * moveSpeed, 0.0f, 0.0f, Space.World);
 
-        if (_verticalMoveAmount != 0 && IsWithinBounds())
+        if (_verticalMoveAmount != 0 && IsWithinVerticalBoundary())
             transform.Translate(0.0f, 0.0f, -_verticalMoveAmount * moveSpeed, Space.World);
     }
 
-    private bool IsWithinBounds()
+    private bool IsWithinHorizontalBoundary()
     {
-        return true;
+        var position = transform.position;
+        return _horizontalMoveAmount < 0 ? position.x < boundaries.x : position.x > -boundaries.x;
+    }
+
+    private bool IsWithinVerticalBoundary()
+    {
+        var position = transform.position;
+        return _verticalMoveAmount < 0 ? position.z < boundaries.y : position.z > -boundaries.y;
     }
 }

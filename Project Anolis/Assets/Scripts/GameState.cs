@@ -6,7 +6,7 @@ public class GameState : MonoBehaviour
     public static GameState Get { get; private set; }
     
     public GameObject CurrentFocus { get; set; }
-    public Mode CurrentMode { get; set; } = Mode.Interplanetary;
+    public Mode CurrentMode { get; set; } = Mode.Planetary;
 
     private void Awake()
     {

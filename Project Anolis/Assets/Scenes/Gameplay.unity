@@ -1260,6 +1260,7 @@ MonoBehaviour:
   moveSpeed: 0.5
   maxCameraHeight: 200
   rotation: {x: -64.67, y: 0, z: 0}
+  boundaries: {x: 5, y: 5}
 --- !u!114 &631273902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4200,7 +4201,7 @@ MonoBehaviour:
     m_ActionName: InterplanetaryMode/Zoom[/Mouse/scroll]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
-  m_DefaultActionMap: InterplanetaryMode
+  m_DefaultActionMap: 40213b6b-8349-40d9-8f5c-6e88e1340d97
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!4 &1762456355
