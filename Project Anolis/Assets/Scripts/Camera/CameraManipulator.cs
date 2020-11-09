@@ -28,4 +28,10 @@ public class CameraManipulator : MonoBehaviour
         cameraPosition.z = height;
         _cameraTransform.localPosition = cameraPosition;
     }
+
+    public void CenterAtPlanet(GameObject planet)
+    {
+        transform.position = planet.transform.position;
+        SetHeightTo(15.0f);
+    }
 }
