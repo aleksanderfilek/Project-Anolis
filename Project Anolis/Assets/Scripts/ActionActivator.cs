@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+//todo remove PlayerInput and move binding here, because we use it only for binding actions with callbacks, and it adds
+//that callback to all phases (started, performed, ended) which is stupid, because we must then check in callbacks that
+//certain action is performed (because it will be invoked basicaly 3 time on every action)
+
 [RequireComponent(typeof(PlayerInput))]
 public class ActionActivator : MonoBehaviour
 {
@@ -17,14 +21,4 @@ public class ActionActivator : MonoBehaviour
             _playerInput.actions[action].Enable();
         }
     }
-
-    // private void Update()
-    // {
-    //     if (GameState.Get.CurrentMode == GameState.Mode.Interplanetary)    //todo change!!!
-    //        _playerInput.SwitchCurrentActionMap("InterplanetaryMode");
-    //     else
-    //     {
-    //         // _playerInput.SwitchCurrentActionMap("PlanetaryMode");
-    //     }
-    // }
 }

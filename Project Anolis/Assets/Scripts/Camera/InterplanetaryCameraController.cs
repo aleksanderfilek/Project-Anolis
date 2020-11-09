@@ -20,6 +20,11 @@ public class InterplanetaryCameraController : MonoBehaviour
     {
         _cameraManipulator = GetComponent<CameraManipulator>();
         _cameraTransform = GetComponentInChildren<Camera>().transform;
+        PositionCamera();
+    }
+
+    public void PositionCamera()
+    {
         transform.rotation = Quaternion.Euler(rotation);
     }
 
@@ -47,10 +52,6 @@ public class InterplanetaryCameraController : MonoBehaviour
 
         if (_cameraTransform.localPosition.z > maxCameraHeight)
             _cameraManipulator.SetHeightTo(maxCameraHeight);
-        else if (_cameraTransform.localPosition.z < _cameraManipulator.modeTransitionHeight)
-        {
-            GameState.Get.CurrentMode = GameState.Mode.Planetary;
-        }
     }
     
     private void MakeMovement()

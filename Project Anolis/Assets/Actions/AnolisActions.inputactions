@@ -136,7 +136,7 @@
                     "id": "ebd25abd-667f-49e8-ac57-e7e0a907d853",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "MultiTap"
                 }
             ],
             "bindings": [
@@ -210,7 +210,7 @@
                     "name": "",
                     "id": "87666a1e-937e-4c82-add0-7bee210fff6d",
                     "path": "<Mouse>/leftButton",
-                    "interactions": "MultiTap",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "ChoosePlanet",
