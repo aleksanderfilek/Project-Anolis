@@ -542,6 +542,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1208179375}
+        m_MethodName: UpdateView
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &175713689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,7 +850,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 366375143}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &366375143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1578,6 +1600,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycast: {fileID: 1100733910}
+--- !u!1 &676513124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 676513126}
+  - component: {fileID: 676513125}
+  m_Layer: 0
+  m_Name: Displayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &676513125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676513124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e52a9fa517d2c54c9fdd67a682dffec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 1062877555}
+--- !u!4 &676513126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676513124}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 553.1982, y: 317.97168, z: -297.9482}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1268548614}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &729527544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1910,6 +1976,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2139325474}
+        m_MethodName: UpdateView
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &855705214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2068,7 +2145,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1268548614}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1034571009
 MonoBehaviour:
@@ -2093,6 +2170,7 @@ GameObject:
   - component: {fileID: 1062877556}
   - component: {fileID: 1062877558}
   - component: {fileID: 1062877557}
+  - component: {fileID: 1062877559}
   m_Layer: 5
   m_Name: Properties Panel
   m_TagString: Untagged
@@ -2156,6 +2234,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062877555}
   m_CullTransparentMesh: 0
+--- !u!114 &1062877559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062877555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_StartCorner: 0
+  m_StartAxis: 1
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 1
+  m_ConstraintCount: 1
 --- !u!1 &1100733908
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,7 +2287,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1268548614}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1100733910
 MonoBehaviour:
@@ -2381,15 +2483,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 898671628}
-  _placeables:
+  placeables:
   - {fileID: 11400000, guid: 96fd126a986eb834d82439601b1abf6e, type: 2}
   - {fileID: 11400000, guid: defadd075bbf25e42b989b02a1a4ca28, type: 2}
-  _buttonPrefab: {fileID: 5229485784711942867, guid: c7eb202acd8a38d4895570a82c8c1c38,
+  buttonPrefab: {fileID: 5229485784711942867, guid: c7eb202acd8a38d4895570a82c8c1c38,
     type: 3}
-  _tileSelector: {fileID: 530461730}
-  _planetSelector: {fileID: 676402323}
-  _builder: {fileID: 1034571009}
-  _raycaster: {fileID: 1100733910}
+  tileSelector: {fileID: 530461730}
+  planetSelector: {fileID: 676402323}
+  builder: {fileID: 1034571009}
+  raycaster: {fileID: 1100733910}
+  displayer: {fileID: 676513125}
 --- !u!4 &1208179376
 Transform:
   m_ObjectHideFlags: 0
@@ -2432,6 +2535,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1674435021}
+  - {fileID: 676513126}
   - {fileID: 1100733909}
   - {fileID: 1034571008}
   - {fileID: 2031464021}
@@ -2980,7 +3084,7 @@ RectTransform:
   - {fileID: 260328836}
   - {fileID: 1062877556}
   m_Father: {fileID: 1268548614}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3247,7 +3351,7 @@ Transform:
   - {fileID: 1208179376}
   - {fileID: 2139325475}
   m_Father: {fileID: 1268548614}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2031464022
 MonoBehaviour:
@@ -3292,16 +3396,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 856794513}
-  _placeables:
+  placeables:
   - {fileID: 11400000, guid: 490547b1fb6eee8449cd376554c2be29, type: 2}
   - {fileID: 11400000, guid: 8db4f75552b93ad4a825c23500e25861, type: 2}
   - {fileID: 11400000, guid: 80736920f2282094eb7d916d234c995f, type: 2}
-  _buttonPrefab: {fileID: 5229485784711942867, guid: c7eb202acd8a38d4895570a82c8c1c38,
+  buttonPrefab: {fileID: 5229485784711942867, guid: c7eb202acd8a38d4895570a82c8c1c38,
     type: 3}
-  _tileSelector: {fileID: 530461730}
-  _planetSelector: {fileID: 676402323}
-  _builder: {fileID: 1034571009}
-  _raycaster: {fileID: 1100733910}
+  tileSelector: {fileID: 530461730}
+  planetSelector: {fileID: 676402323}
+  builder: {fileID: 1034571009}
+  raycaster: {fileID: 1100733910}
+  displayer: {fileID: 676513125}
 --- !u!4 &2139325475
 Transform:
   m_ObjectHideFlags: 0

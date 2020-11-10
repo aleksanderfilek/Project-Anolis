@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,10 +17,25 @@ public class PropertiesDisplayer : MonoBehaviour
         BuildDisplay();
     }
 
-    public void SetSelectionTo(Placeable p)
+    public void UpdateWith(BuildingOption p)
     {
-        currentSelection = p;
-        UpdateDisplay();
+        currentSelection = p != null ? p.Placeable : null;
+        if (currentSelection == null)
+        {
+            foreach (var element in displayElements)
+            {
+                element.Value.SetActive(false);
+            }
+        }
+        else
+        {
+            foreach (var element in displayElements)
+            {
+                element.Value.SetActive(true);
+            }
+            displayElements["Description"].GetComponent<Text>().text = currentSelection.description;
+            displayElements["Name"].GetComponent<Text>().text = currentSelection.objectName;
+        }
     }
 
     private void BuildDisplay()
@@ -40,11 +57,5 @@ public class PropertiesDisplayer : MonoBehaviour
             text.alignment = TextAnchor.MiddleCenter;
             text.color = Color.black;
         }
-    }
-    
-    private void UpdateDisplay()
-    {
-        displayElements["Description"].GetComponent<Text>().text = currentSelection.description;
-        displayElements["Name"].GetComponent<Text>().text = currentSelection.objectName;
     }
 }

@@ -1,24 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Interaction.Editor
 {
     public class BuildMenu : Menu
     {
-        [SerializeField] private List<Placeable> _placeables;
-        [SerializeField] private GameObject _buttonPrefab;
-        [SerializeField] private TileSelector _tileSelector;
-        [SerializeField] private PlanetSelector _planetSelector;
-        [SerializeField] private Builder _builder;
-        [SerializeField] private Raycast _raycaster;
-        [SerializeField] private PropertiesDisplayer _displayer;
+        [SerializeField] private List<Placeable> placeables;
+        [SerializeField] private GameObject buttonPrefab;
+        [SerializeField] private TileSelector tileSelector;
+        [SerializeField] private PlanetSelector planetSelector;
+        [SerializeField] private Builder builder;
+        [SerializeField] private Raycast raycaster;
+        [SerializeField] private PropertiesDisplayer displayer;
         
-        public PropertiesDisplayer Displayer { get; private set; }
-        public Placeable CurrentSelection { get; set; }
+        public BuildingOption CurrentOption { get; private set; }
 
         public override bool CanHandleSelection()
         {
@@ -27,42 +29,61 @@ namespace Interaction.Editor
 
         public void Start()
         {
-            Displayer = _displayer;
-            
-            if (_placeables.Count == 0)
+            if (placeables.Count == 0)
             {
                 Debug.LogWarning(this + ": List of Placeables is empty");
-                return;
             }
+            CreateOptions();
+        }
 
-            foreach (var placeable in _placeables)
-            {
-                var panelToAttach = ui.GetComponentInChildren<GridLayoutGroup>().transform;
-                var newButton = Instantiate(_buttonPrefab, panelToAttach);
-                newButton.name = "Button - " + placeable.name;
-                newButton.GetComponentInChildren<Text>().text = placeable.objectName;
-                newButton.AddComponent<OptionContainer>().option = placeable;
-                var containerModule = newButton.GetComponentInChildren<OptionContainer>();
-                containerModule.AssignManager(this);
-                newButton.GetComponentInChildren<Button>().onClick.AddListener(containerModule.OnSelection);
-            }
+        public void SetSelectionTo(BuildingOption newOption)
+        {
+            CurrentOption = newOption;
+            displayer.UpdateWith(CurrentOption);
+        }
+        
+        public void UpdateView()
+        {
+            displayer.UpdateWith(CurrentOption);
         }
 
         public void BulidSelected()
         {
-            if (CurrentSelection == null) return;
-            _raycaster.Shoot();
-            _tileSelector.UpdateSelector();
-            _planetSelector.UpdateSelector();
-            if (_tileSelector.SelectedTile == null)
+            if (CurrentOption == null)
+            {
+                return;
+            }
+            raycaster.Shoot();
+            tileSelector.UpdateSelector();
+            planetSelector.UpdateSelector();
+            if (tileSelector.SelectedTile == null)
             {
                 Debug.LogError("Tile is not selected");
-                if (_planetSelector.SelectedPlanet == null)
-                {
-                    Debug.LogError("Planet is not selected");
-                }
+                return;
             }
-            else _builder.Build(CurrentSelection, _tileSelector.SelectedTile, _planetSelector.SelectedPlanet.transform);
+            if (planetSelector.SelectedPlanet == null)
+            {
+                Debug.LogError("Planet is not selected");
+                return;
+            }
+            builder.Build(CurrentOption.Placeable, tileSelector.SelectedTile, planetSelector.SelectedPlanet.transform);
+        }
+
+        private void CreateOptions()
+        {
+            foreach (var placeable in placeables)
+            {
+                var panelToAttach = ui.GetComponentInChildren<GridLayoutGroup>().transform;
+                var newButton = Instantiate(buttonPrefab, panelToAttach);
+                newButton.name = "Button - " + placeable.name;
+                newButton.GetComponentInChildren<Text>().text = placeable.objectName;
+
+                var containerModule = newButton.AddComponent<BuildingOption>();
+                containerModule.Placeable = placeable;
+                containerModule.AssignManager(this);
+                
+                newButton.GetComponent<Button>().onClick.AddListener(containerModule.OnSelection);
+            }
         }
     }
 }
