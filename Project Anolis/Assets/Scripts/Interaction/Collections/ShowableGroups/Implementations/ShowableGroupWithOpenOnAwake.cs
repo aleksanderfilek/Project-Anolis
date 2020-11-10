@@ -9,7 +9,8 @@ namespace Interaction
 
         private void Awake()
         {
-            ActivateMenu(openOnAwakeShowable);
+            if (openOnAwakeShowable != null)    //todo remove that if
+                ActivateMenu(openOnAwakeShowable);
         }
 
         public override void ActivateMenu(Showable showable)

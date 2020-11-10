@@ -1,24 +1,79 @@
 ﻿using System;
 using System.Collections.Generic;
+using Interaction;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-//todo remove PlayerInput and move binding here, because we use it only for binding actions with callbacks, and it adds
-//that callback to all phases (started, performed, ended) which is stupid, because we must then check in callbacks that
-//certain action is performed (because it will be invoked basicaly 3 time on every action)
-
-[RequireComponent(typeof(PlayerInput))]
 public class ActionActivator : MonoBehaviour
 {
-    [SerializeField] private List<string> alwaysActivatedActions;
-    private PlayerInput _playerInput;
-
+    private GameplayControls _controls;
+    private InputActionMap _currentActionMap;
+    
+    [SerializeField] private string defaultActionMapName;
+    [SerializeField] private List<string> alwaysEnabledActionMapNames;
+    
+    [Header("References for objects with callbacks")]
+    [SerializeField] private InterplanetaryCameraController interplanetaryCameraController;
+    [SerializeField] private PlanetaryCameraController planetaryCameraController;
+    [SerializeField] private PlanetChooser planetChooser;
+    [SerializeField] private Raycast raycast;
+    
     private void Awake()
     {
-        _playerInput = GetComponent<PlayerInput>();
-        foreach (var action in alwaysActivatedActions)
-        {
-            _playerInput.actions[action].Enable();
-        }
+        _controls = new GameplayControls();
+        ConnectActionsWithCallbacks();
+        EnableDefaultActionMap();
+        EnableAlwaysEnabledActionMaps();
     }
+
+
+    public void SwitchCurrentActionMap(string actionMapName)
+    {
+        _currentActionMap.Disable();
+        EnableActionMapAsCurrent(actionMapName);
+    }
+
+    private void ConnectActionsWithCallbacks()
+    {
+        var interplanetaryMode = _controls.InterplanetaryMode;
+        interplanetaryMode.Move.performed += interplanetaryCameraController.OnMove;
+        interplanetaryMode.Move.canceled += interplanetaryCameraController.OnMove;
+        interplanetaryMode.Zoom.performed += interplanetaryCameraController.OnZoom;
+        interplanetaryMode.ChoosePlanet.performed += planetChooser.OnChoose;
+
+        var planetaryMode = _controls.PlanetaryMode;
+        planetaryMode.Rotate.performed += planetaryCameraController.OnRotate;
+        planetaryMode.Rotate.canceled += planetaryCameraController.OnRotate;
+        planetaryMode.Zoom.performed += planetaryCameraController.OnZoom;
+
+        _controls.Gameplay.CastRay.performed += ctx => raycast.Shoot();
+    }
+
+    private void EnableDefaultActionMap()
+    {
+        EnableActionMapAsCurrent(defaultActionMapName);
+    }
+
+    private void EnableActionMapAsCurrent(string actionMapName)
+    {
+        _currentActionMap = EnableActionMap(actionMapName);
+    }
+    
+    private InputActionMap EnableActionMap(string actionMapName)
+    {
+        var actionMap = _controls.asset.FindActionMap(actionMapName);
+        if (actionMap == null)
+            Debug.LogError($"Cannot find action map '{actionMapName}'.", this);
+
+        actionMap.Enable();
+        return actionMap;
+    }
+   
+    private void EnableAlwaysEnabledActionMaps()
+    {
+        foreach (var mapName in alwaysEnabledActionMapNames)
+        {
+            EnableActionMap(mapName);
+        }
+    } 
 }
