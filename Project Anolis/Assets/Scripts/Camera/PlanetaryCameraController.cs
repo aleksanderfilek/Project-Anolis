@@ -9,7 +9,6 @@ public class PlanetaryCameraController : MonoBehaviour
     [SerializeField] private float minCameraHeight;
     
     [SerializeField] private InterplanetaryCameraController interplanetaryCameraController;
-    [SerializeField] private ActionActivator actionActivator;
 
     private Transform _cameraTransform;
     private CameraManipulator _cameraManipulator;
@@ -52,8 +51,9 @@ public class PlanetaryCameraController : MonoBehaviour
             _cameraManipulator.SetHeightTo(minCameraHeight);
         else if (_cameraTransform.localPosition.z > _cameraManipulator.modeTransitionHeight)
         {
-            interplanetaryCameraController.PositionCamera();
-            actionActivator.SwitchCurrentActionMap("InterplanetaryMode");
+            //interplanetaryCameraController.PositionCamera();    //todo move to callback for mode changed event
+            //actionActivator.SwitchCurrentActionMap("InterplanetaryMode");
+            GameState.Get.ChangeModeToInterplanetary();
         }
     }
 

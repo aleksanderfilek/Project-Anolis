@@ -9,7 +9,6 @@ namespace Interaction
         
         [SerializeField] private Raycast raycast;
         [SerializeField] private PlanetSelector planetSelector;
-        [SerializeField] private ActionActivator actionActivator;
         [SerializeField] private CameraManipulator _cameraManipulator;
         
         public void OnChoose(InputAction.CallbackContext ctx)
@@ -22,8 +21,9 @@ namespace Interaction
                 return;
             
             GameState.Get.CurrentFocus = planetSelector.SelectedPlanet;
-            _cameraManipulator.CenterAtPlanet(GameState.Get.CurrentFocus);
-            actionActivator.SwitchCurrentActionMap("PlanetaryMode");
+            //_cameraManipulator.CenterAtPlanet(GameState.Get.CurrentFocus); //todo move to callback for event mode changed
+            //actionActivator.SwitchCurrentActionMap("PlanetaryMode");
+            GameState.Get.ChangeModeToPlanetary();
         }
     }
 }
