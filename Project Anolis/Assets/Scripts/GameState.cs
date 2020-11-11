@@ -6,7 +6,7 @@ public class GameState : MonoBehaviour
     [SerializeField] private ActionActivator actionActivator;
     
     public static GameState Get { get; private set; }
-    public event Action<Mode> StateChanged;
+    public event Action<Mode> ModeChanged; //todo think about changing that event to two events for planetary and interplanetary
 
     public GameObject CurrentFocus { get; set; }
     public Mode CurrentMode { get; private set; } = Mode.Planetary;
@@ -32,9 +32,9 @@ public class GameState : MonoBehaviour
         OnStateChanged(Mode.Interplanetary); 
     }
 
-    private void OnStateChanged(Mode mode)
+    private void OnStateChanged(Mode newMode)
     {
-        StateChanged?.Invoke(mode);
+        ModeChanged?.Invoke(newMode);
     }
 
     public enum Mode

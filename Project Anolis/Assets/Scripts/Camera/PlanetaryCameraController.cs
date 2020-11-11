@@ -8,18 +8,17 @@ public class PlanetaryCameraController : MonoBehaviour
     [SerializeField] private float rotatingSpeed = 100f;
     [SerializeField] private float minCameraHeight;
     
-    [SerializeField] private InterplanetaryCameraController interplanetaryCameraController;
-
     private Transform _cameraTransform;
     private CameraManipulator _cameraManipulator;
 
     private float _verticalRotationAmount;
     private float _horizontalRotationAmount;
 
-    private void Awake()
+    private void Start()
     {
         _cameraManipulator = GetComponent<CameraManipulator>();
         _cameraTransform = transform.GetChild(0);
+        GameState.Get.ModeChanged += HandleModeChange;
     }
 
     private void Update()
@@ -51,10 +50,14 @@ public class PlanetaryCameraController : MonoBehaviour
             _cameraManipulator.SetHeightTo(minCameraHeight);
         else if (_cameraTransform.localPosition.z > _cameraManipulator.modeTransitionHeight)
         {
-            //interplanetaryCameraController.PositionCamera();    //todo move to callback for mode changed event
-            //actionActivator.SwitchCurrentActionMap("InterplanetaryMode");
             GameState.Get.ChangeModeToInterplanetary();
         }
+    }
+
+    private void HandleModeChange(GameState.Mode newMode)
+    {
+        if (newMode == GameState.Mode.Planetary)
+            _cameraManipulator.CenterAtPlanet(GameState.Get.CurrentFocus);
     }
 
     private void MakeRotation()
