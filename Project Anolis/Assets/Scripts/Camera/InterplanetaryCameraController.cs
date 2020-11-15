@@ -1,38 +1,37 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InterplanetaryCameraController : MonoBehaviour
+//todo remove merge on zoom with zoom
+
+public class InterplanetaryCameraController
 {
     private float _horizontalMoveAmount;
     private float _verticalMoveAmount;
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private float maxCameraHeight;
-    [SerializeField] private Vector3 rotation;
-    [SerializeField] private Vector2 boundaries;
     
     private Transform _cameraTransform;
+    private Transform _controllerTransform;
     private CameraManipulator _cameraManipulator;
     
-    private void Start()
+    private Vector3 _fixedRotation;
+    private Vector2 _boundaries;
+    private float _maxCameraHeight;
+    private float _moveSpeed;
+    private float _zoomSpeed;
+
+    public InterplanetaryCameraController(CameraManipulator cameraManipulator, Transform controllerTransform, Transform cameraTransform, 
+        Vector3 fixedRotation, float maxCameraHeight, float moveSpeed, float zoomSpeed, Vector2 boundaries)
     {
-        _cameraManipulator = GetComponent<CameraManipulator>();
-        _cameraTransform = GetComponentInChildren<Camera>().transform;
+        _cameraManipulator = cameraManipulator;
+        _controllerTransform = controllerTransform;
+        _cameraTransform = cameraTransform;
+        _fixedRotation = fixedRotation;
+        _maxCameraHeight = maxCameraHeight;
+        _moveSpeed = moveSpeed;
+        _zoomSpeed = zoomSpeed;
+        _boundaries = boundaries;
         GameState.Get.ModeChanged += HandleModeChange;
     }
 
-    private void Update()
-    {
-        MakeMovement();
-    }
-
-    private void PositionCamera()
-    {
-        transform.rotation = Quaternion.Euler(rotation);
-    }
-    
     public void OnMove(InputAction.CallbackContext context)
     {
         var amount = context.ReadValue<Vector2>();
@@ -48,36 +47,36 @@ public class InterplanetaryCameraController : MonoBehaviour
     
     private void Zoom(float amount)
     {
-        _cameraManipulator.ChangeHeightBy(amount);
+        _cameraManipulator.ChangeHeightBy(amount * _zoomSpeed);
 
-        if (_cameraTransform.localPosition.z > maxCameraHeight)
-            _cameraManipulator.SetHeightTo(maxCameraHeight);
+        if (_cameraTransform.localPosition.z > _maxCameraHeight)
+            _cameraManipulator.SetHeightTo(_maxCameraHeight);
     }
     
     private void HandleModeChange(GameState.Mode newMode)
     {
         if (newMode == GameState.Mode.Interplanetary) 
-            PositionCamera();
+            _cameraManipulator.SetRotationTo(_fixedRotation);
     }
     
-    private void MakeMovement()
+    public void MakeMovement()
     {
         if (_horizontalMoveAmount != 0 && IsWithinHorizontalBoundary())
-            transform.Translate(-_horizontalMoveAmount * moveSpeed, 0.0f, 0.0f, Space.World);
+            _cameraManipulator.TranslateHorizontalyBy(_horizontalMoveAmount * _moveSpeed);
 
         if (_verticalMoveAmount != 0 && IsWithinVerticalBoundary())
-            transform.Translate(0.0f, 0.0f, -_verticalMoveAmount * moveSpeed, Space.World);
+            _cameraManipulator.TranslateVerticalyBy(_verticalMoveAmount * _moveSpeed);
     }
 
     private bool IsWithinHorizontalBoundary()
     {
-        var position = transform.position;
-        return _horizontalMoveAmount < 0 ? position.x < boundaries.x : position.x > -boundaries.x;
+        var position = _controllerTransform.position;
+        return _horizontalMoveAmount < 0 ? position.x < _boundaries.x : position.x > -_boundaries.x;
     }
 
     private bool IsWithinVerticalBoundary()
     {
-        var position = transform.position;
-        return _verticalMoveAmount < 0 ? position.z < boundaries.y : position.z > -boundaries.y;
+        var position = _controllerTransform.position;
+        return _verticalMoveAmount < 0 ? position.z < _boundaries.y : position.z > -_boundaries.y;
     }
 }

@@ -9,7 +9,7 @@ public class GameState : MonoBehaviour
     public event Action<Mode> ModeChanged; //todo think about changing that event to two events for planetary and interplanetary
 
     public GameObject CurrentFocus { get; set; }
-    public Mode CurrentMode { get; private set; } = Mode.Planetary;
+    public Mode CurrentMode { get; private set; } = Mode.Interplanetary;
 
     private void Awake()
     {

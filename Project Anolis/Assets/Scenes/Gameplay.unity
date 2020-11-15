@@ -1387,9 +1387,6 @@ GameObject:
   m_Component:
   - component: {fileID: 631273900}
   - component: {fileID: 631273899}
-  - component: {fileID: 631273903}
-  - component: {fileID: 631273902}
-  - component: {fileID: 631273901}
   m_Layer: 0
   m_Name: Camera Controller
   m_TagString: Untagged
@@ -1409,6 +1406,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1f1d37e6101d041965033996629954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomSpeed: 50
+  modeTransitionHeight: 20
+  rotatingSpeed: 50
+  minCameraHeight: 10
+  movingSpeed: 30
+  maxCameraHeight: 200
+  fixedRotation: {x: -60, y: 0, z: 0}
+  boundaries: {x: 50, y: 50}
 --- !u!4 &631273900
 Transform:
   m_ObjectHideFlags: 0
@@ -1424,50 +1429,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &631273901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631273898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cadc18cf8a1cc5d4dae504ee92e7f100, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0.5
-  maxCameraHeight: 200
-  rotation: {x: -64.67, y: 0, z: 0}
-  boundaries: {x: 50, y: 50}
---- !u!114 &631273902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631273898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3114e51824c14f048671b06a512e50db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotatingSpeed: 100
-  minCameraHeight: 15
---- !u!114 &631273903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631273898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95f3f369128c418c9a2901806938aee2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoomSpeed: 25
-  modeTransitionHeight: 30
 --- !u!1 &675619507
 GameObject:
   m_ObjectHideFlags: 0
@@ -4469,7 +4430,6 @@ MonoBehaviour:
   ui: {fileID: 0}
   raycast: {fileID: 174268904}
   planetSelector: {fileID: 568787242}
-  _cameraManipulator: {fileID: 631273903}
 --- !u!1 &1762456353
 GameObject:
   m_ObjectHideFlags: 0
@@ -4516,8 +4476,7 @@ MonoBehaviour:
   defaultActionMapName: InterplanetaryMode
   alwaysEnabledActionMapNames:
   - Gameplay
-  interplanetaryCameraController: {fileID: 631273901}
-  planetaryCameraController: {fileID: 631273902}
+  cameraController: {fileID: 631273899}
   planetChooser: {fileID: 1747392350}
   raycast: {fileID: 174268904}
 --- !u!1 &1827450297

@@ -20,8 +20,10 @@ namespace Interaction
         {
             _selectorCollection = GetComponent<SelectorCollection>();
             _showableGroup = GetComponentInParent<ShowableGroup>();
-            if (_showableGroup == null)    // TODO remove when building
-                Debug.LogError("Wrong structure. Chooser should be child of ShowableGroup that it manages.");
+            #if UNITY_EDITOR
+                if (_showableGroup == null)
+                    Debug.LogError("Wrong structure. Chooser should be child of ShowableGroup that it manages.");
+            #endif
         }
 
         public void Choose()

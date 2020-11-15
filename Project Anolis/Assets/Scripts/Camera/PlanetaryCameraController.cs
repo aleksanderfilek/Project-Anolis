@@ -2,28 +2,30 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-[RequireComponent(typeof(CameraManipulator))]
-public class PlanetaryCameraController : MonoBehaviour
+public class PlanetaryCameraController
 {
-    [SerializeField] private float rotatingSpeed = 100f;
-    [SerializeField] private float minCameraHeight;
-    
     private Transform _cameraTransform;
+    private Transform _controllerTransform;
     private CameraManipulator _cameraManipulator;
+
+    private float _rotatingSpeed;
+    private float _minCameraHeight;
+    private float _modeTransitionHeight;
 
     private float _verticalRotationAmount;
     private float _horizontalRotationAmount;
+    private float _zoomSpeed;
 
-    private void Start()
+    public PlanetaryCameraController(CameraManipulator cameraManipulator, Transform cameraTransform, Transform controllerTransform, float rotatingSpeed, float minCameraHeight, float modeTransitionHeight, float zoomSpeed)
     {
-        _cameraManipulator = GetComponent<CameraManipulator>();
-        _cameraTransform = transform.GetChild(0);
+        _cameraManipulator = cameraManipulator;
+        _cameraTransform = cameraTransform;
+        _controllerTransform = controllerTransform;
+        _rotatingSpeed = rotatingSpeed;
+        _minCameraHeight = minCameraHeight;
+        _modeTransitionHeight = modeTransitionHeight;
+        _zoomSpeed = zoomSpeed;
         GameState.Get.ModeChanged += HandleModeChange;
-    }
-
-    private void Update()
-    {
-        MakeRotation();
     }
 
     public void OnRotate(InputAction.CallbackContext context)
@@ -44,11 +46,11 @@ public class PlanetaryCameraController : MonoBehaviour
 
     private void Zoom(float amount)
     {
-        _cameraManipulator.ChangeHeightBy(amount);
+        _cameraManipulator.ChangeHeightBy(amount * _zoomSpeed);
 
-        if (_cameraTransform.localPosition.z < minCameraHeight)
-            _cameraManipulator.SetHeightTo(minCameraHeight);
-        else if (_cameraTransform.localPosition.z > _cameraManipulator.modeTransitionHeight)
+        if (_cameraTransform.localPosition.z < _minCameraHeight)
+            _cameraManipulator.SetHeightTo(_minCameraHeight);
+        else if (_cameraTransform.localPosition.z > _modeTransitionHeight)
         {
             GameState.Get.ChangeModeToInterplanetary();
         }
@@ -60,14 +62,13 @@ public class PlanetaryCameraController : MonoBehaviour
             _cameraManipulator.CenterAtPlanet(GameState.Get.CurrentFocus);
     }
 
-    private void MakeRotation()
+    public void MakeRotation()
     {
         if (_verticalRotationAmount != 0 && IsWithinBounds())
-            _cameraManipulator.Rotate(new Vector3(-1, 0, 0), _verticalRotationAmount * rotatingSpeed);
+            _cameraManipulator.RotateVertivalyBy(_verticalRotationAmount * _rotatingSpeed);
 
         if (_horizontalRotationAmount != 0)
-            _cameraManipulator.Rotate(new Vector3(0, -1, 0), _horizontalRotationAmount * rotatingSpeed,
-                Space.World);
+            _cameraManipulator.RotateHorizontalyBy(_horizontalRotationAmount * _rotatingSpeed);
     }
 
     private bool IsWithinBounds()
@@ -75,18 +76,18 @@ public class PlanetaryCameraController : MonoBehaviour
         //when working with euler angles instead of quaternions we get some nasty conditions
         //this sould be cameraControllerTransform.localEulerAngles.z == 180f, but comparing floats is not a good idea
         //rotationEulerAngles.z can have values 180f and 0f, therefore condition > 90f was chosen
-        if (transform.localEulerAngles.z < 90f)
+        if (_controllerTransform.localEulerAngles.z < 90f)
             return true;
         return _verticalRotationAmount > 0f ? IsWithinUpperBoundary() : IsWithinLowerBoundary();
     }
 
     private bool IsWithinUpperBoundary()
     {
-        return transform.localEulerAngles.x < 90f;
+        return _controllerTransform.localEulerAngles.x < 90f;
     }
 
     private bool IsWithinLowerBoundary()
     {
-        return transform.localEulerAngles.x > 270f;
+        return _controllerTransform.localEulerAngles.x > 270f;
     }
 }
