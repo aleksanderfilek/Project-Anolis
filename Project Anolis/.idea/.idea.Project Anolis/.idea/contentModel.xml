@@ -17,6 +17,7 @@
           <e p="Camera" t="Include">
             <e p="CameraController.cs" t="Include" />
             <e p="CameraManipulator.cs" t="Include" />
+            <e p="ControllerManipulator.cs" t="Include" />
             <e p="InterplanetaryCameraController.cs" t="Include" />
             <e p="PlanetaryCameraController.cs" t="Include" />
           </e>

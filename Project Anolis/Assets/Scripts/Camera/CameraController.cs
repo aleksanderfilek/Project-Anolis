@@ -20,15 +20,39 @@ public class CameraController : MonoBehaviour
     public InterplanetaryCameraController Interplanetary { get; private set; }
 
     private CameraManipulator _cameraManipulator;
+    private ControllerManipulator _controllerManipulator;
 
     private void Start()
     {
         var cameraTransform = GetComponentInChildren<Camera>().transform;
         var controllerTransform = transform;
-        _cameraManipulator = new CameraManipulator(controllerTransform, cameraTransform);
-        Planetary = new PlanetaryCameraController(_cameraManipulator, cameraTransform, controllerTransform, rotatingSpeed, minCameraHeight, modeTransitionHeight, zoomSpeed);
-        Interplanetary = new InterplanetaryCameraController(_cameraManipulator, controllerTransform, cameraTransform, fixedRotation, maxCameraHeight, movingSpeed, zoomSpeed, boundaries);
-        _cameraManipulator.SetRotationTo(fixedRotation);
+        _cameraManipulator = new CameraManipulator(cameraTransform);
+        _controllerManipulator = new ControllerManipulator(controllerTransform);
+        
+        Planetary = new PlanetaryCameraController(_cameraManipulator, _controllerManipulator, cameraTransform, controllerTransform);
+        UpdatePlanetaryParameters();
+
+        Interplanetary = new InterplanetaryCameraController(_cameraManipulator, _controllerManipulator, controllerTransform, cameraTransform);
+        UpdateInterplanetaryParameters();
+
+        _controllerManipulator.SetRotationTo(fixedRotation);    //todo move to common init
+    }
+
+    private void UpdatePlanetaryParameters()
+    {
+        Planetary.RotatingSpeed = rotatingSpeed;
+        Planetary.ZoomSpeed = zoomSpeed;
+        Planetary.MinCameraHeight = minCameraHeight;
+        Planetary.ModeTransitionHeight = modeTransitionHeight;
+    }
+
+    private void UpdateInterplanetaryParameters()
+    {
+        Interplanetary.Boundaries = boundaries;
+        Interplanetary.FixedRotation = fixedRotation;
+        Interplanetary.MoveSpeed = movingSpeed;
+        Interplanetary.ZoomSpeed = zoomSpeed;
+        Interplanetary.MaxCameraHeight = maxCameraHeight;
     }
 
     private void Update()
@@ -44,5 +68,9 @@ public class CameraController : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+        #if UNITY_EDITOR
+            UpdatePlanetaryParameters();
+            UpdateInterplanetaryParameters();
+        #endif
     }
 }
