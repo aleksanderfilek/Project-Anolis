@@ -9,15 +9,17 @@ public class GameState : MonoBehaviour
     public event Action<Mode> ModeChanged; //todo think about changing that event to two events for planetary and interplanetary
 
     public GameObject CurrentFocus { get; set; }
-    public Mode CurrentMode { get; private set; } = Mode.Interplanetary;
+    public Mode CurrentMode { get; private set; }
 
     private void Awake()
     {
-        if (Get != null)    //TODO get rid of this in final build
-            Debug.LogError("Multiple occurrences of GameState. There should be only one GameState in any time.");
+        #if UNITY_EDITOR
+            if (Get != null)
+                Debug.LogError("Multiple occurrences of GameState. There should be only one GameState in any time.");
+        #endif
         Get = this;
     }
-
+    
     public void ChangeModeToPlanetary()
     {
         CurrentMode = Mode.Planetary;

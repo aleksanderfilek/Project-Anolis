@@ -16,7 +16,7 @@ namespace Interaction
         private SelectorCollection _selectorCollection;
         private ShowableGroup _showableGroup;
         
-        private void Awake()
+        private void Start()
         {
             _selectorCollection = GetComponent<SelectorCollection>();
             _showableGroup = GetComponentInParent<ShowableGroup>();

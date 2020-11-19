@@ -7,7 +7,7 @@ namespace Interaction
         [SerializeField] private Showable defaultShowable;
         private Showable _currentMenu;
 
-        private void Awake()
+        private void Start()
         {
             ActivateMenu(defaultShowable);
         }

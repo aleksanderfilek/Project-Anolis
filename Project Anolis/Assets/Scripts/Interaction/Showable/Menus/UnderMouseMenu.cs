@@ -9,7 +9,7 @@ namespace Interaction
     {
         private RectTransform _uiRectTransform;
 
-        private void Awake()
+        private void Start()
         {
             _uiRectTransform = ui.GetComponent<RectTransform>();
         }

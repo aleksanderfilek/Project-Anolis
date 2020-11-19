@@ -27,32 +27,21 @@ public class PlanetaryCameraController
         GameState.Get.ModeChanged += HandleModeChange;
     }
 
-    public void OnRotate(InputAction.CallbackContext context)
+    public void UpdateRotateAmounts(InputAction.CallbackContext context)
     {
         var amount = context.ReadValue<Vector2>();
         _verticalRotationAmount = amount.y;
         _horizontalRotationAmount = amount.x;
     }
 
-    public void OnZoom(InputAction.CallbackContext context)
+    public void Zoom(InputAction.CallbackContext context)
     {
-        if (!context.performed)
-            return;
-
         var amount = context.ReadValue<Vector2>().normalized.y;
-        Zoom(amount);
-    }
-
-    private void Zoom(float amount)
-    {
         _cameraManipulator.ChangeHeightBy(amount * ZoomSpeed);
-
         if (_cameraTransform.localPosition.z < MinCameraHeight)
             _cameraManipulator.SetHeightTo(MinCameraHeight);
         else if (_cameraTransform.localPosition.z > ModeTransitionHeight)
-        {
             GameState.Get.ChangeModeToInterplanetary();
-        }
     }
 
     private void HandleModeChange(GameState.Mode newMode)

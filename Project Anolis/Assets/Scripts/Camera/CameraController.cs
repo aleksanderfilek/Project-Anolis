@@ -34,8 +34,6 @@ public class CameraController : MonoBehaviour
 
         Interplanetary = new InterplanetaryCameraController(_cameraManipulator, _controllerManipulator, controllerTransform, cameraTransform);
         UpdateInterplanetaryParameters();
-
-        _controllerManipulator.SetRotationTo(fixedRotation);    //todo move to common init
     }
 
     private void UpdatePlanetaryParameters()

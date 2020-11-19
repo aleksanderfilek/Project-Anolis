@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-//todo remove merge on zoom with zoom
-
 public class InterplanetaryCameraController
 {
     private float _horizontalMoveAmount;
@@ -29,23 +27,17 @@ public class InterplanetaryCameraController
         GameState.Get.ModeChanged += HandleModeChange;
     }
 
-    public void OnMove(InputAction.CallbackContext context)
+    public void UpdateMoveAmounts(InputAction.CallbackContext context)
     {
         var amount = context.ReadValue<Vector2>();
         _horizontalMoveAmount = amount.x;
         _verticalMoveAmount = amount.y;
     }
 
-    public void OnZoom(InputAction.CallbackContext context)
+    public void Zoom(InputAction.CallbackContext context)
     {
         var amount = context.ReadValue<Vector2>().normalized.y;
-        Zoom(amount);
-    }
-
-    private void Zoom(float amount)
-    {
         _cameraManipulator.ChangeHeightBy(amount * ZoomSpeed);
-
         if (_cameraTransform.localPosition.z > MaxCameraHeight)
             _cameraManipulator.SetHeightTo(MaxCameraHeight);
     }

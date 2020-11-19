@@ -7,9 +7,9 @@ namespace Interaction
         [SerializeField] private Showable openOnAwakeShowable;
         private Showable _currentMenu;
 
-        private void Awake()
+        private void Start()
         {
-            if (openOnAwakeShowable != null)    //todo remove that if
+            if (openOnAwakeShowable != null)    //todo remove that if after changing chooser
                 ActivateMenu(openOnAwakeShowable);
         }
 
