@@ -14,6 +14,7 @@ public class ActionActivator : MonoBehaviour
     [Header("References for objects with callbacks")]
     [SerializeField] private CameraController cameraController;
     [SerializeField] private PlanetChooser planetChooser;
+    [SerializeField] private MenuChooser planetaryMenuChooser;
     [SerializeField] private Raycast raycast;
 
     private void Awake()
@@ -27,11 +28,34 @@ public class ActionActivator : MonoBehaviour
         EnableAlwaysEnabledActionMaps();
     }
 
-
     public void SwitchCurrentActionMap(string actionMapName)
     {
         _currentActionMap?.Disable();
         EnableActionMapAsCurrent(actionMapName);
+    }
+
+    public void EnableAction(string actionName)
+    {
+        _controls.asset[actionName].Enable();
+    }
+
+    public void DisableAction(string actionName)
+    {
+        _controls.asset[actionName].Disable(); 
+    }
+
+    public bool IsValidAction(string actionName)
+    {
+        try
+        {
+            _ = _controls.asset[actionName];
+        }
+        catch (KeyNotFoundException)
+        {
+            return false;
+        }
+
+        return true;
     }
 
     private void ConnectActionsWithCallbacks()
@@ -46,10 +70,11 @@ public class ActionActivator : MonoBehaviour
         planetaryMode.Rotate.performed += cameraController.Planetary.UpdateRotateAmounts;
         planetaryMode.Rotate.canceled += cameraController.Planetary.UpdateRotateAmounts;
         planetaryMode.Zoom.performed += cameraController.Planetary.Zoom;
+        planetaryMode.ChooseMenu.performed += ctx => planetaryMenuChooser.Choose();
 
         _controls.Gameplay.CastRay.performed += ctx => raycast.Shoot();
     }
-
+    
     private void EnableActionMapAsCurrent(string actionMapName)
     {
         _currentActionMap = EnableActionMap(actionMapName);
