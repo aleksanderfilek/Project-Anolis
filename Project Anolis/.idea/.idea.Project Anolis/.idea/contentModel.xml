@@ -6,30 +6,53 @@
     <e p="D:\projekty_unity\projekty\Project-Anolis\Project Anolis" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Actions" t="Include">
+          <e p="GameplayControls.cs" t="Include" />
+        </e>
         <e p="Scriptable_Objects" t="Include">
           <e p="Placeable.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="ActionActivator.cs" t="Include" />
           <e p="Camera" t="Include">
             <e p="CameraController.cs" t="Include" />
+            <e p="CameraManipulator.cs" t="Include" />
+            <e p="ControllerManipulator.cs" t="Include" />
             <e p="InterplanetaryCameraController.cs" t="Include" />
             <e p="PlanetaryCameraController.cs" t="Include" />
           </e>
           <e p="GameState.cs" t="Include" />
-          <e p="InputActionMapManager.cs" t="Include" />
+          <e p="Init.cs" t="Include" />
           <e p="Interaction" t="Include">
+            <e p="Choosers" t="Include">
+              <e p="MenuChooser.cs" t="Include" />
+              <e p="PlanetChooser.cs" t="Include" />
+            </e>
             <e p="Collections" t="Include">
-              <e p="SelectorCollection.cs" t="Include" />
-              <e p="ShowableGroups" t="Include">
+              <e p="MenuGroups" t="Include">
                 <e p="Implementations" t="Include">
-                  <e p="ShowableGroupWithDefault.cs" t="Include" />
-                  <e p="ShowableGroupWithOpenOnAwake.cs" t="Include" />
+                  <e p="MenuGroupWithChooser.cs" t="Include" />
+                  <e p="MenuGroupWithOpenOnAwake.cs" t="Include" />
                 </e>
-                <e p="ShowableGroup.cs" t="Include" />
+                <e p="MenuGroup.cs" t="Include" />
               </e>
+              <e p="SelectorCollection.cs" t="Include" />
             </e>
             <e p="Executives" t="Include">
               <e p="Builder.cs" t="Include" />
+            </e>
+            <e p="Menus" t="Include">
+              <e p="Implementations" t="Include">
+                <e p="EditorMenus" t="Include">
+                  <e p="BuildMenu.cs" t="Include" />
+                </e>
+                <e p="GameMenus" t="Include">
+                  <e p="BuildMenu.cs" t="Include" />
+                  <e p="UpgradeBuildingMenu.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Menu.cs" t="Include" />
+              <e p="UnderMouseMenu.cs" t="Include" />
             </e>
             <e p="Selectors" t="Include">
               <e p="Implementations" t="Include">
@@ -37,28 +60,6 @@
                 <e p="TileSelector.cs" t="Include" />
               </e>
               <e p="Selector.cs" t="Include" />
-            </e>
-            <e p="Showable" t="Include">
-              <e p="Choosers" t="Include">
-                <e p="Chooser.cs" t="Include" />
-                <e p="Implementations" t="Include">
-                  <e p="MenuChooser.cs" t="Include" />
-                </e>
-              </e>
-              <e p="Menus" t="Include">
-                <e p="Implementations" t="Include">
-                  <e p="EditorMenus" t="Include">
-                    <e p="BuildMenu.cs" t="Include" />
-                  </e>
-                  <e p="GameMenus" t="Include">
-                    <e p="BuildMenu.cs" t="Include" />
-                    <e p="UpgradeBuildingMenu.cs" t="Include" />
-                  </e>
-                </e>
-                <e p="Menu.cs" t="Include" />
-                <e p="UnderMouseMenu.cs" t="Include" />
-              </e>
-              <e p="Showable.cs" t="Include" />
             </e>
             <e p="Utilities" t="Include">
               <e p="Raycast.cs" t="Include" />
