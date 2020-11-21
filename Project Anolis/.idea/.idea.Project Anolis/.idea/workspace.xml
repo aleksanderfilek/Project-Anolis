@@ -23,35 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Move chooser choose method from button to action">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/MenuChooser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/MenuChooser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/PlanetChooser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/PlanetChooser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/ShowableGroups.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/ShowableGroups/Implementations.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/ShowableGroups/Implementations/ShowableGroupWithChooser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations/MenuGroupWithChooser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/ShowableGroups/Implementations/ShowableGroupWithOpenOnAwake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations/MenuGroupWithOpenOnAwake.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/ShowableGroups/Implementations/ShowableGroupWithOpenOnAwake.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations/MenuGroupWithOpenOnAwake.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/ShowableGroups/ShowableGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/MenuGroup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/ShowableGroups/ShowableGroup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/MenuGroup.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Implementations.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/EditorMenus.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Implementations/EditorMenus.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/EditorMenus/BuildMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Implementations/EditorMenus/BuildMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/EditorMenus/BuildMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Implementations/EditorMenus/BuildMenu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Implementations/GameMenus.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/BuildMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Implementations/GameMenus/BuildMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/BuildMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Implementations/GameMenus/BuildMenu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Menu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Menu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Menu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/UnderMouseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/UnderMouseMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/UnderMouseMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/UnderMouseMenu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Showable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Showable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,12 +93,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManipulator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Choosers/Implementations/PlanetChooser.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/UnderMouseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Choosers/Implementations/MenuChooser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Init.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/Chooser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/Implementations/MenuChooser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/ShowableGroups/Implementations/ShowableGroupWithDefault.cs" />
@@ -139,6 +111,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/PlanetChooser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ActionActivator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/MenuChooser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
       </list>
     </option>
   </component>
@@ -220,7 +194,7 @@
       <workItem from="1605812100303" duration="28000" />
       <workItem from="1605825451300" duration="2025000" />
       <workItem from="1605904716195" duration="7470000" />
-      <workItem from="1605967647040" duration="301000" />
+      <workItem from="1605967647040" duration="1089000" />
     </task>
     <task id="LOCAL-00001" summary="Change rotating planets to new input">
       <created>1603627329359</created>
@@ -348,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605911335404</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Change chooser inheritance from showable to MonoBehaviour and change showable to menu">
+      <created>1605967993413</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1605967993413</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +367,8 @@
     <MESSAGE value="Split CameraManipulator and shorten controller paremeter lists" />
     <MESSAGE value="Add Init and little refactor" />
     <MESSAGE value="Move chooser choose method from button to action" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move chooser choose method from button to action" />
+    <MESSAGE value="Change chooser inheritance from showable to MonoBehaviour and change showable to menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change chooser inheritance from showable to MonoBehaviour and change showable to menu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="345" key="#Notifications" timestamp="1603533591308">
@@ -406,10 +388,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605482502953" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605911340368">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605968004821">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605911340368" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605968004821" />
     <state x="624" y="237" key="run.anything.popup" timestamp="1602954072896">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>

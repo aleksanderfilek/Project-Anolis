@@ -49,7 +49,7 @@ public class PlanetaryCameraController
         if (newMode != GameState.Mode.Planetary)
             return;
         _controllerManipulator.CenterAtPlanet(GameState.Get.CurrentFocus);
-        _cameraManipulator.ChangeHeightBy(15.0f); //todo change
+        _cameraManipulator.SetHeightTo(15.0f); //todo change
     }
 
     public void MakeRotation()

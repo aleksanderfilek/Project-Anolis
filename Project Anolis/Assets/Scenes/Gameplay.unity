@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 246263383}
   - component: {fileID: 246263384}
   m_Layer: 0
-  m_Name: InterplanetaryShowableGroup
+  m_Name: InterplanetaryMenuGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4616,7 +4616,7 @@ GameObject:
   - component: {fileID: 1913385596}
   - component: {fileID: 1913385597}
   m_Layer: 0
-  m_Name: PlanetaryShowableGroup
+  m_Name: PlanetaryMenuGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4823,14 +4823,6 @@ MonoBehaviour:
   - {fileID: 115155388}
   chooseActionName: ChooseMenu
   actionActivator: {fileID: 1762456356}
-  inputAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
 --- !u!114 &1942606176
 MonoBehaviour:
   m_ObjectHideFlags: 0
