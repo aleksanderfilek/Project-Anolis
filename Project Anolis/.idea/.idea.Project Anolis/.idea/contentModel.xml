@@ -29,17 +29,30 @@
               <e p="PlanetChooser.cs" t="Include" />
             </e>
             <e p="Collections" t="Include">
-              <e p="SelectorCollection.cs" t="Include" />
-              <e p="ShowableGroups" t="Include">
+              <e p="MenuGroups" t="Include">
                 <e p="Implementations" t="Include">
-                  <e p="ShowableGroupWithChooser.cs" t="Include" />
-                  <e p="ShowableGroupWithOpenOnAwake.cs" t="Include" />
+                  <e p="MenuGroupWithChooser.cs" t="Include" />
+                  <e p="MenuGroupWithOpenOnAwake.cs" t="Include" />
                 </e>
-                <e p="ShowableGroup.cs" t="Include" />
+                <e p="MenuGroup.cs" t="Include" />
               </e>
+              <e p="SelectorCollection.cs" t="Include" />
             </e>
             <e p="Executives" t="Include">
               <e p="Builder.cs" t="Include" />
+            </e>
+            <e p="Menus" t="Include">
+              <e p="Implementations" t="Include">
+                <e p="EditorMenus" t="Include">
+                  <e p="BuildMenu.cs" t="Include" />
+                </e>
+                <e p="GameMenus" t="Include">
+                  <e p="BuildMenu.cs" t="Include" />
+                  <e p="UpgradeBuildingMenu.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Menu.cs" t="Include" />
+              <e p="UnderMouseMenu.cs" t="Include" />
             </e>
             <e p="Selectors" t="Include">
               <e p="Implementations" t="Include">
@@ -47,22 +60,6 @@
                 <e p="TileSelector.cs" t="Include" />
               </e>
               <e p="Selector.cs" t="Include" />
-            </e>
-            <e p="Showable" t="Include">
-              <e p="Menus" t="Include">
-                <e p="Implementations" t="Include">
-                  <e p="EditorMenus" t="Include">
-                    <e p="BuildMenu.cs" t="Include" />
-                  </e>
-                  <e p="GameMenus" t="Include">
-                    <e p="BuildMenu.cs" t="Include" />
-                    <e p="UpgradeBuildingMenu.cs" t="Include" />
-                  </e>
-                </e>
-                <e p="Menu.cs" t="Include" />
-                <e p="UnderMouseMenu.cs" t="Include" />
-              </e>
-              <e p="Showable.cs" t="Include" />
             </e>
             <e p="Utilities" t="Include">
               <e p="Raycast.cs" t="Include" />

@@ -1,22 +1,20 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 namespace Interaction
 {
     [RequireComponent(typeof(SelectorCollection))]
     public class MenuChooser : MonoBehaviour
     {
-        //todo remove invisible button and change clicking to action in input system
-        
         [SerializeField] private Raycast raycast;
         [SerializeField] private List<Menu> menus;
-        [SerializeField] private String chooseActionName;
+        [SerializeField] private string chooseActionName;
         [SerializeField] private ActionActivator actionActivator;
 
         private SelectorCollection _selectorCollection;
-        private ShowableGroupWithChooser _showableGroup;
+        private MenuGroupWithChooser _menuGroup;
 
         public void Activate()
         {
@@ -31,9 +29,9 @@ namespace Interaction
         private void Start()
         {
             _selectorCollection = GetComponent<SelectorCollection>();
-            _showableGroup = GetComponentInParent<ShowableGroupWithChooser>();
+            _menuGroup = GetComponentInParent<MenuGroupWithChooser>();
             #if UNITY_EDITOR
-                if (_showableGroup == null)
+                if (_menuGroup == null)
                     Debug.LogError("Wrong structure. Chooser should be child of ShowableGroup that it manages.");
                 if (!actionActivator.IsValidAction(chooseActionName))
                     Debug.LogError($"There is no action named '{chooseActionName}'", this);
@@ -47,7 +45,7 @@ namespace Interaction
             _selectorCollection.UpdateSelectors();
             foreach (var menu in menus.Where(menu => menu.CanHandleSelection()))
             {
-                _showableGroup.ActivateMenu(menu);
+                _menuGroup.ActivateMenu(menu);
                 return;
             }
         }

@@ -5,8 +5,6 @@ namespace Interaction
 {
     public class PlanetChooser : MonoBehaviour
     {
-        //todo remove invisible button and change clicking to action in input system
-        
         [SerializeField] private Raycast raycast;
         [SerializeField] private PlanetSelector planetSelector;
 
@@ -14,11 +12,11 @@ namespace Interaction
         {
             if (!context.performed || !raycast.IsSomethingHit)
                 return;
-            
+
             planetSelector.UpdateSelector();
-            if (planetSelector.SelectedPlanet == null) 
+            if (planetSelector.SelectedPlanet == null)
                 return;
-            
+
             GameState.Get.CurrentFocus = planetSelector.SelectedPlanet;
             GameState.Get.ChangeModeToPlanetary();
         }

@@ -2,14 +2,14 @@
 
 namespace Interaction
 {
-    public class ShowableGroupWithChooser : ShowableGroup
+    public class MenuGroupWithChooser : MenuGroup
     {
         [SerializeField] private MenuChooser chooser;
-        private Showable _currentMenu;
+        private Menu _currentMenu;
 
-        public override void ActivateMenu(Showable showable)
+        public override void ActivateMenu(Menu menu)
         {
-            _currentMenu = showable;
+            _currentMenu = menu;
             _currentMenu.Show();
             chooser.Deactivate();
         }

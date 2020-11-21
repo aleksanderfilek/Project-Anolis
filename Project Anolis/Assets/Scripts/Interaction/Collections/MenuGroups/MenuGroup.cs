@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Interaction
 {
-    public abstract class ShowableGroup : MonoBehaviour
+    public abstract class MenuGroup : MonoBehaviour
     {
-        public abstract void ActivateMenu(Showable showable);
+        public abstract void ActivateMenu(Menu menu);
 
         public abstract void DeactivateCurrent();
     }

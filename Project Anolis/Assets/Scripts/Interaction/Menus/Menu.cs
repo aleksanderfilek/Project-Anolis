@@ -2,7 +2,7 @@
 
 namespace Interaction
 {
-    public abstract class Showable : MonoBehaviour
+    public abstract class Menu : MonoBehaviour
     {
         [SerializeField] protected GameObject ui;
 
@@ -15,5 +15,7 @@ namespace Interaction
         {
             ui.SetActive(false);
         }
+        
+        public abstract bool CanHandleSelection();
     }
 }
