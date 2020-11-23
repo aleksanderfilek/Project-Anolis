@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.PackageManager;
+﻿using System.Collections.Generic;
+using Displayers;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Interaction.Editor
@@ -18,7 +13,7 @@ namespace Interaction.Editor
         [SerializeField] private PlanetSelector planetSelector;
         [SerializeField] private Builder builder;
         [SerializeField] private Raycast raycaster;
-        [SerializeField] private PropertiesDisplayer displayer;
+        [SerializeField] private PlaceableDisplayer selectionDisplayer;
         
         public BuildingOption CurrentOption { get; private set; }
 
@@ -39,15 +34,17 @@ namespace Interaction.Editor
         public void SetSelectionTo(BuildingOption newOption)
         {
             CurrentOption = newOption;
-            displayer.UpdateWith(CurrentOption);
+            UpdateView();
         }
         
         public void UpdateView()
         {
-            displayer.UpdateWith(CurrentOption);
+            Placeable toDisplay = null;
+            if (CurrentOption != null) toDisplay = CurrentOption.Placeable;
+            selectionDisplayer.UpdateWith(toDisplay);
         }
 
-        public void BulidSelected()
+        public void BuildSelected()
         {
             if (CurrentOption == null)
             {
@@ -81,7 +78,7 @@ namespace Interaction.Editor
                 var containerModule = newButton.AddComponent<BuildingOption>();
                 containerModule.Placeable = placeable;
                 containerModule.AssignManager(this);
-                
+
                 newButton.GetComponent<Button>().onClick.AddListener(containerModule.OnSelection);
             }
         }
