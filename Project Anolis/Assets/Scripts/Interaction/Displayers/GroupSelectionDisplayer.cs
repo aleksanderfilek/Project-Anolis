@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 namespace Displayers
 {
-    public class PlaceableDisplayer : MonoBehaviour
+    public class GroupSelectionDisplayer : MonoBehaviour
     {
         [SerializeField] private GameObject display;
 
-        private Placeable current;
+        private Placeable currentSelection;
         private Dictionary<string,GameObject> displayElements;
     
         private void Start()
@@ -21,24 +21,22 @@ namespace Displayers
 
         public void UpdateWith(Placeable newPlaceable)
         {
-            current = newPlaceable;
-            if (current == null)
+            currentSelection = newPlaceable;
+            if (currentSelection == null)
             {
                 display.SetActive(false);
                 return;
             }
             display.SetActive(true);
-            displayElements["Description"].GetComponent<Text>().text = current.description;
-            displayElements["Name"].GetComponent<Text>().text = current.objectName;
+            displayElements["Description"].GetComponent<Text>().text = currentSelection.description;
+            displayElements["Name"].GetComponent<Text>().text = currentSelection.objectName;
         }
 
         private void CreateLayout()
         {
             var nameBox = new GameObject("Name");
             var descriptionBox = new GameObject("Description");
-            var cancelButton = new GameObject("Cancel");
-            
-            
+
             displayElements.Add("Name", nameBox);
             displayElements.Add("Description", descriptionBox);
 

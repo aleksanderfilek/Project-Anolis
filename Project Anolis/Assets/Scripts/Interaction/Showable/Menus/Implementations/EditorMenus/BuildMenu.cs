@@ -13,7 +13,7 @@ namespace Interaction.Editor
         [SerializeField] private PlanetSelector planetSelector;
         [SerializeField] private Builder builder;
         [SerializeField] private Raycast raycaster;
-        [SerializeField] private PlaceableDisplayer selectionDisplayer;
+        [SerializeField] private GroupSelectionDisplayer selectionDisplayer;
         
         public BuildingOption CurrentOption { get; private set; }
 
@@ -44,8 +44,12 @@ namespace Interaction.Editor
             selectionDisplayer.UpdateWith(toDisplay);
         }
 
-        public void BuildSelected()
+        public void BuildSelectedIfActive()
         {
+            if (!ui.gameObject.activeSelf)
+            {
+                return;
+            }
             if (CurrentOption == null)
             {
                 return;
@@ -53,14 +57,8 @@ namespace Interaction.Editor
             raycaster.Shoot();
             tileSelector.UpdateSelector();
             planetSelector.UpdateSelector();
-            if (tileSelector.SelectedTile == null)
+            if (tileSelector.SelectedTile == null || planetSelector.SelectedPlanet == null)
             {
-                Debug.LogError("Tile is not selected");
-                return;
-            }
-            if (planetSelector.SelectedPlanet == null)
-            {
-                Debug.LogError("Planet is not selected");
                 return;
             }
             builder.Build(CurrentOption.Placeable, tileSelector.SelectedTile, planetSelector.SelectedPlanet.transform);
@@ -70,7 +68,7 @@ namespace Interaction.Editor
         {
             foreach (var placeable in placeables)
             {
-                var panelToAttach = ui.GetComponentInChildren<GridLayoutGroup>().transform;
+                var panelToAttach = ui.transform;
                 var newButton = Instantiate(buttonPrefab, panelToAttach);
                 newButton.name = "Button - " + placeable.name;
                 newButton.GetComponentInChildren<Text>().text = placeable.objectName;
