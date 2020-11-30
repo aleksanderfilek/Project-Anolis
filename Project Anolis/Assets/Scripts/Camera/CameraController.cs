@@ -1,51 +1,74 @@
-﻿using UnityEditor.Experimental.GraphView;
+﻿using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
-using UnityEngine.XR.WSA.Input;
 
-[RequireComponent(typeof(PlanetaryCameraController))]
-[RequireComponent(typeof(InterplanetaryCameraController))]
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private float zoomSpeed = 25f;
-    [SerializeField] private float minCameraHeight = 10f;
-    [SerializeField] private GameState state;
+    [SerializeField] private float zoomSpeed;
+    [SerializeField] private float modeTransitionHeight;
 
-    private Transform _cameraTransform;
+    [Header("Planetary Mode")] 
+    [SerializeField] private float rotatingSpeed;
+    [SerializeField] private float minCameraHeight;
 
-    private PlanetaryCameraController _planetaryCameraController;
+    [Header("Interplanetary Mode")] 
+    [SerializeField] private float movingSpeed;
+    [SerializeField] private float maxCameraHeight;
+    [SerializeField] private Vector3 fixedRotation;
+    [SerializeField] private Vector2 boundaries;
 
-    private float _zoomAmount;
-    
-    private void Awake()
+    public PlanetaryCameraController Planetary { get; private set; }
+    public InterplanetaryCameraController Interplanetary { get; private set; }
+
+    private CameraManipulator _cameraManipulator;
+    private ControllerManipulator _controllerManipulator;
+
+    private void Start()
     {
-        _cameraTransform = transform.GetChild(0);
-        _planetaryCameraController = GetComponent<PlanetaryCameraController>();
+        var cameraTransform = GetComponentInChildren<Camera>().transform;
+        var controllerTransform = transform;
+        _cameraManipulator = new CameraManipulator(cameraTransform);
+        _controllerManipulator = new ControllerManipulator(controllerTransform);
+        
+        Planetary = new PlanetaryCameraController(_cameraManipulator, _controllerManipulator, cameraTransform, controllerTransform);
+        UpdatePlanetaryParameters();
+
+        Interplanetary = new InterplanetaryCameraController(_cameraManipulator, _controllerManipulator, controllerTransform, cameraTransform);
+        UpdateInterplanetaryParameters();
+    }
+
+    private void UpdatePlanetaryParameters()
+    {
+        Planetary.RotatingSpeed = rotatingSpeed;
+        Planetary.ZoomSpeed = zoomSpeed;
+        Planetary.MinCameraHeight = minCameraHeight;
+        Planetary.ModeTransitionHeight = modeTransitionHeight;
+    }
+
+    private void UpdateInterplanetaryParameters()
+    {
+        Interplanetary.Boundaries = boundaries;
+        Interplanetary.FixedRotation = fixedRotation;
+        Interplanetary.MoveSpeed = movingSpeed;
+        Interplanetary.ZoomSpeed = zoomSpeed;
+        Interplanetary.MaxCameraHeight = maxCameraHeight;
     }
 
     private void Update()
     {
-        _planetaryCameraController.MakeMovement();
-    }
-
-    public void OnZoom(InputAction.CallbackContext context)
-    {
-        var amount = context.ReadValue<Vector2>().normalized.y;
-        Zoom(amount);
-    }
-    
-    private void Zoom(float amount)
-    {
-        _cameraTransform.localPosition += zoomSpeed * Time.deltaTime * amount * new Vector3(0, 0, -1);
-        if (_cameraTransform.localPosition.z < minCameraHeight)
-            FixCameraHeight();
-    }
-
-    private void FixCameraHeight()
-    {
-        var cameraPosition = _cameraTransform.localPosition;
-        cameraPosition.z = minCameraHeight;
-        _cameraTransform.localPosition = cameraPosition;
+        switch (GameState.Get.CurrentMode)
+        {
+            case GameState.Mode.Planetary:
+                Planetary.MakeRotation();
+                break;
+            case GameState.Mode.Interplanetary:
+                Interplanetary.MakeMovement();
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+        #if UNITY_EDITOR
+            UpdatePlanetaryParameters();
+            UpdateInterplanetaryParameters();
+        #endif
     }
 }

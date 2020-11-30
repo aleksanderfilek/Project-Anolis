@@ -46,6 +46,7 @@ namespace Editor
         private static void GetFunctions()
         {
             _commands.Add("slomo", Slomo.Process);
+            _commands.Add("turnui", TurnUI_CF.Process);
         }
 
         private static void ProcessCommand()
