@@ -1153,7 +1153,7 @@ MonoBehaviour:
         m_MethodName: ActivateMenu
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1994990445}
+          m_ObjectArgument: {fileID: 1994990446}
           m_ObjectArgumentAssemblyTypeName: Interaction.Menu, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3547,7 +3547,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1994990444}
-  - component: {fileID: 1994990445}
   - component: {fileID: 1994990446}
   m_Layer: 0
   m_Name: Menu Planets
@@ -3570,27 +3569,6 @@ Transform:
   m_Father: {fileID: 2031464021}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1994990445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994990443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa101276a76a43717b3a1d5a343fb97c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ui: {fileID: 1956329243}
-  placeables: []
-  buttonPrefab: {fileID: 5229485784711942867, guid: c7eb202acd8a38d4895570a82c8c1c38,
-    type: 3}
-  tileSelector: {fileID: 0}
-  planetSelector: {fileID: 0}
-  builder: {fileID: 0}
-  raycaster: {fileID: 0}
-  selectionDisplayer: {fileID: 0}
 --- !u!114 &1994990446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3603,7 +3581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e5e6d25005f9ce4fa7af2d2490ce75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 1956329243}
+  ui: {fileID: 1956329243}
   buttonPrefab: {fileID: 5229485784711942867, guid: c7eb202acd8a38d4895570a82c8c1c38,
     type: 3}
 --- !u!1 &2031464020
@@ -3652,7 +3630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd5e81cd803da64fae2e4c6b69869d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openOnAwakeMenu: {fileID: 1994990445}
+  openOnAwakeMenu: {fileID: 0}
 --- !u!1 &2139325473
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,16 +22,17 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:planet-editor" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Move chooser choose method from button to action">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetButtonAssigner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlanetMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetButtonAssigner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlanetMenu.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlanetButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlanetMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,9 +125,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlanetButtonCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlanetButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlanetButtonAssigner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlanetMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlanetButton.cs" />
       </list>
     </option>
   </component>
@@ -210,7 +211,7 @@
       <workItem from="1605904716195" duration="7470000" />
       <workItem from="1605967647040" duration="1089000" />
       <workItem from="1606774720262" duration="1015000" />
-      <workItem from="1606839446175" duration="4650000" />
+      <workItem from="1606839446175" duration="6053000" />
     </task>
     <task id="LOCAL-00001" summary="Change rotating planets to new input">
       <created>1603627329359</created>
@@ -359,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606843468367</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Rename class and move planet buttons to new page">
+      <created>1606844774389</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1606844774389</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +386,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="planet-editor" />
                       </list>
                     </value>
                   </entry>
@@ -412,7 +420,8 @@
     <MESSAGE value="Change chooser inheritance from showable to MonoBehaviour and change showable to menu" />
     <MESSAGE value="Merge Interplanetary mode into Planet Editor" />
     <MESSAGE value="Add button for each planet in game when starting." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add button for each planet in game when starting." />
+    <MESSAGE value="Rename class and move planet buttons to new page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename class and move planet buttons to new page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="345" key="#Notifications" timestamp="1603533591308">
