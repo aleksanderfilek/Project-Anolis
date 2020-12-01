@@ -21,7 +21,7 @@ namespace Interaction
 
         public override void DeactivateCurrent()
         {
-            _currentMenu.Hide();
+            _currentMenu?.Hide();
         }
     }
 }

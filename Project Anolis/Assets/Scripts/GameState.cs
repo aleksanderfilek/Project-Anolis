@@ -19,7 +19,7 @@ public class GameState : MonoBehaviour
         #endif
         Get = this;
     }
-    
+
     public void ChangeModeToPlanetary()
     {
         CurrentMode = Mode.Planetary;

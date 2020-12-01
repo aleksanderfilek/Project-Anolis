@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Konrad\AppData\local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Konrad\AppData\local\JetBrains\Rider2020.2\resharper-host\local\Transient\Rider\v202\SolutionCaches\_Project Anolis.-309028776.00" t="ExcludeRecursive" />
-    <e p="D:\projekty_unity\projekty\Project-Anolis\Project Anolis" t="IncludeRecursive">
+    <e p="C:\Users\Marcin\AppData\local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Marcin\AppData\local\JetBrains\Rider2020.2\resharper-host\local\Transient\Rider\v202\SolutionCaches\_Project Anolis.1117041784.00" t="ExcludeRecursive" />
+    <e p="D:\Projekty\Projekt-Anolis\Project Anolis" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -14,6 +14,7 @@
           <e p="Command_EW.cs" t="Include" />
           <e p="CommandFuntions" t="Include">
             <e p="Slomo_CF.cs" t="Include" />
+            <e p="TurnUI_CF.cs" t="Include" />
           </e>
         </e>
         <e p="Scriptable_Objects" t="Include">
@@ -28,6 +29,7 @@
             <e p="InterplanetaryCameraController.cs" t="Include" />
             <e p="PlanetaryCameraController.cs" t="Include" />
           </e>
+          <e p="GameManager.cs" t="Include" />
           <e p="GameState.cs" t="Include" />
           <e p="Init.cs" t="Include" />
           <e p="Interaction" t="Include">
@@ -44,6 +46,9 @@
                 <e p="MenuGroup.cs" t="Include" />
               </e>
               <e p="SelectorCollection.cs" t="Include" />
+            </e>
+            <e p="Displayers" t="Include">
+              <e p="GroupSelectionDisplayer.cs" t="Include" />
             </e>
             <e p="Executives" t="Include">
               <e p="Builder.cs" t="Include" />
@@ -80,10 +85,10 @@
             <e p="PlayMenuManager.cs" t="Include" />
             <e p="SettingsMenuManager.cs" t="Include" />
           </e>
-          <e p="Planet Editor" t="Include">
-            <e p="TabButton.cs" t="Include" />
-            <e p="TabGroup.cs" t="Include" />
+          <e p="Misc" t="Include">
+            <e p="BuildingOption.cs" t="Include" />
           </e>
+          <e p="PlaceableInstance.cs" t="Include" />
           <e p="Planet.cs" t="Include" />
           <e p="PlanetGenerator.cs" t="Include" />
           <e p="Tile.cs" t="Include" />

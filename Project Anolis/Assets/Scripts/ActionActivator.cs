@@ -70,7 +70,7 @@ public class ActionActivator : MonoBehaviour
         planetaryMode.Rotate.performed += cameraController.Planetary.UpdateRotateAmounts;
         planetaryMode.Rotate.canceled += cameraController.Planetary.UpdateRotateAmounts;
         planetaryMode.Zoom.performed += cameraController.Planetary.Zoom;
-        planetaryMode.ChooseMenu.performed += ctx => planetaryMenuChooser.Choose();
+        // planetaryMode.ChooseMenu.performed += ctx => planetaryMenuChooser.Choose();
 
         _controls.Gameplay.CastRay.performed += ctx => raycast.Shoot();
     }
