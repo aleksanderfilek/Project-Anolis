@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 // This scripts a new button for each GameObject with "Planet" Tag.
 // Assigns buttons as a children of given panel
-public class PlanetButtonAssigner : MonoBehaviour
+public class PlanetMenu : MonoBehaviour
 {
     [SerializeField] private GameObject panel;
     [SerializeField] private GameObject buttonPrefab;
