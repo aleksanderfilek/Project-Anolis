@@ -31,15 +31,8 @@
   <component name="ChangeListManager">
     <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Move chooser choose method from button to action">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Actions/GameplayControls.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Actions/GameplayControls.inputactions.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActionActivator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActionActivator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations/MenuGroupWithOpenOnAwake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations/MenuGroupWithOpenOnAwake.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,35 +49,34 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../../Program Files/Unity Hub/editor/2019.4.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlanetButtonAssigner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/4f/053d4227/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/InputManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/21/40296c6f/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2DB13BA0-D523-4322-8AA9-892C408FB49A/ed/88a9c046/Input.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/AlphaButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Scripts/GameState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Scripts/ActionActivator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations/MenuGroupWithOpenOnAwake.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations/MenuGroupWithOpenOnAwake.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/0c/77719d9a/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionMap.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/EditorMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/ProjectSettings/QualitySettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/19/a81ead35/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Scenes/Editor.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Scripts/ActionActivator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/AlphaButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Actions/GameplayControls.inputactions.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Projekty/Projekt-Anolis/Project Anolis/Assets/Scripts/GameState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/EditorMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Utilities.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenuManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Menu/Implementations/MenuChooser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Menu/Implementations/EditorBuildMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Planet Editor/TabButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/MenuManager.cs" />
@@ -133,6 +125,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlanetButtonCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlanetButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlanetButtonAssigner.cs" />
       </list>
     </option>
   </component>
@@ -216,6 +211,7 @@
       <workItem from="1605904716195" duration="7470000" />
       <workItem from="1605967647040" duration="1089000" />
       <workItem from="1606774720262" duration="1015000" />
+      <workItem from="1606839446175" duration="3963000" />
     </task>
     <task id="LOCAL-00001" summary="Change rotating planets to new input">
       <created>1603627329359</created>
@@ -350,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605967993413</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Merge Interplanetary mode into Planet Editor">
+      <created>1606839522107</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1606839522107</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +404,8 @@
     <MESSAGE value="Add Init and little refactor" />
     <MESSAGE value="Move chooser choose method from button to action" />
     <MESSAGE value="Change chooser inheritance from showable to MonoBehaviour and change showable to menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change chooser inheritance from showable to MonoBehaviour and change showable to menu" />
+    <MESSAGE value="Merge Interplanetary mode into Planet Editor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge Interplanetary mode into Planet Editor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="345" key="#Notifications" timestamp="1603533591308">
