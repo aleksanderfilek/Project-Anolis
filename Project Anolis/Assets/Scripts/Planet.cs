@@ -15,6 +15,14 @@ public class Planet : MonoBehaviour
 
     private int _previousFrameResolution; // used for real-time generation
 
+    public void RecreateWith(int res)
+    {
+        this.resolution = res;
+        _meshFilter = GetComponent<MeshFilter>();
+        _meshCollider = GetComponent<MeshCollider>();
+        Initialize();
+    }
+    
     private void Start()
     {
         _meshFilter = GetComponent<MeshFilter>();

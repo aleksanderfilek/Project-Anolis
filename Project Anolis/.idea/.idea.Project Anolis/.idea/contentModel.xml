@@ -91,6 +91,7 @@
           <e p="PlaceableInstance.cs" t="Include" />
           <e p="Planet.cs" t="Include" />
           <e p="PlanetButton.cs" t="Include" />
+          <e p="PlanetCreator.cs" t="Include" />
           <e p="PlanetGenerator.cs" t="Include" />
           <e p="PlanetMenu.cs" t="Include" />
           <e p="Tile.cs" t="Include" />

@@ -9,8 +9,11 @@ namespace Interaction.Editor
     public class PlanetMenu : Menu
     {
         [SerializeField] private GameObject buttonPrefab;
+        [SerializeField] private PlanetCreator planetCreator;
+        [SerializeField]private GameObject planetsParent;
         private List<GameObject> planets;
-    
+        
+
         private void Start()
         {
             CheckSerializedFields();
@@ -32,7 +35,25 @@ namespace Interaction.Editor
         {
             return false;
         }
-    
+        
+        // Adds new Planet using PlanetCreator and a connected button
+        public void CreateNewPlanet()
+        {
+            if (planetCreator is null)
+            {
+                Debug.LogError(": PlanetCreator reference is null.", this);
+                return;
+            }
+            var planet = planetCreator.Create();
+
+            if (planetsParent != null)
+            {
+                planet.transform.SetParent(planetsParent.transform);
+            }
+
+            AssignPlanetToButton(planet, CreateButton());
+        }
+
         private void GetAllPlanets()
         {
             var planetCandidates = GameObject.FindGameObjectsWithTag("Planet");
@@ -52,8 +73,9 @@ namespace Interaction.Editor
     
         private GameObject CreateButton()
         {
-            var button = Instantiate(buttonPrefab, ui.transform); 
+            var button = Instantiate(buttonPrefab, ui.transform);
             button.name = "Button Planet";
+            button.transform.SetAsFirstSibling();
             return button;
         }
     
@@ -69,7 +91,7 @@ namespace Interaction.Editor
         {
             if (ui is null) 
                 Debug.LogError(": Panel not assigned",this);
-    
+
             if (buttonPrefab is null)
                 Debug.LogError(": Button Prefab not assigned.", this);
         }
