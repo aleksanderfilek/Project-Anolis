@@ -28,13 +28,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Move chooser choose method from button to action">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Planet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Planet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlanetMenu.cs" afterDir="false" />
-    </list>
+    <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Move chooser choose method from button to action" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -214,7 +208,7 @@
       <workItem from="1605904716195" duration="7470000" />
       <workItem from="1605967647040" duration="1089000" />
       <workItem from="1606774720262" duration="1015000" />
-      <workItem from="1606839446175" duration="11518000" />
+      <workItem from="1606839446175" duration="12044000" />
     </task>
     <task id="LOCAL-00001" summary="Change rotating planets to new input">
       <created>1603627329359</created>
@@ -377,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606846099678</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="New random planet generation">
+      <created>1606851698430</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1606851698430</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +433,8 @@
     <MESSAGE value="Add button for each planet in game when starting." />
     <MESSAGE value="Rename class and move planet buttons to new page" />
     <MESSAGE value="Add quick switching camera focus" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add quick switching camera focus" />
+    <MESSAGE value="New random planet generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="New random planet generation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="345" key="#Notifications" timestamp="1603533591308">
@@ -456,10 +458,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605482502953" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606846202389">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606851706585">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1606846202389" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1606851706585" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605968004821" />
     <state x="624" y="237" key="run.anything.popup" timestamp="1602954072896">
       <screen x="0" y="0" width="1920" height="1037" />

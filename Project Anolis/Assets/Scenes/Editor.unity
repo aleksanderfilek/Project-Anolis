@@ -2442,8 +2442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randRadius: 1000
   minMaxSize: {x: 2, y: 5}
-  defaultMaterial: {fileID: -6629797300637803691, guid: 4e85dccd3cdd8074ba4c5c971eef5c3f,
-    type: 3}
+  defaultMaterial: {fileID: 2100000, guid: 75747121cda989c499968fc733046fb7, type: 2}
 --- !u!1 &1145688918
 GameObject:
   m_ObjectHideFlags: 0
