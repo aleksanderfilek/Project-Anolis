@@ -20,24 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Move chooser choose method from button to action">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Actions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/AnolisControlsActionCallbackConnection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/AnolisControlsActionCallbackConnection.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/GameplayActionCallbackConnection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/GameplayActionCallbackConnection.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/ActionCallbackConnection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Actions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActionActivator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/AnolisControlsActionActivator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActionActivator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/AnolisControlsActionActivator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/AnolisControlsActionActivator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionActivator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/AnolisControlsActionActivator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionActivator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/AnolisControlsActionCallbackConnection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/AnolisControlsActionCallbackConnection.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/ActionCallbackConnection.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/GameplayActionCallbackConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/GameplayActionCallbackConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/GameplayActionCallbackConnection.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/GameplayActionCallbackConnection.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/MenuChooser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/MenuChooser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/MenuChooser.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/MenuChooser.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlanetCreator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +70,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Menu/EditorMenuManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/AlphaButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Utilities.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenuManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Menu/Implementations/MenuChooser.cs" />
@@ -114,12 +112,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Displayers/GroupSelectionDisplayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ActionActivator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ActionCallbackConnection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionActivator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/AnolisControlsActionActivator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/GameplayActionCallbackConnection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Actions/AnolisControlsActionCallbackConnection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/AnolisControlsActionActivator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/GameplayActionCallbackConnection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnectioncs.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/ActionCallbackConnection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionActivator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlanetCreator.cs" />
       </list>
     </option>
   </component>
@@ -185,7 +186,7 @@
       <workItem from="1604569008499" duration="1338000" />
       <workItem from="1604570669138" duration="5310000" />
       <workItem from="1606924080706" duration="2942000" />
-      <workItem from="1606927089538" duration="2279000" />
+      <workItem from="1606927089538" duration="6965000" />
     </task>
     <task id="LOCAL-00001" summary="Change rotating planets to new input">
       <created>1603627329359</created>
@@ -236,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604572713548</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Move actions-callbacks connection to another object, that action activator uses to make connection (therefore different actions can be conected in editor and different actions in gameplay)">
+      <created>1606929865065</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1606929865065</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +288,8 @@
     <MESSAGE value="Import latest master, changed names" />
     <MESSAGE value="Removed some shame" />
     <MESSAGE value="Built Placeable can be changed to another" />
-    <option name="LAST_COMMIT_MESSAGE" value="Built Placeable can be changed to another" />
+    <MESSAGE value="Move actions-callbacks connection to another object, that action activator uses to make connection (therefore different actions can be conected in editor and different actions in gameplay)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move actions-callbacks connection to another object, that action activator uses to make connection (therefore different actions can be conected in editor and different actions in gameplay)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="345" key="#Notifications" timestamp="1603533591308">

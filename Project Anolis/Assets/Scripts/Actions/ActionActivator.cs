@@ -4,23 +4,19 @@ using Interaction;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class AnolisControlsActionActivator : MonoBehaviour
+[RequireComponent(typeof(ActionCallbackConnection))]
+public class ActionActivator : MonoBehaviour
 {
-    private GameplayControls _controls;
+    private InputActionAsset controlsAsset;
     private InputActionMap _currentActionMap;
     
     [SerializeField] private List<string> alwaysEnabledActionMapNames;
-    [SerializeField] private AnolisControlsActionCallbackConnection anolisControlsActionCallbackConnection;
-    
-    private void Awake()
-    {
-        _controls = new GameplayControls();
-    }
+    [SerializeField] private ActionCallbackConnection actionCallbackConnection;
 
     private void Start()
     {
-        anolisControlsActionCallbackConnection.SetControls(_controls);
-        anolisControlsActionCallbackConnection.Connect();
+        controlsAsset = actionCallbackConnection.GetInputActionAsset();
+        actionCallbackConnection.Connect();
         EnableAlwaysEnabledActionMaps();
     }
 
@@ -32,19 +28,19 @@ public class AnolisControlsActionActivator : MonoBehaviour
 
     public void EnableAction(string actionName)
     {
-        _controls.asset[actionName].Enable();
+        controlsAsset[actionName].Enable();
     }
 
     public void DisableAction(string actionName)
     {
-        _controls.asset[actionName].Disable(); 
+        controlsAsset[actionName].Disable(); 
     }
 
     public bool IsValidAction(string actionName)
     {
         try
         {
-            _ = _controls.asset[actionName];
+            _ = controlsAsset[actionName];
         }
         catch (KeyNotFoundException)
         {
@@ -60,7 +56,7 @@ public class AnolisControlsActionActivator : MonoBehaviour
     
     private InputActionMap EnableActionMap(string actionMapName)
     {
-        var actionMap = _controls.asset.FindActionMap(actionMapName);
+        var actionMap = controlsAsset.FindActionMap(actionMapName);
         if (actionMap == null)
             Debug.LogError($"Cannot find action map '{actionMapName}'.", this);
 

@@ -2771,7 +2771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72086c40c68084458a29955a238ab49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anolisControlsActionActivator: {fileID: 0}
+  actionActivator: {fileID: 1762456356}
 --- !u!4 &1100528768
 Transform:
   m_ObjectHideFlags: 0
@@ -4808,6 +4808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraController: {fileID: 631273899}
   planetChooser: {fileID: 1747392350}
+  planetaryMenuChooser: {fileID: 1942606175}
   raycast: {fileID: 174268904}
 --- !u!4 &1762456355
 Transform:
@@ -4837,7 +4838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alwaysEnabledActionMapNames:
   - Gameplay
-  anolisControlsActionCallbackConnection: {fileID: 1762456354}
+  actionCallbackConnection: {fileID: 1762456354}
 --- !u!1 &1854492198
 GameObject:
   m_ObjectHideFlags: 0
@@ -5176,7 +5177,7 @@ MonoBehaviour:
   - {fileID: 746254087}
   - {fileID: 115155388}
   chooseActionName: ChooseMenu
-  anolisControlsActionActivator: {fileID: 1762456356}
+  actionActivator: {fileID: 1762456356}
 --- !u!114 &1942606176
 MonoBehaviour:
   m_ObjectHideFlags: 0

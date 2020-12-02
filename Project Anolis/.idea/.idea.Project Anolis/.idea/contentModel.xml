@@ -22,9 +22,14 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Actions" t="Include">
-            <e p="AnolisControlsActionActivator.cs" t="Include" />
-            <e p="AnolisControlsActionCallbackConnection.cs" t="Include" />
-            <e p="GameplayActionCallbackConnection.cs" t="Include" />
+            <e p="ActionActivator.cs" t="Include" />
+            <e p="ActionCallbackConnestions" t="Include">
+              <e p="ActionCallbackConnection.cs" t="Include" />
+              <e p="Implementations" t="Include">
+                <e p="EditorActionCallbackConnection.cs" t="Include" />
+                <e p="GameplayActionCallbackConnection.cs" t="Include" />
+              </e>
+            </e>
           </e>
           <e p="Camera" t="Include">
             <e p="CameraController.cs" t="Include" />

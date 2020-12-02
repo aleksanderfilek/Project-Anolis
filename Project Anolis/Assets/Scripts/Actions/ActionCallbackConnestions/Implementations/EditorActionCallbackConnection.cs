@@ -1,27 +1,39 @@
+using System;
 using Interaction;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class GameplayActionCallbackConnection : AnolisControlsActionCallbackConnection
+public class EditorActionCallbackConnection : ActionCallbackConnection
 {
+    private GameplayControls _controls;    //todo add another controls (EditorControls) or change name to AnolisControls
+    
     [SerializeField] private CameraController cameraController;
     [SerializeField] private PlanetChooser planetChooser;
-    [SerializeField] private MenuChooser planetaryMenuChooser;
     [SerializeField] private Raycast raycast;
 
-    protected override void ConnectActionsWithCallbacks()
+    private void Awake()
     {
-        var interplanetaryMode = Controls.InterplanetaryMode;
+        _controls = new GameplayControls();
+    }
+
+    public override InputActionAsset GetInputActionAsset()
+    {
+        return _controls.asset;
+    }
+
+    public override void Connect()
+    {
+        var interplanetaryMode = _controls.InterplanetaryMode;
         interplanetaryMode.Move.performed += cameraController.Interplanetary.UpdateMoveAmounts;
         interplanetaryMode.Move.canceled += cameraController.Interplanetary.UpdateMoveAmounts;
         interplanetaryMode.Zoom.performed += cameraController.Interplanetary.Zoom;
         interplanetaryMode.ChoosePlanet.performed += planetChooser.Choose;
 
-        var planetaryMode = Controls.PlanetaryMode;
+        var planetaryMode = _controls.PlanetaryMode;
         planetaryMode.Rotate.performed += cameraController.Planetary.UpdateRotateAmounts;
         planetaryMode.Rotate.canceled += cameraController.Planetary.UpdateRotateAmounts;
         planetaryMode.Zoom.performed += cameraController.Planetary.Zoom;
-        planetaryMode.ChooseMenu.performed += ctx => planetaryMenuChooser.Choose();
 
-        Controls.Gameplay.CastRay.performed += ctx => raycast.Shoot(); 
+        _controls.Gameplay.CastRay.performed += ctx => raycast.Shoot(); 
     }
 }

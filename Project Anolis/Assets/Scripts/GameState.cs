@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
-    [SerializeField] private AnolisControlsActionActivator anolisControlsActionActivator;
+    [SerializeField] private ActionActivator actionActivator;
     
     public static GameState Get { get; private set; }
     public event Action<Mode> ModeChanged; //todo think about changing that event to two events for planetary and interplanetary
@@ -23,14 +23,14 @@ public class GameState : MonoBehaviour
     public void ChangeModeToPlanetary()
     {
         CurrentMode = Mode.Planetary;
-        anolisControlsActionActivator.SwitchCurrentActionMap("PlanetaryMode");
+        actionActivator.SwitchCurrentActionMap("PlanetaryMode");
         OnStateChanged(Mode.Planetary);
     }
 
     public void ChangeModeToInterplanetary()
     {
         CurrentMode = Mode.Interplanetary;
-        anolisControlsActionActivator.SwitchCurrentActionMap("InterplanetaryMode");
+        actionActivator.SwitchCurrentActionMap("InterplanetaryMode");
         OnStateChanged(Mode.Interplanetary); 
     }
 

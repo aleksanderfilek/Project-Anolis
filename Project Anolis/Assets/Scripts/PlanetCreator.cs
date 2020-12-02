@@ -28,6 +28,7 @@ public class PlanetCreator : MonoBehaviour
         var planetComp = planet.AddComponent<Planet>();
         planet.GetComponent<Renderer>().material = defaultMaterial;
         planetComp.RecreateWith(size);
+        planet.tag = "Planet";
 
         return planet;
     }
