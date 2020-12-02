@@ -4,19 +4,14 @@ using Interaction;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ActionActivator : MonoBehaviour
+public class AnolisControlsActionActivator : MonoBehaviour
 {
     private GameplayControls _controls;
     private InputActionMap _currentActionMap;
     
     [SerializeField] private List<string> alwaysEnabledActionMapNames;
-
-    [Header("References for objects with callbacks")]
-    [SerializeField] private CameraController cameraController;
-    [SerializeField] private PlanetChooser planetChooser;
-    [SerializeField] private MenuChooser planetaryMenuChooser;
-    [SerializeField] private Raycast raycast;
-
+    [SerializeField] private AnolisControlsActionCallbackConnection anolisControlsActionCallbackConnection;
+    
     private void Awake()
     {
         _controls = new GameplayControls();
@@ -24,7 +19,8 @@ public class ActionActivator : MonoBehaviour
 
     private void Start()
     {
-        ConnectActionsWithCallbacks();
+        anolisControlsActionCallbackConnection.SetControls(_controls);
+        anolisControlsActionCallbackConnection.Connect();
         EnableAlwaysEnabledActionMaps();
     }
 
@@ -54,25 +50,7 @@ public class ActionActivator : MonoBehaviour
         {
             return false;
         }
-
         return true;
-    }
-
-    private void ConnectActionsWithCallbacks()
-    {
-        var interplanetaryMode = _controls.InterplanetaryMode;
-        interplanetaryMode.Move.performed += cameraController.Interplanetary.UpdateMoveAmounts;
-        interplanetaryMode.Move.canceled += cameraController.Interplanetary.UpdateMoveAmounts;
-        interplanetaryMode.Zoom.performed += cameraController.Interplanetary.Zoom;
-        interplanetaryMode.ChoosePlanet.performed += planetChooser.Choose;
-
-        var planetaryMode = _controls.PlanetaryMode;
-        planetaryMode.Rotate.performed += cameraController.Planetary.UpdateRotateAmounts;
-        planetaryMode.Rotate.canceled += cameraController.Planetary.UpdateRotateAmounts;
-        planetaryMode.Zoom.performed += cameraController.Planetary.Zoom;
-        // planetaryMode.ChooseMenu.performed += ctx => planetaryMenuChooser.Choose();
-
-        _controls.Gameplay.CastRay.performed += ctx => raycast.Shoot();
     }
     
     private void EnableActionMapAsCurrent(string actionMapName)
@@ -98,3 +76,4 @@ public class ActionActivator : MonoBehaviour
         }
     } 
 }
+

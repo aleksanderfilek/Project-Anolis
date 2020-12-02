@@ -11,19 +11,19 @@ namespace Interaction
         [SerializeField] private Raycast raycast;
         [SerializeField] private List<Menu> menus;
         [SerializeField] private string chooseActionName;
-        [SerializeField] private ActionActivator actionActivator;
+        [SerializeField] private AnolisControlsActionActivator anolisControlsActionActivator;
 
         private SelectorCollection _selectorCollection;
         private MenuGroupWithChooser _menuGroup;
 
         public void Activate()
         {
-            actionActivator.EnableAction(chooseActionName);
+            anolisControlsActionActivator.EnableAction(chooseActionName);
         }
         
         public void Deactivate()
         {
-            actionActivator.DisableAction(chooseActionName);
+            anolisControlsActionActivator.DisableAction(chooseActionName);
         }
         
         private void Start()
@@ -33,7 +33,7 @@ namespace Interaction
             #if UNITY_EDITOR
                 if (_menuGroup == null)
                     Debug.LogError("Wrong structure. Chooser should be child of ShowableGroup that it manages.");
-                if (!actionActivator.IsValidAction(chooseActionName))
+                if (!anolisControlsActionActivator.IsValidAction(chooseActionName))
                     Debug.LogError($"There is no action named '{chooseActionName}'", this);
             #endif
         }
