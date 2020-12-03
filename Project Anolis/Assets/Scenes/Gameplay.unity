@@ -4837,7 +4837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alwaysEnabledActionMapNames:
-  - Gameplay
+  - Utilities
   actionCallbackConnection: {fileID: 1762456354}
 --- !u!1 &1854492198
 GameObject:

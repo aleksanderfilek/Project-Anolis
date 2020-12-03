@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class EditorActionCallbackConnection : ActionCallbackConnection
 {
-    private GameplayControls _controls;    //todo add another controls (EditorControls) or change name to AnolisControls
+    private EditorControls _controls;
     
     [SerializeField] private CameraController cameraController;
     [SerializeField] private PlanetChooser planetChooser;
@@ -13,7 +13,7 @@ public class EditorActionCallbackConnection : ActionCallbackConnection
 
     private void Awake()
     {
-        _controls = new GameplayControls();
+        _controls = new EditorControls();
     }
 
     public override InputActionAsset GetInputActionAsset()
@@ -27,13 +27,13 @@ public class EditorActionCallbackConnection : ActionCallbackConnection
         interplanetaryMode.Move.performed += cameraController.Interplanetary.UpdateMoveAmounts;
         interplanetaryMode.Move.canceled += cameraController.Interplanetary.UpdateMoveAmounts;
         interplanetaryMode.Zoom.performed += cameraController.Interplanetary.Zoom;
-        interplanetaryMode.ChoosePlanet.performed += planetChooser.Choose;
+        interplanetaryMode.FocusPlanet.performed += planetChooser.Choose;
 
         var planetaryMode = _controls.PlanetaryMode;
         planetaryMode.Rotate.performed += cameraController.Planetary.UpdateRotateAmounts;
         planetaryMode.Rotate.canceled += cameraController.Planetary.UpdateRotateAmounts;
         planetaryMode.Zoom.performed += cameraController.Planetary.Zoom;
 
-        _controls.Gameplay.CastRay.performed += ctx => raycast.Shoot(); 
+        _controls.Utilities.CastRay.performed += ctx => raycast.Shoot(); 
     }
 }

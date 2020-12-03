@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Actions/GameplayControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Actions/EditorControls.inputactions'
 
 using System;
 using System.Collections;
@@ -6,22 +6,22 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @GameplayControls : IInputActionCollection, IDisposable
+public class @EditorControls : IInputActionCollection, IDisposable
 {
     public InputActionAsset asset { get; }
-    public @GameplayControls()
+    public @EditorControls()
     {
         asset = InputActionAsset.FromJson(@"{
-    ""name"": ""GameplayControls"",
+    ""name"": ""EditorControls"",
     ""maps"": [
         {
             ""name"": ""PlanetaryMode"",
-            ""id"": ""815d0310-239f-4bb2-837a-b01562e0aaf2"",
+            ""id"": ""fee0cbba-fd1b-44a3-b8fe-d225fbeb0142"",
             ""actions"": [
                 {
                     ""name"": ""Rotate"",
                     ""type"": ""Value"",
-                    ""id"": ""ab77acef-0e06-4ac9-8a44-6cbc56483d0e"",
+                    ""id"": ""b208584b-2241-4eeb-a124-49175d20dd68"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -29,24 +29,16 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""Zoom"",
                     ""type"": ""Value"",
-                    ""id"": ""20fadbc5-f268-434a-94f9-5006fcc2e195"",
+                    ""id"": ""aae8273e-af8a-4927-80ba-1ea987827d1b"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
-                },
-                {
-                    ""name"": ""ChooseMenu"",
-                    ""type"": ""Button"",
-                    ""id"": ""d52f9fda-3abd-444d-b0e3-6e3acf207825"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press(behavior=1)""
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": ""WSAD"",
-                    ""id"": ""5d8ed5f2-b081-4e99-affa-e4ce3804e419"",
+                    ""id"": ""a745ff3b-b7f1-4868-b17b-30f133251af7"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -57,7 +49,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""99ddc06f-c563-4b2c-a0d0-fcb90954e2fc"",
+                    ""id"": ""bbf9700b-8398-4dce-a340-4409844d6c9e"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -68,7 +60,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""76bb0edc-c15a-49d0-9dc3-211695f83b57"",
+                    ""id"": ""21752f18-688e-4a33-96d1-993a0b866771"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -79,7 +71,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""60e6aa59-8e98-4950-9eda-b6d16befc386"",
+                    ""id"": ""5a9ddcc1-1483-42ce-88a2-ddd2cf2af305"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -90,7 +82,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""2f54bde2-d823-4ddc-a07e-2b0832f06811"",
+                    ""id"": ""ae94b3de-bae2-4c0f-a5c3-81e84cfa606f"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -101,7 +93,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Arrows"",
-                    ""id"": ""89c427a1-48a4-42ed-89db-c447395fa406"",
+                    ""id"": ""73184929-cb56-481b-b118-e284d5bf6ab1"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -112,7 +104,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""b5c054bb-3746-40d4-ace6-95845b010b03"",
+                    ""id"": ""9fc8c949-80f7-401e-a95b-3e4f06b40e23"",
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -123,7 +115,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""2b8e405a-c2f1-4066-9908-ac68b5a15375"",
+                    ""id"": ""ed87441e-dd19-476f-814b-54c649e3eb8e"",
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -134,7 +126,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""73fdceb3-9539-4204-b516-b1dcf4e457bf"",
+                    ""id"": ""75f555f0-d866-4fc1-aeeb-cce88f1dee4f"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -145,7 +137,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""35ab43f4-30c7-4392-ba6d-2f83050476ce"",
+                    ""id"": ""3de2019b-85b9-45c3-aa5a-467e3b36c6bc"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -156,23 +148,12 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""add41f27-11fe-4d2a-ade1-ed7c0117bacf"",
+                    ""id"": ""01ef413f-07d1-4719-8851-c86b1a23cc3f"",
                     ""path"": ""<Mouse>/scroll"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Zoom"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e1d860da-d6f1-4951-937b-c05a47bc6a12"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ChooseMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -180,12 +161,12 @@ public class @GameplayControls : IInputActionCollection, IDisposable
         },
         {
             ""name"": ""InterplanetaryMode"",
-            ""id"": ""40213b6b-8349-40d9-8f5c-6e88e1340d97"",
+            ""id"": ""618f3dbd-803e-4154-a4dd-ad003596cb91"",
             ""actions"": [
                 {
                     ""name"": ""Move"",
                     ""type"": ""Value"",
-                    ""id"": ""af1fe188-4007-4a2f-b2f4-b31bdbb27dd1"",
+                    ""id"": ""fa866e2e-4c2c-4717-bcbd-62a1d7e75336"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -193,7 +174,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""Zoom"",
                     ""type"": ""Value"",
-                    ""id"": ""04fc4c6a-4d9f-4223-8162-7a41cf80b977"",
+                    ""id"": ""49022bc6-e3bd-4520-86a3-aae41a07f333"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -201,7 +182,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""FocusPlanet"",
                     ""type"": ""Button"",
-                    ""id"": ""ebd25abd-667f-49e8-ac57-e7e0a907d853"",
+                    ""id"": ""502aa6fd-107a-41c7-8cf5-21ca472ae970"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""MultiTap""
@@ -209,19 +190,8 @@ public class @GameplayControls : IInputActionCollection, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": """",
-                    ""id"": ""ce91063c-fcdf-40a5-bfc9-ee360cb874f5"",
-                    ""path"": ""<Mouse>/scroll"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Zoom"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
                     ""name"": ""WSAD"",
-                    ""id"": ""d9071b39-2038-48ed-b533-0853206700f8"",
+                    ""id"": ""6117200c-8ff1-4f58-bc88-09d41337ec55"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -232,7 +202,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""e74297cd-1c49-456c-845d-6b7d74db0a7a"",
+                    ""id"": ""ee47b86d-a37e-4021-8ac6-ecb2cc539fc0"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -243,7 +213,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""cd914ea7-0387-4b48-b769-4f76674c1d1a"",
+                    ""id"": ""49c3f8bf-7767-4c17-b823-b0bf51b1166b"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -254,7 +224,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""96cf24c9-f361-4e5c-8f5c-3c5f2d44bf5e"",
+                    ""id"": ""49b34103-ed43-4563-a6f5-458815f5f2d4"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -265,7 +235,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""07c2a447-3201-4d66-bbc1-41b4db457db9"",
+                    ""id"": ""1f881d90-dbf8-46d3-a07d-cd880d7f9a4b"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -276,7 +246,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Arrows"",
-                    ""id"": ""4a60a0d8-50d1-43cf-b73e-20202b1c0342"",
+                    ""id"": ""f149e956-daac-4086-b27f-68446bde84f9"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -287,7 +257,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""89111756-d225-4c0e-8d00-c0c52d5f6b90"",
+                    ""id"": ""583a98f4-a5ee-454b-9496-e31547dfca71"",
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -298,7 +268,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""78a3dbd2-cb92-4a0f-9af3-f77dfa3907dc"",
+                    ""id"": ""21cd4d8e-71dc-4fb0-8014-ebf54289cd8b"",
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -309,7 +279,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""2b1462b7-60d2-4737-9e46-61a179f1bb06"",
+                    ""id"": ""ed33fafd-0f7b-4a5e-bbed-62ece3b06b18"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -320,7 +290,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""360c4b0a-3ca8-4934-a188-04aacb82b2dd"",
+                    ""id"": ""6a91cd9b-a5d3-42e9-b435-3facebeaa84e"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -331,7 +301,18 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""87666a1e-937e-4c82-add0-7bee210fff6d"",
+                    ""id"": ""947b7088-7b05-4bfb-aa98-9dde14895133"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ac1f7aae-17f3-42ef-a6d4-9ab29ae51bc0"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -344,13 +325,13 @@ public class @GameplayControls : IInputActionCollection, IDisposable
         },
         {
             ""name"": ""Utilities"",
-            ""id"": ""39b072f5-4e42-4c60-934d-b7f38d01a9a8"",
+            ""id"": ""c9a21217-697a-451d-98c6-fcb77f173758"",
             ""actions"": [
                 {
                     ""name"": ""CastRay"",
                     ""type"": ""Value"",
-                    ""id"": ""ec3ec968-0559-4686-919b-b2012e0c9482"",
-                    ""expectedControlType"": ""Button"",
+                    ""id"": ""9ffcd75b-8ba0-4553-a04b-906b1602c2c9"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -358,7 +339,7 @@ public class @GameplayControls : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""943b4955-fd81-4cc9-b258-822aab22560b"",
+                    ""id"": ""3438385b-688e-4124-8ba9-c5cea9d28bd6"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -370,74 +351,12 @@ public class @GameplayControls : IInputActionCollection, IDisposable
             ]
         }
     ],
-    ""controlSchemes"": [
-        {
-            ""name"": ""Keyboard&Mouse"",
-            ""bindingGroup"": ""Keyboard&Mouse"",
-            ""devices"": [
-                {
-                    ""devicePath"": ""<Keyboard>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                },
-                {
-                    ""devicePath"": ""<Mouse>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Gamepad"",
-            ""bindingGroup"": ""Gamepad"",
-            ""devices"": [
-                {
-                    ""devicePath"": ""<Gamepad>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Touch"",
-            ""bindingGroup"": ""Touch"",
-            ""devices"": [
-                {
-                    ""devicePath"": ""<Touchscreen>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Joystick"",
-            ""bindingGroup"": ""Joystick"",
-            ""devices"": [
-                {
-                    ""devicePath"": ""<Joystick>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""XR"",
-            ""bindingGroup"": ""XR"",
-            ""devices"": [
-                {
-                    ""devicePath"": ""<XRController>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                }
-            ]
-        }
-    ]
+    ""controlSchemes"": []
 }");
         // PlanetaryMode
         m_PlanetaryMode = asset.FindActionMap("PlanetaryMode", throwIfNotFound: true);
         m_PlanetaryMode_Rotate = m_PlanetaryMode.FindAction("Rotate", throwIfNotFound: true);
         m_PlanetaryMode_Zoom = m_PlanetaryMode.FindAction("Zoom", throwIfNotFound: true);
-        m_PlanetaryMode_ChooseMenu = m_PlanetaryMode.FindAction("ChooseMenu", throwIfNotFound: true);
         // InterplanetaryMode
         m_InterplanetaryMode = asset.FindActionMap("InterplanetaryMode", throwIfNotFound: true);
         m_InterplanetaryMode_Move = m_InterplanetaryMode.FindAction("Move", throwIfNotFound: true);
@@ -497,14 +416,12 @@ public class @GameplayControls : IInputActionCollection, IDisposable
     private IPlanetaryModeActions m_PlanetaryModeActionsCallbackInterface;
     private readonly InputAction m_PlanetaryMode_Rotate;
     private readonly InputAction m_PlanetaryMode_Zoom;
-    private readonly InputAction m_PlanetaryMode_ChooseMenu;
     public struct PlanetaryModeActions
     {
-        private @GameplayControls m_Wrapper;
-        public PlanetaryModeActions(@GameplayControls wrapper) { m_Wrapper = wrapper; }
+        private @EditorControls m_Wrapper;
+        public PlanetaryModeActions(@EditorControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Rotate => m_Wrapper.m_PlanetaryMode_Rotate;
         public InputAction @Zoom => m_Wrapper.m_PlanetaryMode_Zoom;
-        public InputAction @ChooseMenu => m_Wrapper.m_PlanetaryMode_ChooseMenu;
         public InputActionMap Get() { return m_Wrapper.m_PlanetaryMode; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -520,9 +437,6 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 @Zoom.started -= m_Wrapper.m_PlanetaryModeActionsCallbackInterface.OnZoom;
                 @Zoom.performed -= m_Wrapper.m_PlanetaryModeActionsCallbackInterface.OnZoom;
                 @Zoom.canceled -= m_Wrapper.m_PlanetaryModeActionsCallbackInterface.OnZoom;
-                @ChooseMenu.started -= m_Wrapper.m_PlanetaryModeActionsCallbackInterface.OnChooseMenu;
-                @ChooseMenu.performed -= m_Wrapper.m_PlanetaryModeActionsCallbackInterface.OnChooseMenu;
-                @ChooseMenu.canceled -= m_Wrapper.m_PlanetaryModeActionsCallbackInterface.OnChooseMenu;
             }
             m_Wrapper.m_PlanetaryModeActionsCallbackInterface = instance;
             if (instance != null)
@@ -533,9 +447,6 @@ public class @GameplayControls : IInputActionCollection, IDisposable
                 @Zoom.started += instance.OnZoom;
                 @Zoom.performed += instance.OnZoom;
                 @Zoom.canceled += instance.OnZoom;
-                @ChooseMenu.started += instance.OnChooseMenu;
-                @ChooseMenu.performed += instance.OnChooseMenu;
-                @ChooseMenu.canceled += instance.OnChooseMenu;
             }
         }
     }
@@ -549,8 +460,8 @@ public class @GameplayControls : IInputActionCollection, IDisposable
     private readonly InputAction m_InterplanetaryMode_FocusPlanet;
     public struct InterplanetaryModeActions
     {
-        private @GameplayControls m_Wrapper;
-        public InterplanetaryModeActions(@GameplayControls wrapper) { m_Wrapper = wrapper; }
+        private @EditorControls m_Wrapper;
+        public InterplanetaryModeActions(@EditorControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_InterplanetaryMode_Move;
         public InputAction @Zoom => m_Wrapper.m_InterplanetaryMode_Zoom;
         public InputAction @FocusPlanet => m_Wrapper.m_InterplanetaryMode_FocusPlanet;
@@ -596,8 +507,8 @@ public class @GameplayControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Utilities_CastRay;
     public struct UtilitiesActions
     {
-        private @GameplayControls m_Wrapper;
-        public UtilitiesActions(@GameplayControls wrapper) { m_Wrapper = wrapper; }
+        private @EditorControls m_Wrapper;
+        public UtilitiesActions(@EditorControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @CastRay => m_Wrapper.m_Utilities_CastRay;
         public InputActionMap Get() { return m_Wrapper.m_Utilities; }
         public void Enable() { Get().Enable(); }
@@ -622,56 +533,10 @@ public class @GameplayControls : IInputActionCollection, IDisposable
         }
     }
     public UtilitiesActions @Utilities => new UtilitiesActions(this);
-    private int m_KeyboardMouseSchemeIndex = -1;
-    public InputControlScheme KeyboardMouseScheme
-    {
-        get
-        {
-            if (m_KeyboardMouseSchemeIndex == -1) m_KeyboardMouseSchemeIndex = asset.FindControlSchemeIndex("Keyboard&Mouse");
-            return asset.controlSchemes[m_KeyboardMouseSchemeIndex];
-        }
-    }
-    private int m_GamepadSchemeIndex = -1;
-    public InputControlScheme GamepadScheme
-    {
-        get
-        {
-            if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
-            return asset.controlSchemes[m_GamepadSchemeIndex];
-        }
-    }
-    private int m_TouchSchemeIndex = -1;
-    public InputControlScheme TouchScheme
-    {
-        get
-        {
-            if (m_TouchSchemeIndex == -1) m_TouchSchemeIndex = asset.FindControlSchemeIndex("Touch");
-            return asset.controlSchemes[m_TouchSchemeIndex];
-        }
-    }
-    private int m_JoystickSchemeIndex = -1;
-    public InputControlScheme JoystickScheme
-    {
-        get
-        {
-            if (m_JoystickSchemeIndex == -1) m_JoystickSchemeIndex = asset.FindControlSchemeIndex("Joystick");
-            return asset.controlSchemes[m_JoystickSchemeIndex];
-        }
-    }
-    private int m_XRSchemeIndex = -1;
-    public InputControlScheme XRScheme
-    {
-        get
-        {
-            if (m_XRSchemeIndex == -1) m_XRSchemeIndex = asset.FindControlSchemeIndex("XR");
-            return asset.controlSchemes[m_XRSchemeIndex];
-        }
-    }
     public interface IPlanetaryModeActions
     {
         void OnRotate(InputAction.CallbackContext context);
         void OnZoom(InputAction.CallbackContext context);
-        void OnChooseMenu(InputAction.CallbackContext context);
     }
     public interface IInterplanetaryModeActions
     {

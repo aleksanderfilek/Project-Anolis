@@ -28,7 +28,7 @@ public class GameplayActionCallbackConnection : ActionCallbackConnection
         interplanetaryMode.Move.performed += cameraController.Interplanetary.UpdateMoveAmounts;
         interplanetaryMode.Move.canceled += cameraController.Interplanetary.UpdateMoveAmounts;
         interplanetaryMode.Zoom.performed += cameraController.Interplanetary.Zoom;
-        interplanetaryMode.ChoosePlanet.performed += planetChooser.Choose;
+        interplanetaryMode.FocusPlanet.performed += planetChooser.Choose;
 
         var planetaryMode = _controls.PlanetaryMode;
         planetaryMode.Rotate.performed += cameraController.Planetary.UpdateRotateAmounts;
@@ -36,6 +36,6 @@ public class GameplayActionCallbackConnection : ActionCallbackConnection
         planetaryMode.Zoom.performed += cameraController.Planetary.Zoom;
         planetaryMode.ChooseMenu.performed += ctx => planetaryMenuChooser.Choose();
 
-        _controls.Gameplay.CastRay.performed += ctx => raycast.Shoot(); 
+        _controls.Utilities.CastRay.performed += ctx => raycast.Shoot(); 
     }
 }
