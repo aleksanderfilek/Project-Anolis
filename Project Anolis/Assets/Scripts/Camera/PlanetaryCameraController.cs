@@ -9,13 +9,15 @@ public class PlanetaryCameraController
     private CameraManipulator _cameraManipulator;
     private ControllerManipulator _controllerManipulator;
 
+    public float RotationSpeed { get; set; }
+    public float MinCameraDistanceFactor { get; set; }
+    public float ModeTransitionDistanceFactor { get; set; }
+    public float ZoomSpeed { get; set; }
+
+    private float _minCameraDistance;
+    private float _modeTransitionDistance;
     private float _verticalRotationAmount;
     private float _horizontalRotationAmount;
-
-    public float RotatingSpeed { get; set; }
-    public float MinCameraHeight { get; set; }
-    public float ModeTransitionHeight { get; set; }
-    public float ZoomSpeed { get; set; }
 
     public PlanetaryCameraController(CameraManipulator cameraManipulator, ControllerManipulator controllerManipulator,
         Transform cameraTransform, Transform controllerTransform)
@@ -24,7 +26,7 @@ public class PlanetaryCameraController
         _controllerManipulator = controllerManipulator;
         _cameraTransform = cameraTransform;
         _controllerTransform = controllerTransform;
-        GameState.Get.ModeChanged += HandleModeChange;
+        GameState.Get.ModeChanged += HandleModeChangeToPlanetary;
     }
 
     public void UpdateRotateAmounts(InputAction.CallbackContext context)
@@ -38,27 +40,30 @@ public class PlanetaryCameraController
     {
         var amount = context.ReadValue<Vector2>().normalized.y;
         _cameraManipulator.ChangeHeightBy(amount * ZoomSpeed);
-        if (_cameraTransform.localPosition.z < MinCameraHeight)
-            _cameraManipulator.SetHeightTo(MinCameraHeight);
-        else if (_cameraTransform.localPosition.z > ModeTransitionHeight)
+        if (_cameraTransform.localPosition.z < _minCameraDistance)
+            _cameraManipulator.SetHeightTo(_minCameraDistance);
+        else if (_cameraTransform.localPosition.z > _modeTransitionDistance)
             GameState.Get.ChangeModeToInterplanetary();
     }
 
-    private void HandleModeChange(GameState.Mode newMode)
+    private void HandleModeChangeToPlanetary(GameState.Mode newMode)
     {
         if (newMode != GameState.Mode.Planetary)
             return;
         _controllerManipulator.CenterAtPlanet(GameState.Get.CurrentFocus);
-        _cameraManipulator.SetHeightTo(15.0f); //todo change
+        var radius = GameState.Get.CurrentFocus.GetComponent<Planet>().Radius;
+        _modeTransitionDistance = radius * ModeTransitionDistanceFactor;
+        _minCameraDistance = radius * MinCameraDistanceFactor;
+        _cameraManipulator.SetHeightTo(_minCameraDistance); //todo change
     }
 
     public void MakeRotation()
     {
         if (_verticalRotationAmount != 0 && IsWithinBounds())
-            _controllerManipulator.RotateVertivalyBy(_verticalRotationAmount * RotatingSpeed);
+            _controllerManipulator.RotateVerticallyBy(_verticalRotationAmount * RotationSpeed);
 
         if (_horizontalRotationAmount != 0)
-            _controllerManipulator.RotateHorizontalyBy(_horizontalRotationAmount * RotatingSpeed);
+            _controllerManipulator.RotateHorizontallyBy(_horizontalRotationAmount * RotationSpeed);
     }
 
     private bool IsWithinBounds()

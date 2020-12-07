@@ -8,7 +8,7 @@ public class Planet : MonoBehaviour
     [SerializeField] [Range(1,100)] private int resolution = 1;
 
     public Tile[] Tiles { get; private set; }
-    public float Radius { private get; set; }
+    public float Radius { get; set; }
 
     private MeshFilter _meshFilter;
     private MeshCollider _meshCollider;
@@ -50,7 +50,7 @@ public class Planet : MonoBehaviour
         _meshCollider.sharedMesh = planetMesh;
         
         Tiles = PlanetGenerator.GetTiles(_meshFilter.sharedMesh);
-        Radius = (_meshFilter.sharedMesh.vertices[0] - transform.position).magnitude;
+        Radius = _meshFilter.sharedMesh.vertices[0].magnitude;
     }
     
     private void OnDrawGizmos()

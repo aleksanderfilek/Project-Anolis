@@ -1797,13 +1797,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomSpeed: 50
-  modeTransitionHeight: 40
-  rotatingSpeed: 50
-  minCameraHeight: 10
-  movingSpeed: 30
-  maxCameraHeight: 200
-  fixedRotation: {x: -45, y: 0, z: 0}
-  boundaries: {x: 50, y: 50}
+  modeTransitionDistanceFactor: 5
+  rotationSpeed: 50
+  minCameraDistanceFactor: 1.4
+  movementSpeed: 50
+  maxCameraDistance: 500
+  cameraRotation: {x: -45, y: 0, z: 0}
+  movementBoundaries: {x: 1000, y: 1000}
 --- !u!4 &631273900
 Transform:
   m_ObjectHideFlags: 0
@@ -1816,6 +1816,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1493357540}
+  - {fileID: 869899707}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1970,7 +1971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e8ce2d26fe5d9e0ba2d6c4def6131b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolution: 2
+  resolution: 4
 --- !u!64 &699167721
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2040,7 +2041,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699167719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1825, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 689144866}
@@ -2428,6 +2429,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849317128}
   m_Mesh: {fileID: 0}
+--- !u!1 &869899706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 869899707}
+  m_Layer: 0
+  m_Name: CameraHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &869899707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869899706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 631273900}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &935512798
 GameObject:
   m_ObjectHideFlags: 0

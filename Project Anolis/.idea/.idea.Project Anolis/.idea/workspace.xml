@@ -23,15 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Move chooser choose method from button to action">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Actions/GameplayControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Actions/GameplayControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Actions/GameplayControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Actions/GameplayControls.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/GameplayActionCallbackConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/GameplayActionCallbackConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Planet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Planet.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +37,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="planet-editor" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -60,8 +63,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Menu/Implementations/MenuChooser.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Menu/Implementations/EditorBuildMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Planet Editor/TabButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/MenuManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Menu/Implementations/EditorMenus/BuildMenu.cs" />
@@ -80,15 +81,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Collections/ShowableGroups/Implementations/ShowableGroupWithDefault.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputActionMapManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Raycast.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Choosers/Implementations/MenuChooser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Showable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/BuildMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Selector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NewBehaviourScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scriptable_Objects/Placeable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlaceableInstance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tile.cs" />
@@ -109,8 +107,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/ActionCallbackConnection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionActivator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlanetCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/GameplayActionCallbackConnection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Planet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
       </list>
     </option>
   </component>
@@ -177,7 +180,8 @@
       <workItem from="1604570669138" duration="5310000" />
       <workItem from="1606924080706" duration="2942000" />
       <workItem from="1606927089538" duration="7154000" />
-      <workItem from="1606995270678" duration="3502000" />
+      <workItem from="1606995270678" duration="10389000" />
+      <workItem from="1607378008773" duration="2794000" />
     </task>
     <task id="LOCAL-00001" summary="Change rotating planets to new input">
       <created>1603627329359</created>
@@ -242,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606939794027</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add EditorControls">
+      <created>1607015005864</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607015005865</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +299,8 @@
     <MESSAGE value="Built Placeable can be changed to another" />
     <MESSAGE value="Move actions-callbacks connection to another object, that action activator uses to make connection (therefore different actions can be conected in editor and different actions in gameplay)" />
     <MESSAGE value="Add EditorActionCallbackConnection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add EditorActionCallbackConnection" />
+    <MESSAGE value="Add EditorControls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add EditorControls" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="345" key="#Notifications" timestamp="1603533591308">
@@ -377,11 +389,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603658622327" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606939852351">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607015366321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604338388670" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606939852351" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607015366321" />
     <state x="529" y="140" key="VcsDiffUtil.ChangesDialog" timestamp="1606862903940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -390,9 +402,9 @@
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="624" y="237" key="run.anything.popup/0.0.1920.1037/1920.0.1280.1024@0.0.1920.1037" timestamp="1602954072896" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607013541077">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607021580102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607013541077" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607021580102" />
   </component>
 </project>

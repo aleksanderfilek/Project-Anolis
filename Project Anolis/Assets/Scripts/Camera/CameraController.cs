@@ -4,17 +4,17 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private float zoomSpeed;
-    [SerializeField] private float modeTransitionHeight;
+    [SerializeField] private float modeTransitionDistanceFactor;    //todo need better name
 
     [Header("Planetary Mode")] 
-    [SerializeField] private float rotatingSpeed;
-    [SerializeField] private float minCameraHeight;
+    [SerializeField] private float rotationSpeed;
+    [SerializeField] private float minCameraDistanceFactor;
 
     [Header("Interplanetary Mode")] 
-    [SerializeField] private float movingSpeed;
-    [SerializeField] private float maxCameraHeight;
-    [SerializeField] private Vector3 fixedRotation;
-    [SerializeField] private Vector2 boundaries;
+    [SerializeField] private float movementSpeed;
+    [SerializeField] private float maxCameraDistance;
+    [SerializeField] private Vector3 cameraRotation;
+    [SerializeField] private Vector2 movementBoundaries;
 
     public PlanetaryCameraController Planetary { get; private set; }
     public InterplanetaryCameraController Interplanetary { get; private set; }
@@ -38,19 +38,19 @@ public class CameraController : MonoBehaviour
 
     private void UpdatePlanetaryParameters()
     {
-        Planetary.RotatingSpeed = rotatingSpeed;
+        Planetary.RotationSpeed = rotationSpeed;
         Planetary.ZoomSpeed = zoomSpeed;
-        Planetary.MinCameraHeight = minCameraHeight;
-        Planetary.ModeTransitionHeight = modeTransitionHeight;
+        Planetary.MinCameraDistanceFactor = minCameraDistanceFactor;
+        Planetary.ModeTransitionDistanceFactor = modeTransitionDistanceFactor;
     }
 
     private void UpdateInterplanetaryParameters()
     {
-        Interplanetary.Boundaries = boundaries;
-        Interplanetary.FixedRotation = fixedRotation;
-        Interplanetary.MoveSpeed = movingSpeed;
+        Interplanetary.MovementBoundaries = movementBoundaries;
+        Interplanetary.CameraRotation = cameraRotation;
+        Interplanetary.MovementSpeed = movementSpeed;
         Interplanetary.ZoomSpeed = zoomSpeed;
-        Interplanetary.MaxCameraHeight = maxCameraHeight;
+        Interplanetary.MaxCameraDistance = maxCameraDistance;
     }
 
     private void Update()

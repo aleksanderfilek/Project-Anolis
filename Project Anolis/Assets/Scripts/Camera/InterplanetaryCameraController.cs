@@ -11,10 +11,10 @@ public class InterplanetaryCameraController
     private CameraManipulator _cameraManipulator;
     private ControllerManipulator _controllerManipulator;
 
-    public Vector3 FixedRotation { get; set; }
-    public Vector2 Boundaries { get; set; }
-    public float MaxCameraHeight { get; set; }
-    public float MoveSpeed { get; set; }
+    public Vector3 CameraRotation { get; set; }
+    public Vector2 MovementBoundaries { get; set; }
+    public float MaxCameraDistance { get; set; }
+    public float MovementSpeed { get; set; }
     public float ZoomSpeed { get; set; }
 
     public InterplanetaryCameraController(CameraManipulator cameraManipulator,
@@ -24,7 +24,7 @@ public class InterplanetaryCameraController
         _controllerManipulator = controllerManipulator;
         _controllerTransform = controllerTransform;
         _cameraTransform = cameraTransform;
-        GameState.Get.ModeChanged += HandleModeChange;
+        GameState.Get.ModeChanged += HandleModeChangeToInterplanetary;
     }
 
     public void UpdateMoveAmounts(InputAction.CallbackContext context)
@@ -38,34 +38,35 @@ public class InterplanetaryCameraController
     {
         var amount = context.ReadValue<Vector2>().normalized.y;
         _cameraManipulator.ChangeHeightBy(amount * ZoomSpeed);
-        if (_cameraTransform.localPosition.z > MaxCameraHeight)
-            _cameraManipulator.SetHeightTo(MaxCameraHeight);
+        if (_cameraTransform.localPosition.z > MaxCameraDistance)
+            _cameraManipulator.SetHeightTo(MaxCameraDistance);
     }
 
-    private void HandleModeChange(GameState.Mode newMode)
+    private void HandleModeChangeToInterplanetary(GameState.Mode newMode)
     {
-        if (newMode == GameState.Mode.Interplanetary)
-            _controllerManipulator.SetRotationTo(FixedRotation);
+        if (newMode != GameState.Mode.Interplanetary) 
+            return;
+        _controllerManipulator.SetRotationTo(CameraRotation);
     }
 
     public void MakeMovement()
     {
         if (_horizontalMoveAmount != 0 && IsWithinHorizontalBoundary())
-            _controllerManipulator.TranslateHorizontalyBy(_horizontalMoveAmount * MoveSpeed);
+            _controllerManipulator.TranslateHorizontallyBy(_horizontalMoveAmount * MovementSpeed);
 
         if (_verticalMoveAmount != 0 && IsWithinVerticalBoundary())
-            _controllerManipulator.TranslateVerticalyBy(_verticalMoveAmount * MoveSpeed);
+            _controllerManipulator.TranslateVerticallyBy(_verticalMoveAmount * MovementSpeed);
     }
 
     private bool IsWithinHorizontalBoundary()
     {
         var position = _controllerTransform.position;
-        return _horizontalMoveAmount < 0 ? position.x < Boundaries.x : position.x > -Boundaries.x;
+        return _horizontalMoveAmount < 0 ? position.x < MovementBoundaries.x : position.x > -MovementBoundaries.x;
     }
 
     private bool IsWithinVerticalBoundary()
     {
         var position = _controllerTransform.position;
-        return _verticalMoveAmount < 0 ? position.z < Boundaries.y : position.z > -Boundaries.y;
+        return _verticalMoveAmount < 0 ? position.z < MovementBoundaries.y : position.z > -MovementBoundaries.y;
     }
 }

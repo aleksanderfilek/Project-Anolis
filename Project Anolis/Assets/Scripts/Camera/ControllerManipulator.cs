@@ -9,22 +9,22 @@ public class ControllerManipulator
         _controllerTransform = controllerTransform;
     }
 
-    public void RotateVertivalyBy(float amount)
+    public void RotateVerticallyBy(float amount)
     {
         _controllerTransform.Rotate(Time.deltaTime * amount * new Vector3(-1, 0, 0));
     }
 
-    public void RotateHorizontalyBy(float amount)
+    public void RotateHorizontallyBy(float amount)
     {
         _controllerTransform.Rotate(Time.deltaTime * amount * new Vector3(0, -1, 0), Space.World);
     }
 
-    public void TranslateVerticalyBy(float amount)
+    public void TranslateVerticallyBy(float amount)
     {
         _controllerTransform.Translate(0.0f, 0.0f, -amount * Time.deltaTime, Space.World);
     }
 
-    public void TranslateHorizontalyBy(float amount)
+    public void TranslateHorizontallyBy(float amount)
     {
         _controllerTransform.Translate(-amount * Time.deltaTime, 0.0f, 0.0f, Space.World);
     }
