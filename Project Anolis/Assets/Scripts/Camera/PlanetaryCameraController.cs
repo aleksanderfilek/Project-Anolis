@@ -12,7 +12,7 @@ public class PlanetaryCameraController
     public float RotationSpeed { get; set; }
     public float MinCameraDistanceFactor { get; set; }
     public float ModeTransitionDistanceFactor { get; set; }
-    public float ZoomSpeed { get; set; }
+    public float ZoomDistance { get; set; }
 
     private float _minCameraDistance;
     private float _modeTransitionDistance;
@@ -39,9 +39,9 @@ public class PlanetaryCameraController
     public void Zoom(InputAction.CallbackContext context)
     {
         var amount = context.ReadValue<Vector2>().normalized.y;
-        _cameraManipulator.ChangeHeightBy(amount * ZoomSpeed);
+        _cameraManipulator.ChangeHolderDisctanceBy(amount * ZoomDistance);
         if (_cameraTransform.localPosition.z < _minCameraDistance)
-            _cameraManipulator.SetHeightTo(_minCameraDistance);
+            _cameraManipulator.SetHolderDisctanceTo(_minCameraDistance);
         else if (_cameraTransform.localPosition.z > _modeTransitionDistance)
             GameState.Get.ChangeModeToInterplanetary();
     }
@@ -54,7 +54,7 @@ public class PlanetaryCameraController
         var radius = GameState.Get.CurrentFocus.GetComponent<Planet>().Radius;
         _modeTransitionDistance = radius * ModeTransitionDistanceFactor;
         _minCameraDistance = radius * MinCameraDistanceFactor;
-        _cameraManipulator.SetHeightTo(_minCameraDistance); //todo change
+        _cameraManipulator.SetHolderDisctanceTo(_minCameraDistance); //todo change
     }
 
     public void MakeRotation()

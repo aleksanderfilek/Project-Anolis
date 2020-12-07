@@ -37,9 +37,9 @@ public class InterplanetaryCameraController
     public void Zoom(InputAction.CallbackContext context)
     {
         var amount = context.ReadValue<Vector2>().normalized.y;
-        _cameraManipulator.ChangeHeightBy(amount * ZoomSpeed);
+        _cameraManipulator.ChangeHolderDisctanceBy(amount * ZoomSpeed);
         if (_cameraTransform.localPosition.z > MaxCameraDistance)
-            _cameraManipulator.SetHeightTo(MaxCameraDistance);
+            _cameraManipulator.SetHolderDisctanceTo(MaxCameraDistance);
     }
 
     private void HandleModeChangeToInterplanetary(GameState.Mode newMode)

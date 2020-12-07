@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    [SerializeField] private Transform holderTransform;
+
+    [SerializeField] private float zoomDistance;
     [SerializeField] private float zoomSpeed;
     [SerializeField] private float modeTransitionDistanceFactor;    //todo need better name
 
@@ -26,7 +29,7 @@ public class CameraController : MonoBehaviour
     {
         var cameraTransform = GetComponentInChildren<Camera>().transform;
         var controllerTransform = transform;
-        _cameraManipulator = new CameraManipulator(cameraTransform);
+        _cameraManipulator = new CameraManipulator(cameraTransform, holderTransform);
         _controllerManipulator = new ControllerManipulator(controllerTransform);
         
         Planetary = new PlanetaryCameraController(_cameraManipulator, _controllerManipulator, cameraTransform, controllerTransform);
@@ -39,7 +42,7 @@ public class CameraController : MonoBehaviour
     private void UpdatePlanetaryParameters()
     {
         Planetary.RotationSpeed = rotationSpeed;
-        Planetary.ZoomSpeed = zoomSpeed;
+        Planetary.ZoomDistance = zoomDistance;
         Planetary.MinCameraDistanceFactor = minCameraDistanceFactor;
         Planetary.ModeTransitionDistanceFactor = modeTransitionDistanceFactor;
     }
@@ -49,12 +52,13 @@ public class CameraController : MonoBehaviour
         Interplanetary.MovementBoundaries = movementBoundaries;
         Interplanetary.CameraRotation = cameraRotation;
         Interplanetary.MovementSpeed = movementSpeed;
-        Interplanetary.ZoomSpeed = zoomSpeed;
+        Interplanetary.ZoomSpeed = zoomDistance;
         Interplanetary.MaxCameraDistance = maxCameraDistance;
     }
 
     private void Update()
     {
+        _cameraManipulator.MoveCameraTowardsHolder(zoomSpeed);
         switch (GameState.Get.CurrentMode)
         {
             case GameState.Mode.Planetary:
