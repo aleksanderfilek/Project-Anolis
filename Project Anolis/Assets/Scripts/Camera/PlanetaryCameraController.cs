@@ -8,8 +8,6 @@ public class PlanetaryCameraController
     private ControllerManipulator _controllerManipulator;
 
     public float RotationSpeed { get; set; }
-    public float MinCameraDistanceFactor { get; set; }
-    public float ModeTransitionDistanceFactor { get; set; }
     public float ZoomDistance { get; set; }
 
     private float _minCameraDistance;
@@ -21,7 +19,6 @@ public class PlanetaryCameraController
     {
         _cameraManipulator = cameraManipulator;
         _controllerManipulator = controllerManipulator;
-        GameState.Get.ModeChanged += HandleModeChangeToPlanetary;
     }
 
     public void UpdateRotateAmounts(InputAction.CallbackContext context)
@@ -42,16 +39,13 @@ public class PlanetaryCameraController
             GameState.Get.ChangeModeToInterplanetary();
     }
 
-    private void HandleModeChangeToPlanetary(GameState.Mode newMode)
+    public void HandleModeChangeToPlanetary(float modeTransitionDistance, float minCameraDistance)
     {
-        if (newMode != GameState.Mode.Planetary)
-            return;
+        _modeTransitionDistance = modeTransitionDistance;
+        _minCameraDistance = minCameraDistance;
         _controllerManipulator.CenterAtPlanet(GameState.Get.CurrentFocus);
-        var radius = GameState.Get.CurrentFocus.GetComponent<Planet>().Radius;
-        _modeTransitionDistance = radius * ModeTransitionDistanceFactor;
-        _minCameraDistance = radius * MinCameraDistanceFactor;
-        var averageCameraDistance = (_minCameraDistance + _modeTransitionDistance) / 2;
-        _cameraManipulator.SetHolderDisctanceTo(averageCameraDistance); //todo change
+        var averageCameraDistance = (minCameraDistance + modeTransitionDistance) / 2;
+        _cameraManipulator.SetHolderDisctanceTo(averageCameraDistance);
     }
 
     public void MakeRotation()

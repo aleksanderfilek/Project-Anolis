@@ -18,9 +18,10 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private float movementSmoothSpeed;
     [SerializeField] private float maxCameraDistance;
+    [SerializeField] private float minInterplanetaryCameraDistance;
     [SerializeField] private Vector3 cameraRotation;
     [SerializeField] private Vector2 movementBoundaries;
-
+    
     public PlanetaryCameraController Planetary { get; private set; }
     public InterplanetaryCameraController Interplanetary { get; private set; }
 
@@ -39,25 +40,10 @@ public class CameraController : MonoBehaviour
 
         Interplanetary = new InterplanetaryCameraController(_cameraManipulator, _controllerManipulator);
         UpdateInterplanetaryParameters();
+        
+        GameState.Get.ModeChanged += HandleModeChange;
     }
-
-    private void UpdatePlanetaryParameters()
-    {
-        Planetary.RotationSpeed = rotationSpeed;
-        Planetary.ZoomDistance = zoomDistance;
-        Planetary.MinCameraDistanceFactor = minCameraDistanceFactor;
-        Planetary.ModeTransitionDistanceFactor = modeTransitionDistanceFactor;
-    }
-
-    private void UpdateInterplanetaryParameters()
-    {
-        Interplanetary.MovementBoundaries = movementBoundaries;
-        Interplanetary.CameraRotation = cameraRotation;
-        Interplanetary.MovementSpeed = movementSpeed;
-        Interplanetary.ZoomSpeed = zoomDistance;
-        Interplanetary.MaxCameraDistance = maxCameraDistance;
-    }
-
+    
     private void Update()
     {
         _cameraManipulator.MoveCameraTowardsHolder(zoomSmoothSpeed);
@@ -74,8 +60,42 @@ public class CameraController : MonoBehaviour
                 throw new ArgumentOutOfRangeException();
         }
         #if UNITY_EDITOR
-            UpdatePlanetaryParameters();
-            UpdateInterplanetaryParameters();
+                UpdatePlanetaryParameters();
+                UpdateInterplanetaryParameters();
         #endif
+    }
+
+    private void UpdatePlanetaryParameters()
+    {
+        Planetary.RotationSpeed = rotationSpeed;
+        Planetary.ZoomDistance = zoomDistance;
+    }
+
+    private void UpdateInterplanetaryParameters()
+    {
+        Interplanetary.MovementBoundaries = movementBoundaries;
+        Interplanetary.MovementSpeed = movementSpeed;
+        Interplanetary.ZoomSpeed = zoomDistance;
+        Interplanetary.MaxCameraDistance = maxCameraDistance;
+        Interplanetary.MinCameraDistance = minInterplanetaryCameraDistance;
+    }
+    
+    private void HandleModeChange(GameState.Mode newMode)
+    {
+        switch (newMode)
+        {
+            case GameState.Mode.Planetary:
+                var radius = GameState.Get.CurrentFocus.GetComponent<Planet>().Radius;
+                var modeTransitionDistance = radius * modeTransitionDistanceFactor;
+                var minPlanetaryCameraDistance = radius * minCameraDistanceFactor;
+
+                Planetary.HandleModeChangeToPlanetary(modeTransitionDistance, minPlanetaryCameraDistance);
+                break;
+            case GameState.Mode.Interplanetary:
+                Interplanetary.HandleModeChangeToInterplanetary(cameraRotation);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        } 
     }
 }

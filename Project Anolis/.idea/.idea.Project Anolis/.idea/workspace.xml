@@ -25,8 +25,6 @@
     <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Move chooser choose method from button to action">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManipulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManipulator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" afterDir="false" />
     </list>
@@ -109,10 +107,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/GameplayActionCallbackConnection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Planet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManipulator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
       </list>
     </option>
@@ -182,7 +180,7 @@
       <workItem from="1606927089538" duration="7154000" />
       <workItem from="1606995270678" duration="10389000" />
       <workItem from="1607378008773" duration="4387000" />
-      <workItem from="1607427671540" duration="4002000" />
+      <workItem from="1607427671540" duration="8811000" />
     </task>
     <task id="LOCAL-00001" summary="Change rotating planets to new input">
       <created>1603627329359</created>
@@ -275,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607435455023</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fix bugs, and refactor a bit">
+      <created>1607437446038</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1607437446038</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +330,8 @@
     <MESSAGE value="Change cameraController names and calculate min and max camera distance based on radius" />
     <MESSAGE value="Add smooth zoom" />
     <MESSAGE value="Add smooth movement and interplanetary -&gt; planetary transition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add smooth movement and interplanetary -&gt; planetary transition" />
+    <MESSAGE value="Fix bugs, and refactor a bit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bugs, and refactor a bit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="345" key="#Notifications" timestamp="1603533591308">
@@ -414,11 +420,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603658622327" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607381181312">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607437453136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604338388670" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607381181312" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607437453136" />
     <state x="529" y="140" key="VcsDiffUtil.ChangesDialog" timestamp="1606862903940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

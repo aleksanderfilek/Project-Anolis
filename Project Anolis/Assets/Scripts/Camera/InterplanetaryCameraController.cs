@@ -9,18 +9,18 @@ public class InterplanetaryCameraController
     private CameraManipulator _cameraManipulator;
     private ControllerManipulator _controllerManipulator;
 
-    public Vector3 CameraRotation { get; set; }
+    //think about if this is needed as properies instead of be passed by parameter in function or if it is updated correctly in event in comara controller
     public Vector2 MovementBoundaries { get; set; }
     public float MaxCameraDistance { get; set; }
     public float MovementSpeed { get; set; }
     public float ZoomSpeed { get; set; }
+    public float MinCameraDistance { get; set; }
 
     public InterplanetaryCameraController(CameraManipulator cameraManipulator,
         ControllerManipulator controllerManipulator)
     {
         _cameraManipulator = cameraManipulator;
         _controllerManipulator = controllerManipulator;
-        GameState.Get.ModeChanged += HandleModeChangeToInterplanetary;
     }
 
     public void UpdateMoveAmounts(InputAction.CallbackContext context)
@@ -34,15 +34,16 @@ public class InterplanetaryCameraController
     {
         var amount = context.ReadValue<Vector2>().normalized.y;
         _cameraManipulator.ChangeHolderDisctanceBy(amount * ZoomSpeed);
-        if (_cameraManipulator.GetHolderDistance() > MaxCameraDistance)
+        
+        if (_cameraManipulator.GetHolderDistance() < MinCameraDistance)
+            _cameraManipulator.SetHolderDisctanceTo(MinCameraDistance);
+        else if (_cameraManipulator.GetHolderDistance() > MaxCameraDistance)
             _cameraManipulator.SetHolderDisctanceTo(MaxCameraDistance);
     }
 
-    private void HandleModeChangeToInterplanetary(GameState.Mode newMode)
+    public void HandleModeChangeToInterplanetary(Vector3 cameraRotation)
     {
-        if (newMode != GameState.Mode.Interplanetary) 
-            return;
-        _controllerManipulator.SetRotationTo(CameraRotation);
+        _controllerManipulator.SetRotationTo(cameraRotation);
     }
 
     public void MakeMovement()
