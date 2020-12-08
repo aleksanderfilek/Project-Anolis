@@ -27,4 +27,9 @@ public class CameraManipulator
         holderPosition.z = height;
         _holderTransform.localPosition = holderPosition;
     }
+
+    public float GetHolderDistance()
+    {
+        return _holderTransform.localPosition.z;
+    }
 }

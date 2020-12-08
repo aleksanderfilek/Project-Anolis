@@ -6,8 +6,6 @@ public class InterplanetaryCameraController
     private float _horizontalMoveAmount;
     private float _verticalMoveAmount;
 
-    private Transform _cameraTransform;
-    private Transform _controllerTransform;
     private CameraManipulator _cameraManipulator;
     private ControllerManipulator _controllerManipulator;
 
@@ -18,12 +16,10 @@ public class InterplanetaryCameraController
     public float ZoomSpeed { get; set; }
 
     public InterplanetaryCameraController(CameraManipulator cameraManipulator,
-        ControllerManipulator controllerManipulator, Transform controllerTransform, Transform cameraTransform)
+        ControllerManipulator controllerManipulator)
     {
         _cameraManipulator = cameraManipulator;
         _controllerManipulator = controllerManipulator;
-        _controllerTransform = controllerTransform;
-        _cameraTransform = cameraTransform;
         GameState.Get.ModeChanged += HandleModeChangeToInterplanetary;
     }
 
@@ -38,7 +34,7 @@ public class InterplanetaryCameraController
     {
         var amount = context.ReadValue<Vector2>().normalized.y;
         _cameraManipulator.ChangeHolderDisctanceBy(amount * ZoomSpeed);
-        if (_cameraTransform.localPosition.z > MaxCameraDistance)
+        if (_cameraManipulator.GetHolderDistance() > MaxCameraDistance)
             _cameraManipulator.SetHolderDisctanceTo(MaxCameraDistance);
     }
 
@@ -60,13 +56,13 @@ public class InterplanetaryCameraController
 
     private bool IsWithinHorizontalBoundary()
     {
-        var position = _controllerTransform.position;
+        var position = _controllerManipulator.GetHolderPosition();
         return _horizontalMoveAmount < 0 ? position.x < MovementBoundaries.x : position.x > -MovementBoundaries.x;
     }
 
     private bool IsWithinVerticalBoundary()
     {
-        var position = _controllerTransform.position;
+        var position = _controllerManipulator.GetHolderPosition();
         return _verticalMoveAmount < 0 ? position.z < MovementBoundaries.y : position.z > -MovementBoundaries.y;
     }
 }

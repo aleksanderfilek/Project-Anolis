@@ -45,4 +45,14 @@ public class ControllerManipulator
     {
         _holderTransform.position = planet.transform.position;
     }
+
+    public Vector3 GetHolderPosition()
+    {
+        return _holderTransform.position;
+    }
+
+    public Vector3 GetRotation()
+    {
+        return _controllerTransform.localEulerAngles;
+    }
 }

@@ -4,8 +4,6 @@ using UnityEngine.UIElements;
 
 public class PlanetaryCameraController
 {
-    private Transform _cameraTransform;
-    private Transform _controllerTransform;
     private CameraManipulator _cameraManipulator;
     private ControllerManipulator _controllerManipulator;
 
@@ -19,13 +17,10 @@ public class PlanetaryCameraController
     private float _verticalRotationAmount;
     private float _horizontalRotationAmount;
 
-    public PlanetaryCameraController(CameraManipulator cameraManipulator, ControllerManipulator controllerManipulator,
-        Transform cameraTransform, Transform controllerTransform)
+    public PlanetaryCameraController(CameraManipulator cameraManipulator, ControllerManipulator controllerManipulator)
     {
         _cameraManipulator = cameraManipulator;
         _controllerManipulator = controllerManipulator;
-        _cameraTransform = cameraTransform;
-        _controllerTransform = controllerTransform;
         GameState.Get.ModeChanged += HandleModeChangeToPlanetary;
     }
 
@@ -40,9 +35,10 @@ public class PlanetaryCameraController
     {
         var amount = context.ReadValue<Vector2>().normalized.y;
         _cameraManipulator.ChangeHolderDisctanceBy(amount * ZoomDistance);
-        if (_cameraTransform.localPosition.z < _minCameraDistance)
+        
+        if (_cameraManipulator.GetHolderDistance() < _minCameraDistance)
             _cameraManipulator.SetHolderDisctanceTo(_minCameraDistance);
-        else if (_cameraTransform.localPosition.z > _modeTransitionDistance)
+        else if (_cameraManipulator.GetHolderDistance() > _modeTransitionDistance)
             GameState.Get.ChangeModeToInterplanetary();
     }
 
@@ -72,18 +68,18 @@ public class PlanetaryCameraController
         //when working with euler angles instead of quaternions we get some nasty conditions
         //this sould be cameraControllerTransform.localEulerAngles.z == 180f, but comparing floats is not a good idea
         //rotationEulerAngles.z can have values 180f and 0f, therefore condition > 90f was chosen
-        if (_controllerTransform.localEulerAngles.z < 90f)
+        if (_controllerManipulator.GetRotation().z < 90f)
             return true;
         return _verticalRotationAmount > 0f ? IsWithinUpperBoundary() : IsWithinLowerBoundary();
     }
 
     private bool IsWithinUpperBoundary()
     {
-        return _controllerTransform.localEulerAngles.x < 90f;
+        return _controllerManipulator.GetRotation().x < 90f;
     }
 
     private bool IsWithinLowerBoundary()
     {
-        return _controllerTransform.localEulerAngles.x > 270f;
+        return _controllerManipulator.GetRotation().x > 270f;
     }
 }

@@ -24,9 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Move chooser choose method from button to action">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManipulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManipulator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/AlphaButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/projekty_unity/projekty/Project-Anolis/Project Anolis/Assets/Scripts/Camera/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -106,12 +108,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlanetCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/GameplayActionCallbackConnection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Planet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManipulator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
       </list>
     </option>
   </component>
@@ -180,7 +182,7 @@
       <workItem from="1606927089538" duration="7154000" />
       <workItem from="1606995270678" duration="10389000" />
       <workItem from="1607378008773" duration="4387000" />
-      <workItem from="1607427671540" duration="2203000" />
+      <workItem from="1607427671540" duration="4002000" />
     </task>
     <task id="LOCAL-00001" summary="Change rotating planets to new input">
       <created>1603627329359</created>
@@ -266,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607382397532</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add smooth movement and interplanetary -&gt; planetary transition">
+      <created>1607435455023</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607435455023</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +324,8 @@
     <MESSAGE value="Add EditorControls" />
     <MESSAGE value="Change cameraController names and calculate min and max camera distance based on radius" />
     <MESSAGE value="Add smooth zoom" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add smooth zoom" />
+    <MESSAGE value="Add smooth movement and interplanetary -&gt; planetary transition" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add smooth movement and interplanetary -&gt; planetary transition" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="345" key="#Notifications" timestamp="1603533591308">

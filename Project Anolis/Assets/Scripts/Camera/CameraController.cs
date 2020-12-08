@@ -34,10 +34,10 @@ public class CameraController : MonoBehaviour
         _cameraManipulator = new CameraManipulator(cameraTransform, cameraHolderTransform);
         _controllerManipulator = new ControllerManipulator(controllerTransform, controllerHolderTransform);
         
-        Planetary = new PlanetaryCameraController(_cameraManipulator, _controllerManipulator, cameraTransform, controllerTransform);
+        Planetary = new PlanetaryCameraController(_cameraManipulator, _controllerManipulator);
         UpdatePlanetaryParameters();
 
-        Interplanetary = new InterplanetaryCameraController(_cameraManipulator, _controllerManipulator, controllerTransform, cameraTransform);
+        Interplanetary = new InterplanetaryCameraController(_cameraManipulator, _controllerManipulator);
         UpdateInterplanetaryParameters();
     }
 
