@@ -1611,6 +1611,7 @@ MonoBehaviour:
   cameraController: {fileID: 1745632516}
   planetChooser: {fileID: 1100733915}
   raycast: {fileID: 1100733910}
+  planetMover: {fileID: 1100733916}
 --- !u!1 &547463705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,6 +1736,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Rotate
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 501098271}
+        m_MethodName: EnableAction
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Drag
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &547463708
@@ -1901,6 +1913,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 501098271}
+        m_MethodName: DisableAction
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Drag
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &551832871
@@ -2261,6 +2284,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Rotate
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 501098271}
+        m_MethodName: EnableAction
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Drag
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &609488228
@@ -3371,6 +3405,7 @@ GameObject:
   - component: {fileID: 1100733912}
   - component: {fileID: 1100733911}
   - component: {fileID: 1100733915}
+  - component: {fileID: 1100733916}
   m_Layer: 0
   m_Name: Utilities
   m_TagString: Untagged
@@ -3468,6 +3503,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycast: {fileID: 1100733910}
+  planetSelector: {fileID: 1100733913}
+--- !u!114 &1100733916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100733908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cab7ed213fecfd418a8ddf7878dd321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraController: {fileID: 1745632516}
   planetSelector: {fileID: 1100733913}
 --- !u!1 &1109444874
 GameObject:
