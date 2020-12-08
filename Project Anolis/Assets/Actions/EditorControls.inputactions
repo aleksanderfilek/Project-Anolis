@@ -1,5 +1,5 @@
 {
-    "name": "EditorActions",
+    "name": "EditorControls",
     "maps": [
         {
             "name": "PlanetaryMode",
@@ -173,6 +173,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "MultiTap"
+                },
+                {
+                    "name": "Drag",
+                    "type": "Button",
+                    "id": "4b9c0db9-eb34-4ae4-8b4e-ad0374ee36d3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Tap"
                 }
             ],
             "bindings": [
@@ -307,6 +315,17 @@
                     "action": "FocusPlanet",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a934e103-3f47-42ca-9f50-77bb702a1bdd",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Drag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -328,6 +347,17 @@
                     "name": "",
                     "id": "3438385b-688e-4124-8ba9-c5cea9d28bd6",
                     "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CastRay",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d5b26b81-0b56-42c8-b38a-2b71f9242d69",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

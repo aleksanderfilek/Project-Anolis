@@ -31,16 +31,9 @@
     <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Move chooser choose method from button to action">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetCreator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetCreator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetMenu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Actions/EditorControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Actions/EditorControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Actions/EditorControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Actions/EditorControls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,13 +67,12 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/19/a81ead35/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Utilities/PlanetMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Raycast.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/UnderMouseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/MenuGroups/ShowableGroup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Managers/SelectorManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/MenuGroups/ShowableCollection.cs" />
@@ -130,6 +122,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Implementations/EditorMenus/PlanetMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Implementations/EditorMenus/PlanetCreationMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Utilities/PlanetMover.cs" />
       </list>
     </option>
   </component>
@@ -218,7 +212,7 @@
       <workItem from="1607364221977" duration="6626000" />
       <workItem from="1607371553567" duration="1000" />
       <workItem from="1607373268559" duration="988000" />
-      <workItem from="1607441456676" duration="4515000" />
+      <workItem from="1607441456676" duration="11179000" />
     </task>
     <task id="LOCAL-00001" summary="Change rotating planets to new input">
       <created>1603627329359</created>
@@ -395,7 +389,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606852172134</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Finalize planet generation option">
+      <created>1607446428130</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1607446428130</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Finalize planet generation option">
+      <created>1607446440101</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1607446440101</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,7 +460,8 @@
     <MESSAGE value="Add quick switching camera focus" />
     <MESSAGE value="New random planet generation" />
     <MESSAGE value="Update scene" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update scene" />
+    <MESSAGE value="Finalize planet generation option" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalize planet generation option" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="345" key="#Notifications" timestamp="1603533591308">
@@ -489,9 +498,10 @@
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="624" y="237" key="run.anything.popup/0.0.1920.1037/1920.0.1280.1024@0.0.1920.1037" timestamp="1602954072896" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605912334930">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607445920917">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1607445920917" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605912334930" />
   </component>
 </project>

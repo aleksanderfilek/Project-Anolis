@@ -186,6 +186,14 @@ public class @EditorControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""MultiTap""
+                },
+                {
+                    ""name"": ""Drag"",
+                    ""type"": ""Button"",
+                    ""id"": ""4b9c0db9-eb34-4ae4-8b4e-ad0374ee36d3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Tap""
                 }
             ],
             ""bindings"": [
@@ -320,6 +328,17 @@ public class @EditorControls : IInputActionCollection, IDisposable
                     ""action"": ""FocusPlanet"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a934e103-3f47-42ca-9f50-77bb702a1bdd"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drag"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -347,6 +366,17 @@ public class @EditorControls : IInputActionCollection, IDisposable
                     ""action"": ""CastRay"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d5b26b81-0b56-42c8-b38a-2b71f9242d69"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CastRay"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -362,6 +392,7 @@ public class @EditorControls : IInputActionCollection, IDisposable
         m_InterplanetaryMode_Move = m_InterplanetaryMode.FindAction("Move", throwIfNotFound: true);
         m_InterplanetaryMode_Zoom = m_InterplanetaryMode.FindAction("Zoom", throwIfNotFound: true);
         m_InterplanetaryMode_FocusPlanet = m_InterplanetaryMode.FindAction("FocusPlanet", throwIfNotFound: true);
+        m_InterplanetaryMode_Drag = m_InterplanetaryMode.FindAction("Drag", throwIfNotFound: true);
         // Utilities
         m_Utilities = asset.FindActionMap("Utilities", throwIfNotFound: true);
         m_Utilities_CastRay = m_Utilities.FindAction("CastRay", throwIfNotFound: true);
@@ -458,6 +489,7 @@ public class @EditorControls : IInputActionCollection, IDisposable
     private readonly InputAction m_InterplanetaryMode_Move;
     private readonly InputAction m_InterplanetaryMode_Zoom;
     private readonly InputAction m_InterplanetaryMode_FocusPlanet;
+    private readonly InputAction m_InterplanetaryMode_Drag;
     public struct InterplanetaryModeActions
     {
         private @EditorControls m_Wrapper;
@@ -465,6 +497,7 @@ public class @EditorControls : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_InterplanetaryMode_Move;
         public InputAction @Zoom => m_Wrapper.m_InterplanetaryMode_Zoom;
         public InputAction @FocusPlanet => m_Wrapper.m_InterplanetaryMode_FocusPlanet;
+        public InputAction @Drag => m_Wrapper.m_InterplanetaryMode_Drag;
         public InputActionMap Get() { return m_Wrapper.m_InterplanetaryMode; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -483,6 +516,9 @@ public class @EditorControls : IInputActionCollection, IDisposable
                 @FocusPlanet.started -= m_Wrapper.m_InterplanetaryModeActionsCallbackInterface.OnFocusPlanet;
                 @FocusPlanet.performed -= m_Wrapper.m_InterplanetaryModeActionsCallbackInterface.OnFocusPlanet;
                 @FocusPlanet.canceled -= m_Wrapper.m_InterplanetaryModeActionsCallbackInterface.OnFocusPlanet;
+                @Drag.started -= m_Wrapper.m_InterplanetaryModeActionsCallbackInterface.OnDrag;
+                @Drag.performed -= m_Wrapper.m_InterplanetaryModeActionsCallbackInterface.OnDrag;
+                @Drag.canceled -= m_Wrapper.m_InterplanetaryModeActionsCallbackInterface.OnDrag;
             }
             m_Wrapper.m_InterplanetaryModeActionsCallbackInterface = instance;
             if (instance != null)
@@ -496,6 +532,9 @@ public class @EditorControls : IInputActionCollection, IDisposable
                 @FocusPlanet.started += instance.OnFocusPlanet;
                 @FocusPlanet.performed += instance.OnFocusPlanet;
                 @FocusPlanet.canceled += instance.OnFocusPlanet;
+                @Drag.started += instance.OnDrag;
+                @Drag.performed += instance.OnDrag;
+                @Drag.canceled += instance.OnDrag;
             }
         }
     }
@@ -543,6 +582,7 @@ public class @EditorControls : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnZoom(InputAction.CallbackContext context);
         void OnFocusPlanet(InputAction.CallbackContext context);
+        void OnDrag(InputAction.CallbackContext context);
     }
     public interface IUtilitiesActions
     {

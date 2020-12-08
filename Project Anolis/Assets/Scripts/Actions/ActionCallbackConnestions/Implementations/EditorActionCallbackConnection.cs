@@ -10,6 +10,7 @@ public class EditorActionCallbackConnection : ActionCallbackConnection
     [SerializeField] private CameraController cameraController;
     [SerializeField] private PlanetChooser planetChooser;
     [SerializeField] private Raycast raycast;
+    [SerializeField] private PlanetMover planetMover;
 
     private void Awake()
     {
@@ -28,6 +29,7 @@ public class EditorActionCallbackConnection : ActionCallbackConnection
         interplanetaryMode.Move.canceled += cameraController.Interplanetary.UpdateMoveAmounts;
         interplanetaryMode.Zoom.performed += cameraController.Interplanetary.Zoom;
         interplanetaryMode.FocusPlanet.performed += planetChooser.Choose;
+        interplanetaryMode.Drag.performed += planetMover.Switch;
 
         var planetaryMode = _controls.PlanetaryMode;
         planetaryMode.Rotate.performed += cameraController.Planetary.UpdateRotateAmounts;

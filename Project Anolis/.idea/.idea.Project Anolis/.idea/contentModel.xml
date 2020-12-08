@@ -86,6 +86,7 @@
               <e p="Selector.cs" t="Include" />
             </e>
             <e p="Utilities" t="Include">
+              <e p="PlanetMover.cs" t="Include" />
               <e p="Raycast.cs" t="Include" />
             </e>
           </e>
