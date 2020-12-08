@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private Transform holderTransform;
+    [SerializeField] private Transform cameraHolderTransform;
+    [SerializeField] private Transform controllerHolderTransform;
 
     [SerializeField] private float zoomDistance;
-    [SerializeField] private float zoomSpeed;
+    [SerializeField] private float zoomSmoothSpeed;
     [SerializeField] private float modeTransitionDistanceFactor;    //todo need better name
 
     [Header("Planetary Mode")] 
@@ -15,6 +16,7 @@ public class CameraController : MonoBehaviour
 
     [Header("Interplanetary Mode")] 
     [SerializeField] private float movementSpeed;
+    [SerializeField] private float movementSmoothSpeed;
     [SerializeField] private float maxCameraDistance;
     [SerializeField] private Vector3 cameraRotation;
     [SerializeField] private Vector2 movementBoundaries;
@@ -29,8 +31,8 @@ public class CameraController : MonoBehaviour
     {
         var cameraTransform = GetComponentInChildren<Camera>().transform;
         var controllerTransform = transform;
-        _cameraManipulator = new CameraManipulator(cameraTransform, holderTransform);
-        _controllerManipulator = new ControllerManipulator(controllerTransform);
+        _cameraManipulator = new CameraManipulator(cameraTransform, cameraHolderTransform);
+        _controllerManipulator = new ControllerManipulator(controllerTransform, controllerHolderTransform);
         
         Planetary = new PlanetaryCameraController(_cameraManipulator, _controllerManipulator, cameraTransform, controllerTransform);
         UpdatePlanetaryParameters();
@@ -58,7 +60,8 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        _cameraManipulator.MoveCameraTowardsHolder(zoomSpeed);
+        _cameraManipulator.MoveCameraTowardsHolder(zoomSmoothSpeed);
+        _controllerManipulator.MoveControllerTowardsHolder(movementSmoothSpeed);
         switch (GameState.Get.CurrentMode)
         {
             case GameState.Mode.Planetary:

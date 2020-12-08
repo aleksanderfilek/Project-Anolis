@@ -54,7 +54,8 @@ public class PlanetaryCameraController
         var radius = GameState.Get.CurrentFocus.GetComponent<Planet>().Radius;
         _modeTransitionDistance = radius * ModeTransitionDistanceFactor;
         _minCameraDistance = radius * MinCameraDistanceFactor;
-        _cameraManipulator.SetHolderDisctanceTo(_minCameraDistance); //todo change
+        var averageCameraDistance = (_minCameraDistance + _modeTransitionDistance) / 2;
+        _cameraManipulator.SetHolderDisctanceTo(averageCameraDistance); //todo change
     }
 
     public void MakeRotation()
