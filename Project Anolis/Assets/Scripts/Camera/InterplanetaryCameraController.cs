@@ -57,6 +57,11 @@ public class InterplanetaryCameraController
             _controllerManipulator.TranslateVerticalyBy(_verticalMoveAmount * MoveSpeed);
     }
 
+    public void MoveToFocus()
+    {
+        _controllerManipulator.CenterAtPlanet(GameState.Get.CurrentFocus);
+    }
+
     private bool IsWithinHorizontalBoundary()
     {
         var position = _controllerTransform.position;

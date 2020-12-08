@@ -28,8 +28,7 @@ public class ControllerManipulator
     {
         _controllerTransform.Translate(-amount * Time.deltaTime, 0.0f, 0.0f, Space.World);
     }
-
-
+    
     public void CenterAtPlanet(GameObject planet)
     {
         _controllerTransform.position = planet.transform.position;

@@ -19,19 +19,28 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:planet-editor" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Move chooser choose method from button to action">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Actions/GameplayControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Actions/GameplayControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Actions/GameplayControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Actions/GameplayControls.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/GameplayActionCallbackConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/GameplayActionCallbackConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetCreator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetCreator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetMenu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,34 +48,37 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../Program Files/Unity Hub/editor/2019.4.13f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/4f/053d4227/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/InputManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/21/40296c6f/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2DB13BA0-D523-4322-8AA9-892C408FB49A/ed/88a9c046/Input.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/AlphaButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/InputManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../2019.4.12f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventTrigger.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/EditorMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/0c/77719d9a/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionMap.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/EditorMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionAsset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/19/a81ead35/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Menu/Implementations/MenuChooser.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Menu/Implementations/EditorBuildMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Planet Editor/TabButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/MenuManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Menu/Implementations/EditorMenus/BuildMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Managers/RaycastManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Raycast.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Showable/Menus/UnderMouseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/MenuGroups/ShowableGroup.cs" />
@@ -80,37 +92,44 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Logistics/Collections/ShowableGroups/Implementations/ShowableGroupWithDefault.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputActionMapManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Raycast.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Choosers/Implementations/MenuChooser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Showable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/BuildMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/sdf.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/wyliczanka.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManipulator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Choosers/Implementations/PlanetChooser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/UnderMouseMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Choosers/Implementations/MenuChooser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Init.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/Chooser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/Implementations/MenuChooser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/ShowableGroups/Implementations/ShowableGroupWithDefault.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Menu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/ShowableGroups/ShowableGroup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/ShowableGroups/Implementations/ShowableGroupWithChooser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/ShowableGroups/Implementations/ShowableGroupWithOpenOnAwake.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations/MenuGroupWithChooser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/MenuGroup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Selector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NewBehaviourScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scriptable_Objects/Placeable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlaceableInstance.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Misc/OptionContainer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/EditorMenus/BuildMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Implementations/TileSelector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Implementations/PlanetSelector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Executives/Builder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Displayers/GroupSelectionDisplayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/PlanetChooser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/MenuChooser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ActionActivator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ActionCallbackConnection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations/MenuGroupWithOpenOnAwake.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/AnolisControlsActionCallbackConnection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/AnolisControlsActionActivator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/GameplayActionCallbackConnection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnectioncs.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/ActionCallbackConnection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionActivator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlanetButtonCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlanetButtonAssigner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlanetButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlanetMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Planet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Displayers/GroupSelectionDisplayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlanetCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/GameplayActionCallbackConnection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Implementations/EditorMenus/PlanetMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Implementations/EditorMenus/PlanetCreationMenu.cs" />
       </list>
     </option>
   </component>
@@ -123,8 +142,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -136,7 +153,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -172,12 +189,36 @@
       <workItem from="1602953679790" duration="2965000" />
       <workItem from="1603620393726" duration="11622000" />
       <workItem from="1603658152492" duration="6756000" />
-      <workItem from="1603701607336" duration="11392000" />
-      <workItem from="1604569008499" duration="1338000" />
-      <workItem from="1604570669138" duration="5310000" />
-      <workItem from="1606924080706" duration="2942000" />
-      <workItem from="1606927089538" duration="7154000" />
-      <workItem from="1606995270678" duration="3502000" />
+      <workItem from="1603701607336" duration="12124000" />
+      <workItem from="1604349168672" duration="4010000" />
+      <workItem from="1604593415680" duration="8874000" />
+      <workItem from="1604698428136" duration="4826000" />
+      <workItem from="1604841282613" duration="2678000" />
+      <workItem from="1604855476374" duration="4998000" />
+      <workItem from="1604935854336" duration="1352000" />
+      <workItem from="1604938751171" duration="3515000" />
+      <workItem from="1605025586387" duration="14023000" />
+      <workItem from="1605097918284" duration="6780000" />
+      <workItem from="1605115863332" duration="374000" />
+      <workItem from="1605178444870" duration="3817000" />
+      <workItem from="1605201587788" duration="4285000" />
+      <workItem from="1605287799560" duration="64000" />
+      <workItem from="1605481097085" duration="3575000" />
+      <workItem from="1605526923615" duration="4155000" />
+      <workItem from="1605612389561" duration="1866000" />
+      <workItem from="1605616034745" duration="2829000" />
+      <workItem from="1605779066955" duration="7230000" />
+      <workItem from="1605812100303" duration="28000" />
+      <workItem from="1605825451300" duration="2025000" />
+      <workItem from="1605904716195" duration="7470000" />
+      <workItem from="1605967647040" duration="1089000" />
+      <workItem from="1606774720262" duration="1015000" />
+      <workItem from="1606839446175" duration="12044000" />
+      <workItem from="1606852149621" duration="38000" />
+      <workItem from="1607364221977" duration="6626000" />
+      <workItem from="1607371553567" duration="1000" />
+      <workItem from="1607373268559" duration="988000" />
+      <workItem from="1607441456676" duration="4515000" />
     </task>
     <task id="LOCAL-00001" summary="Change rotating planets to new input">
       <created>1603627329359</created>
@@ -207,42 +248,154 @@
       <option name="project" value="LOCAL" />
       <updated>1603707236516</updated>
     </task>
-    <task id="LOCAL-00005" summary="Import latest master, changed names">
-      <created>1604337966180</created>
+    <task id="LOCAL-00005" summary="Change file structure and names">
+      <created>1603714343809</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1604337966180</updated>
+      <updated>1603714343809</updated>
     </task>
-    <task id="LOCAL-00006" summary="Removed some shame">
-      <created>1604338073939</created>
+    <task id="LOCAL-00006" summary="Add CameraManipulator, and start implementing InterplanetaryCameraController">
+      <created>1604698783363</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1604338073939</updated>
+      <updated>1604698783363</updated>
     </task>
-    <task id="LOCAL-00007" summary="Built Placeable can be changed to another">
-      <created>1604572713548</created>
+    <task id="LOCAL-00007" summary="Add movement in interplanetary mode">
+      <created>1604703905929</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1604572713548</updated>
+      <updated>1604703905929</updated>
     </task>
-    <task id="LOCAL-00008" summary="Move actions-callbacks connection to another object, that action activator uses to make connection (therefore different actions can be conected in editor and different actions in gameplay)">
-      <created>1606929865065</created>
+    <task id="LOCAL-00008" summary="Add simple transition form interplanetary mode to planetary mode">
+      <created>1604860794134</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1606929865065</updated>
+      <updated>1604860794134</updated>
     </task>
-    <task id="LOCAL-00009" summary="Add EditorActionCallbackConnection">
-      <created>1606939794027</created>
+    <task id="LOCAL-00009" summary="Add simple transition form interplanetary mode to planetary mode">
+      <created>1604860820460</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1606939794027</updated>
+      <updated>1604860820460</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add transition from planetary to interplanetary mode, so now it works both ways (simple but working)">
+      <created>1604941494761</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1604941494761</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add transition from planetary to interplanetary mode, so now it works both ways (simple but working)">
+      <created>1604941691786</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1604941691786</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Replace PlayerInput with ActionActivator (action callbacks are now in ActionActivator.ConnectActionsWithCallbacks)">
+      <created>1605038855512</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1605038855512</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add change mode event">
+      <created>1605103323196</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605103323196</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Make working transitions with new mode changed event">
+      <created>1605105445550</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1605105445550</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Make CameraController one component">
+      <created>1605482897483</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1605482897483</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Split CameraManipulator and shorten controller paremeter lists">
+      <created>1605528095046</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1605528095046</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add Init and little refactor">
+      <created>1605782639558</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1605782639558</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Move chooser choose method from button to action">
+      <created>1605911335404</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1605911335404</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Change chooser inheritance from showable to MonoBehaviour and change showable to menu">
+      <created>1605967993413</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1605967993413</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Merge Interplanetary mode into Planet Editor">
+      <created>1606839522107</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1606839522107</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add button for each planet in game when starting.">
+      <created>1606843468367</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1606843468367</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Rename class and move planet buttons to new page">
+      <created>1606844774389</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1606844774389</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add quick switching camera focus">
+      <created>1606846099678</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1606846099678</updated>
+    </task>
+    <task id="LOCAL-00024" summary="New random planet generation">
+      <created>1606851698430</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1606851698430</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Update scene">
+      <created>1606852172134</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1606852172134</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,22 +408,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="planet-editor" />
-                </option>
-              </RecentGroup>
-            </list>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="planet-editor" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -283,116 +433,65 @@
     <MESSAGE value="Move rest of planetary camera to new input system" />
     <MESSAGE value="Change names" />
     <MESSAGE value="Remove samples" />
-    <MESSAGE value="Import latest master, changed names" />
-    <MESSAGE value="Removed some shame" />
-    <MESSAGE value="Built Placeable can be changed to another" />
-    <MESSAGE value="Move actions-callbacks connection to another object, that action activator uses to make connection (therefore different actions can be conected in editor and different actions in gameplay)" />
-    <MESSAGE value="Add EditorActionCallbackConnection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add EditorActionCallbackConnection" />
+    <MESSAGE value="Change file structure and names" />
+    <MESSAGE value="Add CameraManipulator, and start implementing InterplanetaryCameraController" />
+    <MESSAGE value="Add movement in interplanetary mode" />
+    <MESSAGE value="Add simple transition form interplanetary mode to planetary mode" />
+    <MESSAGE value="Add transition from planetary to interplanetary mode, so now it works both ways (simple but working)" />
+    <MESSAGE value="Replace PlayerInput with ActionActivator (action callbacks are now in ActionActivator.ConnectActionsWithCallbacks)" />
+    <MESSAGE value="Add change mode event" />
+    <MESSAGE value="Make working transitions with new mode changed event" />
+    <MESSAGE value="Make CameraController one component" />
+    <MESSAGE value="Split CameraManipulator and shorten controller paremeter lists" />
+    <MESSAGE value="Add Init and little refactor" />
+    <MESSAGE value="Move chooser choose method from button to action" />
+    <MESSAGE value="Change chooser inheritance from showable to MonoBehaviour and change showable to menu" />
+    <MESSAGE value="Merge Interplanetary mode into Planet Editor" />
+    <MESSAGE value="Add button for each planet in game when starting." />
+    <MESSAGE value="Rename class and move planet buttons to new page" />
+    <MESSAGE value="Add quick switching camera focus" />
+    <MESSAGE value="New random planet generation" />
+    <MESSAGE value="Update scene" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update scene" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="345" key="#Notifications" timestamp="1603533591308">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="708" y="345" key="#Notifications/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603533591308" />
-    <state x="-112" y="671" width="1736" height="718" key="DiffContextDialog" timestamp="1606863339065">
+    <state x="184" y="86" key="MergeDialog" timestamp="1607366478630">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-112" y="671" width="1736" height="718" key="DiffContextDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606863339065" />
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1604574946050">
+    <state x="184" y="86" key="MergeDialog/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1607366478630" />
+    <state x="727" y="244" key="RiderGenerateDialog" timestamp="1604698462204">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
-    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1604574946049">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946049" />
-    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1604574946049">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946049" />
-    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1604574946050">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1604574946050">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
-    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1604574946050">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
-    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1604574946050">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
-    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1604574946050">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
-    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1604574946050">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
-    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1604574946050">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
-    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1604574946050">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
-    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1604574946050">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946050" />
-    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1604574946051">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946051" />
-    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1604574946051">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946051" />
-    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1604574946051">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946051" />
-    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1604574946051">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604574946051" />
-    <state x="766" y="230" key="RollbackChangesDialog" timestamp="1604337980619">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="766" y="230" key="RollbackChangesDialog/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604337980619" />
-    <state x="744" y="183" width="1142" height="851" key="SettingsEditor" timestamp="1604569505186">
+    <state x="727" y="244" key="RiderGenerateDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1604698462204" />
+    <state x="415" y="0" width="1142" height="851" key="SettingsEditor" timestamp="1603541639611">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="472" y="232" key="SettingsEditor/0.0.1920.1037/1920.0.1280.1024@0.0.1920.1037" timestamp="1602954206546" />
-    <state x="744" y="183" key="SettingsEditor/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604569505186" />
     <state x="415" y="0" width="1142" height="851" key="SettingsEditor/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603541639611" />
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1603658622327">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1605482502953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603658622327" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606939852351">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605482502953" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606852179808">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604338388670" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606939852351" />
-    <state x="529" y="140" key="VcsDiffUtil.ChangesDialog" timestamp="1606862903940">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1606852179808" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605968004821" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607366447894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="529" y="140" key="VcsDiffUtil.ChangesDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606862903940" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1607366447894" />
     <state x="624" y="237" key="run.anything.popup" timestamp="1602954072896">
       <screen x="0" y="0" width="1920" height="1037" />
     </state>
     <state x="624" y="237" key="run.anything.popup/0.0.1920.1037/1920.0.1280.1024@0.0.1920.1037" timestamp="1602954072896" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607013541077">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605912334930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607013541077" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605912334930" />
   </component>
 </project>

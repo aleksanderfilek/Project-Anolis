@@ -9,8 +9,7 @@ namespace Interaction.Editor
     public class PlanetMenu : Menu
     {
         [SerializeField] private GameObject buttonPrefab;
-        [SerializeField] private PlanetCreator planetCreator;
-        [SerializeField]private GameObject planetsParent;
+        [SerializeField] private GameObject planetsParent;
         private List<GameObject> planets;
         
 
@@ -35,24 +34,6 @@ namespace Interaction.Editor
         {
             return false;
         }
-        
-        // Adds new Planet using PlanetCreator and a connected button
-        public void CreateNewPlanet()
-        {
-            if (planetCreator is null)
-            {
-                Debug.LogError(": PlanetCreator reference is null.", this);
-                return;
-            }
-            var planet = planetCreator.Create();
-
-            if (planetsParent != null)
-            {
-                planet.transform.SetParent(planetsParent.transform);
-            }
-
-            AssignPlanetToButton(planet, CreateButton());
-        }
 
         private void GetAllPlanets()
         {
@@ -71,7 +52,7 @@ namespace Interaction.Editor
             planets = planetList;
         }
     
-        private GameObject CreateButton()
+        public GameObject CreateButton()
         {
             var button = Instantiate(buttonPrefab, ui.transform);
             button.name = "Button Planet";
@@ -79,12 +60,17 @@ namespace Interaction.Editor
             return button;
         }
     
-        private void AssignPlanetToButton(GameObject planet, GameObject button)
+        public void AssignPlanetToButton(GameObject planet, GameObject button)
         {
             var planetButton = button.AddComponent<PlanetButton>();
             planetButton.Planet = planet;
             button.GetComponentInChildren<Text>().text = planet.name;
             button.GetComponent<Button>().onClick.AddListener(planetButton.ChangeFocusToThis);
+        }
+
+        public void DeleteButton()
+        {
+            
         }
     
         private void CheckSerializedFields()
