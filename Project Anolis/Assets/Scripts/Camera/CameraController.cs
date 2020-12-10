@@ -12,6 +12,7 @@ public class CameraController : MonoBehaviour
 
     [Header("Planetary Mode")] 
     [SerializeField] private float rotationSpeed;
+    [SerializeField] private float rotationSmoothSpeed;
     [SerializeField] private float minCameraDistanceFactor;
 
     [Header("Interplanetary Mode")] 
@@ -48,6 +49,7 @@ public class CameraController : MonoBehaviour
     {
         _cameraManipulator.MoveCameraTowardsHolder(zoomSmoothSpeed);
         _controllerManipulator.MoveControllerTowardsHolder(movementSmoothSpeed);
+        _controllerManipulator.RotateControllerTowardsHolder(rotationSmoothSpeed);
         switch (GameState.Get.CurrentMode)
         {
             case GameState.Mode.Planetary:

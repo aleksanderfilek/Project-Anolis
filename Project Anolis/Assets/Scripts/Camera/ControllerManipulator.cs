@@ -16,19 +16,24 @@ public class ControllerManipulator
         _controllerTransform.position = Vector3.Lerp(_controllerTransform.position, _holderTransform.position, movementSpeed * Time.deltaTime);
     }
 
-    public void RotateVerticallyBy(float amount)
+    public void RotateControllerTowardsHolder(float rotationSmoothSpeed)
     {
-        _controllerTransform.Rotate(Time.deltaTime * amount * new Vector3(-1, 0, 0));
+        _controllerTransform.rotation = Quaternion.Lerp(_controllerTransform.rotation, _holderTransform.rotation, rotationSmoothSpeed * Time.deltaTime);
+    }
+    
+    public void RotateHolderVerticallyBy(float amount)
+    {
+        _holderTransform.Rotate(Time.deltaTime * amount * new Vector3(-1, 0, 0));
     }
 
-    public void RotateHorizontallyBy(float amount)
+    public void RotateHolderHorizontallyBy(float amount)
     {
-        _controllerTransform.Rotate(Time.deltaTime * amount * new Vector3(0, -1, 0), Space.World);
+        _holderTransform.Rotate(Time.deltaTime * amount * new Vector3(0, -1, 0), Space.World);
     }
 
-    public void SetRotationTo(Vector3 rotation)
+    public void SetHolderRotationTo(Vector3 rotation)
     {
-        _controllerTransform.rotation = Quaternion.Euler(rotation);
+        _holderTransform.rotation = Quaternion.Euler(rotation);
     }
     
     public void TranslateVerticallyBy(float amount)
@@ -51,8 +56,8 @@ public class ControllerManipulator
         return _holderTransform.position;
     }
 
-    public Vector3 GetRotation()
+    public Vector3 GetHolderRotation()
     {
-        return _controllerTransform.localEulerAngles;
+        return _holderTransform.localEulerAngles;
     }
 }

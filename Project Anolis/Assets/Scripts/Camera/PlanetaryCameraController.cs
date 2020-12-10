@@ -51,10 +51,10 @@ public class PlanetaryCameraController
     public void MakeRotation()
     {
         if (_verticalRotationAmount != 0 && IsWithinBounds())
-            _controllerManipulator.RotateVerticallyBy(_verticalRotationAmount * RotationSpeed);
+            _controllerManipulator.RotateHolderVerticallyBy(_verticalRotationAmount * RotationSpeed);
 
         if (_horizontalRotationAmount != 0)
-            _controllerManipulator.RotateHorizontallyBy(_horizontalRotationAmount * RotationSpeed);
+            _controllerManipulator.RotateHolderHorizontallyBy(_horizontalRotationAmount * RotationSpeed);
     }
 
     private bool IsWithinBounds()
@@ -62,18 +62,18 @@ public class PlanetaryCameraController
         //when working with euler angles instead of quaternions we get some nasty conditions
         //this sould be cameraControllerTransform.localEulerAngles.z == 180f, but comparing floats is not a good idea
         //rotationEulerAngles.z can have values 180f and 0f, therefore condition > 90f was chosen
-        if (_controllerManipulator.GetRotation().z < 90f)
+        if (_controllerManipulator.GetHolderRotation().z < 90f)
             return true;
         return _verticalRotationAmount > 0f ? IsWithinUpperBoundary() : IsWithinLowerBoundary();
     }
 
     private bool IsWithinUpperBoundary()
     {
-        return _controllerManipulator.GetRotation().x < 90f;
+        return _controllerManipulator.GetHolderRotation().x < 90f;
     }
 
     private bool IsWithinLowerBoundary()
     {
-        return _controllerManipulator.GetRotation().x > 270f;
+        return _controllerManipulator.GetHolderRotation().x > 270f;
     }
 }

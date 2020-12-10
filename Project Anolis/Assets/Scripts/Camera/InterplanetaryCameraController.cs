@@ -43,7 +43,8 @@ public class InterplanetaryCameraController
 
     public void HandleModeChangeToInterplanetary(Vector3 cameraRotation)
     {
-        _controllerManipulator.SetRotationTo(cameraRotation);
+        _cameraManipulator.SetHolderDisctanceTo(MinCameraDistance);
+        _controllerManipulator.SetHolderRotationTo(cameraRotation);
     }
 
     public void MakeMovement()
