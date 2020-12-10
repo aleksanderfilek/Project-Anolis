@@ -1831,13 +1831,13 @@ MonoBehaviour:
   cameraHolderTransform: {fileID: 869899707}
   controllerHolderTransform: {fileID: 1535021771}
   zoomDistance: 100
-  zoomSmoothSpeed: 5
+  zoomSmoothSpeed: 7
   modeTransitionDistanceFactor: 5
-  rotationSpeed: 50
-  rotationSmoothSpeed: 5
+  rotationSpeed: 80
+  rotationSmoothSpeed: 7
   minCameraDistanceFactor: 1.4
   movementSpeed: 50
-  movementSmoothSpeed: 5
+  movementSmoothSpeed: 7
   maxCameraDistance: 500
   minInterplanetaryCameraDistance: 100
   cameraRotation: {x: -45, y: 0, z: 0}

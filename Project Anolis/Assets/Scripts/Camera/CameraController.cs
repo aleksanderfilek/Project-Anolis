@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    //[SerializeField] private AnimationCurve rotationCurve;
+    //[SerializeField] private AnimationCurve zoomCurve;
+ 
     [SerializeField] private Transform cameraHolderTransform;
     [SerializeField] private Transform controllerHolderTransform;
 
