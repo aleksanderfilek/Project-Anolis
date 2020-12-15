@@ -245,7 +245,7 @@ RectTransform:
   m_Children:
   - {fileID: 1550360039}
   m_Father: {fileID: 1204826358}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -960,51 +960,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -16}
   m_SizeDelta: {x: 203.60129, y: 142.50307}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &246263382
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 246263383}
-  - component: {fileID: 246263384}
-  m_Layer: 0
-  m_Name: InterplanetaryMenuGroup
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &246263383
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 246263382}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1747392349}
-  m_Father: {fileID: 1204826358}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &246263384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 246263382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dd5e81cd803da64fae2e4c6b69869d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openOnAwakeMenu: {fileID: 0}
 --- !u!1 &291884340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3016,7 +2971,6 @@ Transform:
   - {fileID: 174268903}
   - {fileID: 1055662572}
   - {fileID: 1913385596}
-  - {fileID: 246263383}
   - {fileID: 53147538}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -4830,51 +4784,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717697338}
   m_Mesh: {fileID: 0}
---- !u!1 &1747392348
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1747392349}
-  - component: {fileID: 1747392350}
-  m_Layer: 0
-  m_Name: PlanetChooser
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1747392349
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747392348}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 246263383}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1747392350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747392348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63c23f5714b04c60bb4c8dfd1c82166d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  raycast: {fileID: 174268904}
-  planetSelector: {fileID: 568787242}
 --- !u!1 &1762456353
 GameObject:
   m_ObjectHideFlags: 0
@@ -4886,6 +4795,7 @@ GameObject:
   - component: {fileID: 1762456355}
   - component: {fileID: 1762456356}
   - component: {fileID: 1762456354}
+  - component: {fileID: 1762456357}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -4906,7 +4816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraController: {fileID: 631273899}
-  planetChooser: {fileID: 1747392350}
+  focusPlanetActionHandler: {fileID: 1762456357}
   planetaryMenuChooser: {fileID: 1942606175}
   raycast: {fileID: 174268904}
 --- !u!4 &1762456355
@@ -4938,6 +4848,20 @@ MonoBehaviour:
   alwaysEnabledActionMapNames:
   - Utilities
   actionCallbackConnection: {fileID: 1762456354}
+--- !u!114 &1762456357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762456353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c23f5714b04c60bb4c8dfd1c82166d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycast: {fileID: 174268904}
+  planetSelector: {fileID: 568787242}
 --- !u!1 &1854492198
 GameObject:
   m_ObjectHideFlags: 0

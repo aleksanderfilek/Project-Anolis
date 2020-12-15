@@ -6,7 +6,7 @@ public class GameState : MonoBehaviour
     [SerializeField] private ActionActivator actionActivator;
     
     public static GameState Get { get; private set; }
-    public event Action<Mode> ModeChanged; //todo think about changing that event to two events for planetary and interplanetary
+    public event Action<Mode> ModeChanged;
 
     public GameObject CurrentFocus { get; set; }
     public Mode CurrentMode { get; private set; }
@@ -23,14 +23,14 @@ public class GameState : MonoBehaviour
     public void ChangeModeToPlanetary()
     {
         CurrentMode = Mode.Planetary;
-        actionActivator.SwitchCurrentActionMap("PlanetaryMode");
+        actionActivator.SwitchCurrentActionMapTo("PlanetaryMode");
         OnStateChanged(Mode.Planetary);
     }
 
     public void ChangeModeToInterplanetary()
     {
         CurrentMode = Mode.Interplanetary;
-        actionActivator.SwitchCurrentActionMap("InterplanetaryMode");
+        actionActivator.SwitchCurrentActionMapTo("InterplanetaryMode");
         OnStateChanged(Mode.Interplanetary); 
     }
 

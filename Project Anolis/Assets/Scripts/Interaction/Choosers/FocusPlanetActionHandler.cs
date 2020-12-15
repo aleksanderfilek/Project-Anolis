@@ -3,12 +3,12 @@ using UnityEngine.InputSystem;
 
 namespace Interaction
 {
-    public class PlanetChooser : MonoBehaviour
+    public class FocusPlanetActionHandler : MonoBehaviour
     {
         [SerializeField] private Raycast raycast;
         [SerializeField] private PlanetSelector planetSelector;
 
-        public void Choose(InputAction.CallbackContext context)
+        public void HandleFocusPlanet(InputAction.CallbackContext context)
         {
             if (!context.performed || !raycast.IsSomethingHit)
                 return;

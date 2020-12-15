@@ -9,7 +9,6 @@ public class InterplanetaryCameraController
     private CameraManipulator _cameraManipulator;
     private ControllerManipulator _controllerManipulator;
 
-    //think about if this is needed as properies instead of be passed by parameter in function or if it is updated correctly in event in comara controller
     public Vector2 MovementBoundaries { get; set; }
     public float MaxCameraDistance { get; set; }
     public float MovementSpeed { get; set; }

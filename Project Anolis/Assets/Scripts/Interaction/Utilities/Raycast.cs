@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 namespace Interaction
 {
+    /// <summary>
+    /// This encapsulates casting rays, it can shoot ray, and store its result.
+    /// </summary>
     public class Raycast : MonoBehaviour
     {
         public bool IsSomethingHit { get; private set; }

@@ -40,12 +40,12 @@
             <e p="PlanetaryCameraController.cs" t="Include" />
           </e>
           <e p="GameManager.cs" t="Include" />
+          <e p="GameplayInit.cs" t="Include" />
           <e p="GameState.cs" t="Include" />
-          <e p="Init.cs" t="Include" />
           <e p="Interaction" t="Include">
             <e p="Choosers" t="Include">
+              <e p="FocusPlanetActionHandler.cs" t="Include" />
               <e p="MenuChooser.cs" t="Include" />
-              <e p="PlanetChooser.cs" t="Include" />
             </e>
             <e p="Collections" t="Include">
               <e p="MenuGroups" t="Include">

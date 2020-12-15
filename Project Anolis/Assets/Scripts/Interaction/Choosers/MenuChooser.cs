@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.InputSystem;
 
 namespace Interaction
 {

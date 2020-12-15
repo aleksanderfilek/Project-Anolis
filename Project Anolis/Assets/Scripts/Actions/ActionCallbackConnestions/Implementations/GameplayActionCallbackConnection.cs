@@ -8,7 +8,7 @@ public class GameplayActionCallbackConnection : ActionCallbackConnection
     private GameplayControls _controls;
     
     [SerializeField] private CameraController cameraController;
-    [SerializeField] private PlanetChooser planetChooser;
+    [SerializeField] private FocusPlanetActionHandler focusPlanetActionHandler;
     [SerializeField] private MenuChooser planetaryMenuChooser;
     [SerializeField] private Raycast raycast;
 
@@ -28,7 +28,7 @@ public class GameplayActionCallbackConnection : ActionCallbackConnection
         interplanetaryMode.Move.performed += cameraController.Interplanetary.UpdateMoveAmounts;
         interplanetaryMode.Move.canceled += cameraController.Interplanetary.UpdateMoveAmounts;
         interplanetaryMode.Zoom.performed += cameraController.Interplanetary.Zoom;
-        interplanetaryMode.FocusPlanet.performed += planetChooser.Choose;
+        interplanetaryMode.FocusPlanet.performed += focusPlanetActionHandler.HandleFocusPlanet;
 
         var planetaryMode = _controls.PlanetaryMode;
         planetaryMode.Rotate.performed += cameraController.Planetary.UpdateRotateAmounts;
