@@ -31,8 +31,9 @@
                 <e p="GameplayActionCallbackConnection.cs" t="Include" />
               </e>
             </e>
+            <e p="FocusPlanetActionHandler.cs" t="Include" />
           </e>
-          <e p="Camera" t="Include">
+          <e p="CameraControl" t="Include">
             <e p="CameraController.cs" t="Include" />
             <e p="CameraManipulator.cs" t="Include" />
             <e p="ControllerManipulator.cs" t="Include" />
@@ -43,18 +44,9 @@
           <e p="GameplayInit.cs" t="Include" />
           <e p="GameState.cs" t="Include" />
           <e p="Interaction" t="Include">
-            <e p="Choosers" t="Include">
-              <e p="FocusPlanetActionHandler.cs" t="Include" />
-              <e p="MenuChooser.cs" t="Include" />
-            </e>
             <e p="Collections" t="Include">
-              <e p="MenuGroups" t="Include">
-                <e p="Implementations" t="Include">
-                  <e p="MenuGroupWithChooser.cs" t="Include" />
-                  <e p="MenuGroupWithOpenOnAwake.cs" t="Include" />
-                </e>
-                <e p="MenuGroup.cs" t="Include" />
-              </e>
+              <e p="MenuGroupWithChooser.cs" t="Include" />
+              <e p="MenuGroupWithOpenOnStart.cs" t="Include" />
               <e p="SelectorCollection.cs" t="Include" />
             </e>
             <e p="Displayers" t="Include">
@@ -63,6 +55,7 @@
             <e p="Executives" t="Include">
               <e p="Builder.cs" t="Include" />
             </e>
+            <e p="MenuChooser.cs" t="Include" />
             <e p="Menus" t="Include">
               <e p="Implementations" t="Include">
                 <e p="EditorMenus" t="Include">

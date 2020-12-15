@@ -589,7 +589,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2031464022}
-        m_MethodName: DeactivateCurrent
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -600,7 +600,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2031464022}
-        m_MethodName: ActivateMenu
+        m_MethodName: ChangeCurrentMenuTo
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1208179375}
@@ -1260,7 +1260,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2031464022}
-        m_MethodName: DeactivateCurrent
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1271,7 +1271,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2031464022}
-        m_MethodName: ActivateMenu
+        m_MethodName: ChangeCurrentMenuTo
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1994990446}
@@ -1387,6 +1387,7 @@ GameObject:
   - component: {fileID: 501098272}
   - component: {fileID: 501098271}
   - component: {fileID: 501098273}
+  - component: {fileID: 501098274}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -1436,8 +1437,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraController: {fileID: 123694250}
-  planetChooser: {fileID: 1100733915}
+  focusPlanetActionHandler: {fileID: 501098274}
   raycast: {fileID: 1100733910}
+--- !u!114 &501098274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501098270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c23f5714b04c60bb4c8dfd1c82166d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycast: {fileID: 1100733910}
+  planetSelector: {fileID: 1100733913}
 --- !u!1 &551832868
 GameObject:
   m_ObjectHideFlags: 0
@@ -2124,7 +2139,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2031464022}
-        m_MethodName: DeactivateCurrent
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2135,7 +2150,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2031464022}
-        m_MethodName: ActivateMenu
+        m_MethodName: ChangeCurrentMenuTo
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2139325474}
@@ -2347,7 +2362,6 @@ GameObject:
   - component: {fileID: 1100733914}
   - component: {fileID: 1100733912}
   - component: {fileID: 1100733911}
-  - component: {fileID: 1100733915}
   - component: {fileID: 1100733916}
   m_Layer: 0
   m_Name: Utilities
@@ -2433,20 +2447,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycast: {fileID: 1100733910}
---- !u!114 &1100733915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100733908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63c23f5714b04c60bb4c8dfd1c82166d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  raycast: {fileID: 1100733910}
-  planetSelector: {fileID: 1100733913}
 --- !u!114 &1100733916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3969,7 +3969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd5e81cd803da64fae2e4c6b69869d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openOnAwakeMenu: {fileID: 0}
+  openOnStartMenu: {fileID: 0}
 --- !u!1 &2139325473
 GameObject:
   m_ObjectHideFlags: 0

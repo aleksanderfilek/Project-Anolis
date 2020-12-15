@@ -8,7 +8,6 @@ public class PlanetButton : MonoBehaviour
 
     public void ChangeFocusToThis()
     {
-        GameState.Get.CurrentFocus = Planet.gameObject;
-        GameState.Get.ChangeModeToPlanetary();
+        GameState.Get.ChangeModeToPlanetary(Planet.gameObject);
     }
 }

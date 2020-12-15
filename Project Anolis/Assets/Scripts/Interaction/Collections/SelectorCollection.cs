@@ -4,6 +4,9 @@ using UnityEngine.Serialization;
 
 namespace Interaction
 {
+    /// <summary>
+    /// This is collection of selectors, it allows to update all selectors specified in list.
+    /// </summary>
     public class SelectorCollection : MonoBehaviour
     {
          public List<Selector> selectors;

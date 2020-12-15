@@ -8,7 +8,7 @@ public class GameState : MonoBehaviour
     public static GameState Get { get; private set; }
     public event Action<Mode> ModeChanged;
 
-    public GameObject CurrentFocus { get; set; }
+    public GameObject CurrentFocus { get; private set; }
     public Mode CurrentMode { get; private set; }
 
     private void Awake()
@@ -20,8 +20,9 @@ public class GameState : MonoBehaviour
         Get = this;
     }
 
-    public void ChangeModeToPlanetary()
+    public void ChangeModeToPlanetary(GameObject focusedPlanet)
     {
+        CurrentFocus = focusedPlanet;
         CurrentMode = Mode.Planetary;
         actionActivator.SwitchCurrentActionMapTo("PlanetaryMode");
         OnStateChanged(Mode.Planetary);

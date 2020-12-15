@@ -1,8 +1,8 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Interaction
 {
+    //todo document
     public class Builder : MonoBehaviour
     {
         public void Build(Placeable building, Tile tile, Transform planetTransform)

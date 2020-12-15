@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace Displayers
 {
+    //todo document
     public class GroupSelectionDisplayer : MonoBehaviour
     {
         [SerializeField] private GameObject display;
