@@ -5,10 +5,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-public class GameManager : MonoBehaviour
+public class Score : MonoBehaviour
 {
-    private static GameManager instance;
-    public static GameManager Get
+    private static Score instance;
+    public static Score Get
     {
         get => instance;
     }
@@ -27,8 +27,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        scoreImage.fillAmount = 0;
-        scoreText.text = score + "/" + scoreTable[scoreIndex];
+        AddScore(100);
     }
 
     private void Update()
@@ -36,20 +35,19 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void AddScore(int value)
+    public static void AddScore(int value)
     {
-        score += value;
+        instance.score += value;
 
-        if (score >= scoreTable[scoreIndex])
+        if (instance.score >= instance.scoreTable[instance.scoreIndex])
         {
-            score = 0;
-            scoreIndex++;
+            instance.scoreIndex++;
         }
 
-        float fillPercentage = score / (float)scoreTable[scoreIndex];
-        scoreImage.fillAmount = fillPercentage;
+        float fillPercentage = instance.score / (float)instance.scoreTable[instance.scoreIndex];
+        instance.scoreImage.fillAmount = fillPercentage;
 
-        scoreText.text = score + "/" + scoreTable[scoreIndex];
+        instance.scoreText.text = instance.score + "/" + instance.scoreTable[instance.scoreIndex];
     }
     
 }

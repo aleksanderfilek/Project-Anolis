@@ -5,51 +5,35 @@ using UnityEngine;
 
 public class ResourceWarehouse : MonoBehaviour
 {
-    class ResourceElement
-    {
-        public ushort ID;
-        public ushort amount;
 
-        public ResourceElement(ushort _ID, ushort _amount)
-        {
-            ID = _ID;
-            amount = _amount;
-        }
-    }
-    
-    private List<ResourceElement> _resourceElements;
+    public List<ResourceElement> _resourceElements;
 
     private void Start()
     {
         _resourceElements = new List<ResourceElement>();
     }
 
-    public static void Add(object This, ushort ID, ushort amount)
+    public static void UpdateResources(object sender, ushort ID, short amount)
     {
-        var warehouse = ((MonoBehaviour) This).GetComponentInParent<ResourceWarehouse>();
+        var warehouse = ((GameObject) sender).GetComponent<ResourceWarehouse>();
 
-        var index = FoundElement(warehouse, ID);
-        if(index == -1)
+        int index = FoundElement(warehouse, ID);
+
+        if (index == -1) // dodaj surowiec
         {
-            warehouse._resourceElements.Add(new ResourceElement(ID, amount));
+            var newElement = new ResourceElement(ID, amount);
+            warehouse._resourceElements.Add(newElement);
         }
-        else
+        else // aktualizuj surowiec
         {
             warehouse._resourceElements[index].amount += amount;
-        }
-    }
-
-    public static void Remove(object This, ushort ID, ushort amount)
-    {
-        var warehouse = ((MonoBehaviour) This).GetComponentInParent<ResourceWarehouse>();
-        
-        var index = FoundElement(warehouse, ID);
-        if(index == -1)
-        {
-            return;
+            if (warehouse._resourceElements[index].amount <= 0)
+            {
+                warehouse._resourceElements.RemoveAt(index);
+            }
         }
         
-        warehouse._resourceElements.RemoveAt(index);
+        ResourceManager.UpdateResourcesPanel();
     }
 
     private static int FoundElement(ResourceWarehouse warehouse, ushort ID)

@@ -5,7 +5,7 @@ namespace Interaction
 {
     public class BuildMenu : UnderMouseMenu
     {
-        [SerializeField] private List<Placeable> buildingList;
+        [SerializeField] private List<BuildingPlaceable> buildingList;
 
         [SerializeField] private TileSelector tileSelector;
         [SerializeField] private PlanetSelector planetSelector;
@@ -15,7 +15,7 @@ namespace Interaction
         {
             if (tileSelector.SelectedTile == null)
                 return false;
-            return tileSelector.SelectedTile.TileContent == null;
+            return tileSelector.SelectedTile.Content == null;
         }
 
         public void BuildForge()

@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9f7fa24678540e47bf60340dd2fc446, type: 3}
+  m_Script: {fileID: 11500000, guid: e7db8ac97ebac848b95d4c224efd2df8, type: 3}
   m_Name: Building_B
   m_EditorClassIdentifier: 
-  objectName: Tartak
-  objectType: 3
+  objectName: kamieniolom
   prefab: {fileID: 1447646891835595025, guid: 2469af0b12568594d9e264129869fe83, type: 3}
+  cost: 25
+  resourceType: 1

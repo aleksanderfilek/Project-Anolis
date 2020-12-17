@@ -11,7 +11,7 @@ namespace Interaction
         {
             if (tileSelector.SelectedTile == null)
                 return false;
-            return tileSelector.SelectedTile.TileContent != null;
+            return tileSelector.SelectedTile.Content != null;
         }
 
         public void RemoveBuilding()
