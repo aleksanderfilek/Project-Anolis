@@ -8,6 +8,7 @@ namespace Interaction
     /// <remarks>
     /// Selectors do not update raycast.
     /// </remarks>
+    /// <seealso cref="Raycast"/>
     public abstract class Selector : MonoBehaviour
     {
         [SerializeField] protected Raycast raycast;

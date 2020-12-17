@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace Interaction
 {
+    /// <summary>
+    /// This class is responsible for showing appropriate menu after choose action was performed using menus' <see cref="Menu.CanHandleSelection"/>
+    /// </summary>
     [RequireComponent(typeof(SelectorCollection))]
     public class MenuChooser : MonoBehaviour
     {
@@ -15,16 +18,6 @@ namespace Interaction
         private SelectorCollection _selectorCollection;
         private MenuGroupWithChooser _menuGroup;
 
-        public void Activate()
-        {
-            actionActivator.EnableAction(chooseActionName);
-        }
-        
-        public void Deactivate()
-        {
-            actionActivator.DisableAction(chooseActionName);
-        }
-        
         private void Start()
         {
             _selectorCollection = GetComponent<SelectorCollection>();
@@ -36,7 +29,26 @@ namespace Interaction
                     Debug.LogError($"There is no action named '{chooseActionName}'", this);
             #endif
         }
-
+        
+        /// <summary>
+        /// Activates choose action specified in inspector.
+        /// </summary>
+        public void Activate()
+        {
+            actionActivator.EnableAction(chooseActionName);
+        }
+        
+        /// <summary>
+        /// Deactivates choose action specified in the inspector, therefore disabling menu choosing.
+        /// </summary>
+        public void Deactivate()
+        {
+            actionActivator.DisableAction(chooseActionName);
+        }
+        
+        /// <summary>
+        /// Iterates through menu list until it finds menu that should be shown.
+        /// </summary>
         public void Choose()
         {
             if (!raycast.IsSomethingHit)

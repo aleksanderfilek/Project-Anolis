@@ -23,40 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046c0e5b-45ee-4224-b791-f8ef7798ceb5" name="Default Changelist" comment="Move chooser choose method from button to action">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Anolis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Editor.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/GameplayActionCallbackConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/GameplayActionCallbackConnection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraControl.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraControl/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraControl/CameraController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManipulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraControl/CameraManipulator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManipulator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraControl/CameraManipulator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraControl/ControllerManipulator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/ControllerManipulator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraControl/ControllerManipulator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraControl/InterplanetaryCameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraControl/InterplanetaryCameraController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraControl/PlanetaryCameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraControl/PlanetaryCameraController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/FocusPlanetActionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/FocusPlanetActionHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/FocusPlanetActionHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/FocusPlanetActionHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/MenuChooser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/MenuChooser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/MenuChooser.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/MenuChooser.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations/MenuGroupWithChooser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroupWithChooser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations/MenuGroupWithChooser.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroupWithChooser.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations/MenuGroupWithOpenOnAwake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroupWithOpenOnStart.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/Implementations/MenuGroupWithOpenOnAwake.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroupWithOpenOnStart.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/MenuGroup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroups/MenuGroup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/SelectorCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/SelectorCollection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Displayers/GroupSelectionDisplayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Displayers/GroupSelectionDisplayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Executives/Builder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Executives/Builder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlanetButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlanetButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraControl/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraControl/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroupWithChooser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroupWithChooser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/MenuChooser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/MenuChooser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/UnderMouseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/UnderMouseMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Selector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Selector.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,40 +45,24 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/projekty_unity/projekty/Project-Anolis/Project Anolis/Assets/Scripts/Interaction/Selectors/Selector.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraControl/PlanetaryCameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/projekty_unity/projekty/Project-Anolis/Project Anolis/Assets/Scripts/Actions/ActionCallbackConnestions/ActionCallbackConnection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraControl/InterplanetaryCameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/projekty_unity/projekty/Project-Anolis/Project Anolis/Assets/Scripts/Interaction/Utilities/Raycast.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/projekty_unity/projekty/Project-Anolis/Project Anolis/Assets/Scripts/Camera/InterplanetaryCameraController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/projekty_unity/projekty/Project-Anolis/Project Anolis/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/projekty_unity/projekty/Project-Anolis/Project Anolis/Assets/Scripts/Interaction/Choosers/MenuChooser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/AlphaButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/projekty_unity/projekty/Project-Anolis/Project Anolis/Assets/Scripts/Actions/ActionActivator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraControl/PlanetaryCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraControl/InterplanetaryCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/InputManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/projekty_unity/projekty/Project-Anolis/Project Anolis/Assets/Scripts/Camera/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/projekty_unity/projekty/Project-Anolis/Project Anolis/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/EditorActionCallbackConnection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/projekty_unity/projekty/Project-Anolis/Project Anolis/Assets/Scripts/Actions/ActionCallbackConnestions/Implementations/GameplayActionCallbackConnection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/projekty_unity/projekty/Project-Anolis/Project Anolis/Assets/Scripts/Camera/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../2019.4.12f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventTrigger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/EditorMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/projekty_unity/projekty/Project-Anolis/Project Anolis/Assets/Scripts/Camera/PlanetaryCameraController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionMap.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionAsset.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/projekty_unity/projekty/Project-Anolis/Project Anolis/Assets/Scripts/GameState.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Raycast.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Choosers/Implementations/MenuChooser.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Showable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/UpgradeBuildingMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Showable/Menus/Implementations/GameMenus/BuildMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NewBehaviourScript.cs" />
@@ -136,13 +93,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/PlanetaryCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/InterplanetaryCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Utilities/Raycast.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Selector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameplayInit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlanetButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Choosers/FocusPlanetActionHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraControl/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraControl/CameraManipulator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraControl/ControllerManipulator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraControl/InterplanetaryCameraController.cs" />
@@ -150,10 +105,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Actions/FocusPlanetActionHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/SelectorCollection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroupWithOpenOnAwake.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroupWithChooser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroupWithOpenOnStart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Displayers/GroupSelectionDisplayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Executives/Builder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/Menu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Selectors/Selector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/MenuChooser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Menus/UnderMouseMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Collections/MenuGroupWithChooser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraControl/CameraController.cs" />
       </list>
     </option>
   </component>
@@ -225,7 +185,8 @@
       <workItem from="1607427671540" duration="9148000" />
       <workItem from="1607598833804" duration="8454000" />
       <workItem from="1607966869969" duration="6476000" />
-      <workItem from="1608036935457" duration="15635000" />
+      <workItem from="1608036935457" duration="15736000" />
+      <workItem from="1608230259346" duration="7432000" />
     </task>
     <task id="LOCAL-00001" summary="Change rotating planets to new input">
       <created>1603627329359</created>
@@ -360,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608048291660</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Document and refactor">
+      <created>1608054386690</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1608054386690</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +383,8 @@
     <MESSAGE value="Add planetary -&gt; interplanetary smooth transition" />
     <MESSAGE value="Change parameters" />
     <MESSAGE value="Change names and add documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change names and add documentation" />
+    <MESSAGE value="Document and refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Document and refactor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="708" y="345" key="#Notifications" timestamp="1603533591308">
@@ -504,12 +473,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608054320853" />
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1607968105341">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608054391468">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607968105341" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1280.1024@0.0.1920.1040" timestamp="1604338388670" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607616317132" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608054391468" />
     <state x="529" y="140" key="VcsDiffUtil.ChangesDialog" timestamp="1606862903940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

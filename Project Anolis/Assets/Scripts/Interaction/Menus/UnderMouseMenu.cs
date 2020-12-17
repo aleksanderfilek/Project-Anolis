@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 namespace Interaction
 {
+    /// <summary>
+    /// This menu shows UI at the point that it was clicked.
+    /// </summary>
     public abstract class UnderMouseMenu : Menu
     {
         private RectTransform _uiRectTransform;
