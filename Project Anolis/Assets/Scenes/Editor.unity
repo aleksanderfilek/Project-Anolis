@@ -198,16 +198,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraHolderTransform: {fileID: 80179305}
   controllerHolderTransform: {fileID: 1986661765}
-  zoomDistance: 100
-  zoomSmoothSpeed: 7
-  modeTransitionDistanceFactor: 5
-  rotationSpeed: 80
-  rotationSmoothSpeed: 7
+  zoomHolderSpeed: 100
+  zoomFollowSpeed: 7
+  maxDistanceFactor: 8
+  rotationHolderSpeed: 80
+  rotationFollowSpeed: 7
   minCameraDistanceFactor: 1.4
   movementSpeed: 50
-  movementSmoothSpeed: 7
+  movementFollowSpeed: 7
   maxCameraDistance: 500
-  minInterplanetaryCameraDistance: 100
+  minCameraDistance: 100
   cameraRotation: {x: -45, y: 0, z: 0}
   movementBoundaries: {x: 1000, y: 1000}
 --- !u!1 &135179394

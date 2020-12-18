@@ -10,7 +10,7 @@ public class GameplayActionCallbackConnection : ActionCallbackConnection
     
     [SerializeField] private CameraController cameraController;
     [SerializeField] private FocusPlanetActionHandler focusPlanetActionHandler;
-    [SerializeField] private MenuChooser planetaryMenuChooser;
+    [SerializeField] private MenuGroupWithChooser menuGroupWithChooser;
     [SerializeField] private Raycast raycast;
 
     private void Awake()
@@ -35,7 +35,7 @@ public class GameplayActionCallbackConnection : ActionCallbackConnection
         planetaryMode.Rotate.performed += cameraController.Planetary.UpdateRotateAmounts;
         planetaryMode.Rotate.canceled += cameraController.Planetary.UpdateRotateAmounts;
         planetaryMode.Zoom.performed += cameraController.Planetary.Zoom;
-        planetaryMode.ChooseMenu.performed += ctx => planetaryMenuChooser.Choose();
+        planetaryMode.ChooseMenu.performed += ctx => menuGroupWithChooser.ShowAppropriateMenu();
 
         _controls.Utilities.CastRay.performed += ctx => raycast.Shoot(); 
     }

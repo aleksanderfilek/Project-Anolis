@@ -504,7 +504,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1913385596}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &160467947
 GameObject:
@@ -1785,16 +1785,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraHolderTransform: {fileID: 869899707}
   controllerHolderTransform: {fileID: 1535021771}
-  zoomDistance: 100
-  zoomSmoothSpeed: 7
-  modeTransitionDistanceFactor: 5
-  rotationSpeed: 80
-  rotationSmoothSpeed: 7
+  zoomHolderSpeed: 100
+  zoomFollowSpeed: 7
+  maxDistanceFactor: 8
+  rotationHolderSpeed: 80
+  rotationFollowSpeed: 7
   minCameraDistanceFactor: 1.4
   movementSpeed: 50
-  movementSmoothSpeed: 7
+  movementFollowSpeed: 7
   maxCameraDistance: 500
-  minInterplanetaryCameraDistance: 100
+  minCameraDistance: 100
   cameraRotation: {x: -45, y: 0, z: 0}
   movementBoundaries: {x: 1000, y: 1000}
 --- !u!4 &631273900
@@ -2081,7 +2081,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1913385596}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &746254087
 MonoBehaviour:
@@ -4817,7 +4817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraController: {fileID: 631273899}
   focusPlanetActionHandler: {fileID: 1762456357}
-  planetaryMenuChooser: {fileID: 1942606175}
+  menuGroupWithChooser: {fileID: 1913385597}
   raycast: {fileID: 174268904}
 --- !u!4 &1762456355
 Transform:
@@ -5011,7 +5011,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1942606174}
   - {fileID: 746254086}
   - {fileID: 115155389}
   m_Father: {fileID: 1204826358}
@@ -5029,7 +5028,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2321d866bc6d19458b8396ba3bdd8f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chooser: {fileID: 1942606175}
+  raycast: {fileID: 174268904}
+  actionActivator: {fileID: 1762456356}
+  selectors:
+  - {fileID: 225091708}
+  - {fileID: 568787242}
+  chooseActionName: ChooseMenu
 --- !u!1 &1925396237
 GameObject:
   m_ObjectHideFlags: 0
@@ -5151,71 +5155,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925396237}
   m_Mesh: {fileID: 0}
---- !u!1 &1942606173
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1942606174}
-  - component: {fileID: 1942606176}
-  - component: {fileID: 1942606175}
-  m_Layer: 0
-  m_Name: MenuChooser
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1942606174
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1942606173}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1913385596}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1942606175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1942606173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb05527cde83c4547881a8b70c566a1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  raycast: {fileID: 174268904}
-  menus:
-  - {fileID: 746254087}
-  - {fileID: 115155388}
-  chooseActionName: ChooseMenu
-  actionActivator: {fileID: 1762456356}
---- !u!114 &1942606176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1942606173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8bdc5fadb2351c4eba8e1f5d775012c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectors:
-  - {fileID: 225091708}
-  - {fileID: 568787242}
 --- !u!1 &1949682698
 GameObject:
   m_ObjectHideFlags: 0
