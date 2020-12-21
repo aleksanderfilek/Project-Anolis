@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
 
 namespace Utilities
 {
-    public static class Utilities
+    public static class Timer
     {
         private static List<float> _timer = new List<float>();
 
@@ -44,4 +45,26 @@ namespace Utilities
             Debug.Log(StopTimer(index) + "s");
         }
     }
+
+    public static class Object
+    {
+        public static Transform[] GetChilds(Transform transform)
+        {
+            
+            Transform[] array = null;
+
+            int length = transform.childCount;
+            if (length > 0)
+            {
+                array = new Transform[length];
+                for (int i = 0; i < length; i++)
+                {
+                    array[i] = transform.GetChild(i);
+                }
+            }
+            
+            return array;
+        }
+    }
+    
 }

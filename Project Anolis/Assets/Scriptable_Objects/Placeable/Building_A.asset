@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9f7fa24678540e47bf60340dd2fc446, type: 3}
+  m_Script: {fileID: 11500000, guid: e7db8ac97ebac848b95d4c224efd2df8, type: 3}
   m_Name: Building_A
   m_EditorClassIdentifier: 
-  objectName: Kuznia
-  objectType: 3
-  prefab: {fileID: 3062741268767224653, guid: 057104767b5684a4aba0225b37920a4d, type: 3}
-  description: In Kuznia we kuj.
+  objectName: tartak
+  prefab: {fileID: 1447646891835595025, guid: 2469af0b12568594d9e264129869fe83, type: 3}
+  cost: 10
+  resourceType: 0

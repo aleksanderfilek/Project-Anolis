@@ -1,31 +1,28 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Interaction
 {
-    //todo document
     public class Builder : MonoBehaviour
     {
-        public void Build(Placeable building, Tile tile, Transform planetTransform)
+
+        public void Build(BuildingPlaceable building, Tile tile, Transform planetTransform)
         {
-            if (tile.TileContent != null)
-            {
-                Destroy(tile.TileContent);
-            }
-            
-            tile.TileContent = Instantiate(building.prefab, planetTransform);
-            
-            tile.TileContent.transform.Translate(tile.Position, Space.Self);
-            tile.TileContent.transform.rotation = Quaternion.LookRotation(tile.Position);
-            tile.TileContent.transform.Rotate(new Vector3(90, 0, 0), Space.Self);
-            
-            tile.TileContent.AddComponent<PlaceableInstance>();
-            tile.TileContent.GetComponent<PlaceableInstance>().Tile = tile;
-            tile.TileContent.tag = "Placeable";
+                tile.Content = Instantiate(building.prefab, planetTransform);
+
+                // position
+                tile.Content.transform.Translate(tile.Position, Space.Self);
+                // rotation
+                tile.Content.transform.rotation = Quaternion.LookRotation(tile.Position);
+                tile.Content.transform.Rotate(new Vector3(90, 0, 0), Space.Self);
+                
+                Score.AddScore(-building.cost);
+                ResourceWarehouse.UpdateResources(planetTransform.gameObject, (ushort)building.resourceType, 1);
         }
+
         public void Destroy(Tile tile)
         {
-            Destroy(tile.TileContent);
-            tile.TileContent = null;
+                Destroy(tile.Content);
         }
     }
 }

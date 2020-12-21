@@ -26,6 +26,9 @@ public class GameState : MonoBehaviour
         CurrentMode = Mode.Planetary;
         actionActivator.SwitchCurrentActionMapTo("PlanetaryMode");
         OnStateChanged(Mode.Planetary);
+
+        var list = CurrentFocus.GetComponent<ResourceWarehouse>()._resourceElements;
+        ResourceManager.InitResourcesPanel(list);
     }
 
     public void ChangeModeToInterplanetary()
@@ -33,6 +36,8 @@ public class GameState : MonoBehaviour
         CurrentMode = Mode.Interplanetary;
         actionActivator.SwitchCurrentActionMapTo("InterplanetaryMode");
         OnStateChanged(Mode.Interplanetary); 
+        
+        ResourceManager.ClearResourcesPanel();
     }
 
     private void OnStateChanged(Mode newMode)
